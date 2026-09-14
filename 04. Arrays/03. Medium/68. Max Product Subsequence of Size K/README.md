@@ -1,0 +1,16 @@
+# Max Product Subsequence of Size K
+
+- **Topic:** Arrays
+- **Difficulty:** Medium
+- **Submissions:** 16006
+- **Problem Link:** https://www.geeksforgeeks.org/problems/maximum-product4633/1
+
+## Approach
+
+_(to be written)_
+
+## Solution
+
+```
+
+```

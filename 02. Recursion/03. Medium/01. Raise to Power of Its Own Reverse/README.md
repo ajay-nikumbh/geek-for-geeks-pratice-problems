@@ -1,0 +1,16 @@
+# Raise to Power of Its Own Reverse
+
+- **Topic:** Recursion
+- **Difficulty:** Medium
+- **Submissions:** 384684
+- **Problem Link:** https://www.geeksforgeeks.org/problems/power-of-numbers-1587115620/1
+
+## Approach
+
+_(to be written)_
+
+## Solution
+
+```
+
+```

@@ -1,0 +1,16 @@
+# Max Occurring Prefix Suffix Substring
+
+- **Topic:** Strings
+- **Difficulty:** Hard
+- **Submissions:** 4482
+- **Problem Link:** https://www.geeksforgeeks.org/problems/elixir-of-life--141631/1
+
+## Approach
+
+_(to be written)_
+
+## Solution
+
+```
+
+```

@@ -1,0 +1,16 @@
+# Count pairs of strings with one mismatch
+
+- **Topic:** Hashing
+- **Difficulty:** Medium
+- **Submissions:** 846
+- **Problem Link:** https://www.geeksforgeeks.org/problems/count-pairs-of-strings-with-one-mismatch/1
+
+## Approach
+
+_(to be written)_
+
+## Solution
+
+```
+
+```
