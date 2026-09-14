@@ -95,22 +95,32 @@ Create a new temporary array of the same size. Place the last element of the ori
 ### Python Code
 
 ```python
-def rotate_array_by_one_brute(arr):
-    n = len(arr)
-    if n <= 1:
+class Solution:
+    def rotateArrayByOneBrute(self, arr):
+        # Get the number of elements in the array
+        n = len(arr)
+        # If array has 0 or 1 elements, nothing to rotate
+        if n <= 1:
+            # Return the array unchanged
+            return arr
+
+        # Create a new temporary array of same size, filled with 0s (O(n) space)
+        temp = [0] * n
+        # Place the last element of arr at index 0 of temp
+        temp[0] = arr[n - 1]
+
+        # Loop through all indices except the last one
+        for i in range(n - 1):
+            # Shift each element right by one position into temp
+            temp[i + 1] = arr[i]
+
+        # Loop through every index to copy temp back into arr
+        for i in range(n):
+            # Copy element from temp into original array to keep it in-place
+            arr[i] = temp[i]
+
+        # Return the rotated array
         return arr
-
-    temp = [0] * n          # extra array -> O(n) space
-    temp[0] = arr[n - 1]    # last element moves to front
-
-    for i in range(n - 1):
-        temp[i + 1] = arr[i]  # shift everything right by one
-
-    # copy back into original array to satisfy "in-place" output
-    for i in range(n):
-        arr[i] = temp[i]
-
-    return arr
 ```
 
 ### Worked Trace
@@ -144,19 +154,28 @@ Avoid the extra array entirely. Save the **last element** in a single temp varia
 ### Python Code
 
 ```python
-def rotate_array_by_one(arr):
-    n = len(arr)
-    if n <= 1:
+class Solution:
+    def rotateArrayByOne(self, arr):
+        # Get the number of elements in the array
+        n = len(arr)
+        # If array has 0 or 1 elements, nothing to rotate
+        if n <= 1:
+            # Return the array unchanged
+            return arr
+
+        # Save the last element in a temp variable, O(1) extra space
+        last = arr[n - 1]
+
+        # Loop from second-last index down to the first index
+        for i in range(n - 2, -1, -1):
+            # Shift current element one position to the right
+            arr[i + 1] = arr[i]
+
+        # Place the saved last element at the front of the array
+        arr[0] = last
+
+        # Return the rotated array
         return arr
-
-    last = arr[n - 1]          # save last element, O(1) extra space
-
-    for i in range(n - 2, -1, -1):   # from second-last down to first
-        arr[i + 1] = arr[i]          # shift right by one
-
-    arr[0] = last               # place saved element at front
-
-    return arr
 ```
 
 ### Step-by-Step Trace (with array state at each step)
@@ -204,24 +223,39 @@ To rotate an array **right** by `k` positions (with `k = k % n` to handle `k > n
 3. Reverse the remaining `n - k` elements.
 
 ```python
-def reverse(arr, start, end):
-    while start < end:
-        arr[start], arr[end] = arr[end], arr[start]
-        start += 1
-        end -= 1
+class Solution:
+    def reverse(self, arr, start, end):
+        # Loop while the two pointers haven't crossed
+        while start < end:
+            # Swap elements at start and end positions
+            arr[start], arr[end] = arr[end], arr[start]
+            # Move start pointer forward
+            start += 1
+            # Move end pointer backward
+            end -= 1
 
-def rotate_right_by_k(arr, k):
-    n = len(arr)
-    if n == 0:
-        return arr
-    k = k % n              # handle k > n
-    if k == 0:
-        return arr
+    def rotateRightByK(self, arr, k):
+        # Get the number of elements in the array
+        n = len(arr)
+        # If array is empty, there is nothing to rotate
+        if n == 0:
+            # Return the array unchanged
+            return arr
+        # Normalize k to handle cases where k > n
+        k = k % n
+        # If normalized k is 0, no rotation is needed
+        if k == 0:
+            # Return the array unchanged
+            return arr
 
-    reverse(arr, 0, n - 1)      # reverse whole array
-    reverse(arr, 0, k - 1)      # reverse first k elements
-    reverse(arr, k, n - 1)      # reverse remaining n-k elements
-    return arr
+        # Reverse the whole array first
+        self.reverse(arr, 0, n - 1)
+        # Reverse the first k elements
+        self.reverse(arr, 0, k - 1)
+        # Reverse the remaining n-k elements
+        self.reverse(arr, k, n - 1)
+        # Return the rotated array
+        return arr
 ```
 
 **Quick check with `k = 1` on `[1, 2, 3, 4, 5]`:**

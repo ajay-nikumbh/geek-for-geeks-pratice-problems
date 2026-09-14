@@ -100,33 +100,51 @@ Perform **two separate full scans**: one to find the minimum, another to find th
 
 ### Python Code (Two-Pass Version)
 ```python
-def get_min_max_bruteforce(arr):
-    n = len(arr)
-    if n == 0:
-        return None, None
+class Solution:
+    def getMinMaxBruteforce(self, arr):
+        # Get the length of the array
+        n = len(arr)
+        # Handle empty array case
+        if n == 0:
+            # Return None, None when there are no elements
+            return None, None
 
-    # Pass 1: find minimum
-    min_val = arr[0]
-    for i in range(1, n):
-        if arr[i] < min_val:
-            min_val = arr[i]
+        # Pass 1: find minimum
+        # Initialize min_val with the first element
+        min_val = arr[0]
+        # Loop through the array starting from index 1
+        for i in range(1, n):
+            # Check if current element is smaller than current min_val
+            if arr[i] < min_val:
+                # Update min_val since current element is smaller
+                min_val = arr[i]
 
-    # Pass 2: find maximum
-    max_val = arr[0]
-    for i in range(1, n):
-        if arr[i] > max_val:
-            max_val = arr[i]
+        # Pass 2: find maximum
+        # Initialize max_val with the first element
+        max_val = arr[0]
+        # Loop through the array starting from index 1
+        for i in range(1, n):
+            # Check if current element is larger than current max_val
+            if arr[i] > max_val:
+                # Update max_val since current element is larger
+                max_val = arr[i]
 
-    return min_val, max_val
+        # Return both the minimum and maximum values found
+        return min_val, max_val
 ```
 
 ### Python Code (Sort-Based Version)
 ```python
-def get_min_max_sort(arr):
-    if not arr:
-        return None, None
-    sorted_arr = sorted(arr)
-    return sorted_arr[0], sorted_arr[-1]
+class Solution:
+    def getMinMaxSort(self, arr):
+        # Handle empty array case
+        if not arr:
+            # Return None, None when there are no elements
+            return None, None
+        # Sort a copy of the array in ascending order
+        sorted_arr = sorted(arr)
+        # First element is the minimum, last element is the maximum
+        return sorted_arr[0], sorted_arr[-1]
 ```
 
 ### Worked Trace (Two-Pass) — `arr = [3, 2, 1, 56, 10000, 167]`
@@ -172,21 +190,33 @@ Instead of two separate passes, do **one single pass** through the array and upd
 
 ### Python Code
 ```python
-def get_min_max_single_pass(arr):
-    n = len(arr)
-    if n == 0:
-        return None, None
+class Solution:
+    def getMinMaxSinglePass(self, arr):
+        # Get the length of the array
+        n = len(arr)
+        # Handle empty array case
+        if n == 0:
+            # Return None, None when there are no elements
+            return None, None
 
-    min_val = arr[0]
-    max_val = arr[0]
+        # Initialize min_val with the first element
+        min_val = arr[0]
+        # Initialize max_val with the first element
+        max_val = arr[0]
 
-    for i in range(1, n):
-        if arr[i] < min_val:
-            min_val = arr[i]
-        if arr[i] > max_val:        # separate, independent check
-            max_val = arr[i]
+        # Loop through the array starting from index 1
+        for i in range(1, n):
+            # Check if current element is smaller than current min_val
+            if arr[i] < min_val:
+                # Update min_val since current element is smaller
+                min_val = arr[i]
+            # Separate, independent check for the maximum
+            if arr[i] > max_val:
+                # Update max_val since current element is larger
+                max_val = arr[i]
 
-    return min_val, max_val
+        # Return both the minimum and maximum values found
+        return min_val, max_val
 ```
 
 ### Worked Trace — `arr = [3, 2, 1, 56, 10000, 167]`
@@ -244,44 +274,65 @@ Over `n` elements (n/2 pairs), total comparisons ≈ `3 * (n/2) = 1.5n`, versus 
 
 ### Python Code
 ```python
-def get_min_max_pairwise(arr):
-    n = len(arr)
-    if n == 0:
-        return None, None
-    if n == 1:
-        return arr[0], arr[0]
+class Solution:
+    def getMinMaxPairwise(self, arr):
+        # Get the length of the array
+        n = len(arr)
+        # Handle empty array case
+        if n == 0:
+            # Return None, None when there are no elements
+            return None, None
+        # Handle single element case
+        if n == 1:
+            # Both min and max are the only element
+            return arr[0], arr[0]
 
-    # Initialize min/max from the first pair (or first element if n is odd)
-    if arr[0] < arr[1]:
-        min_val, max_val = arr[0], arr[1]
-    else:
-        min_val, max_val = arr[1], arr[0]
-
-    i = 2
-    # Process remaining elements in pairs
-    while i < n - 1:
-        # Step 1: compare the pair against each other
-        if arr[i] < arr[i + 1]:
-            local_min, local_max = arr[i], arr[i + 1]
+        # Initialize min/max from the first pair (or first element if n is odd)
+        # Compare the first two elements against each other
+        if arr[0] < arr[1]:
+            # arr[0] is smaller, so it becomes min and arr[1] becomes max
+            min_val, max_val = arr[0], arr[1]
         else:
-            local_min, local_max = arr[i + 1], arr[i]
+            # arr[1] is smaller, so it becomes min and arr[0] becomes max
+            min_val, max_val = arr[1], arr[0]
 
-        # Step 2 & 3: compare local extremes against running extremes
-        if local_min < min_val:
-            min_val = local_min
-        if local_max > max_val:
-            max_val = local_max
+        # Start scanning remaining elements from index 2
+        i = 2
+        # Process remaining elements in pairs
+        while i < n - 1:
+            # Step 1: compare the pair against each other
+            if arr[i] < arr[i + 1]:
+                # arr[i] is the local min, arr[i+1] is the local max
+                local_min, local_max = arr[i], arr[i + 1]
+            else:
+                # arr[i+1] is the local min, arr[i] is the local max
+                local_min, local_max = arr[i + 1], arr[i]
 
-        i += 2
+            # Step 2: compare local minimum against running minimum
+            if local_min < min_val:
+                # Update running min_val since local_min is smaller
+                min_val = local_min
+            # Step 3: compare local maximum against running maximum
+            if local_max > max_val:
+                # Update running max_val since local_max is larger
+                max_val = local_max
 
-    # If n is odd, one element is left over — compare it directly
-    if i == n - 1:
-        if arr[i] < min_val:
-            min_val = arr[i]
-        elif arr[i] > max_val:
-            max_val = arr[i]
+            # Move to the next pair
+            i += 2
 
-    return min_val, max_val
+        # If n is odd, one element is left over — compare it directly
+        if i == n - 1:
+            # Check if the leftover element is a new minimum
+            if arr[i] < min_val:
+                # Update min_val with the leftover element
+                min_val = arr[i]
+            # Otherwise check if it is a new maximum
+            elif arr[i] > max_val:
+                # Update max_val with the leftover element
+                max_val = arr[i]
+
+        # Return both the minimum and maximum values found
+        return min_val, max_val
 ```
 
 ### Step-by-Step Trace — `arr = [3, 2, 1, 56, 10000, 167]` (n = 6, even)

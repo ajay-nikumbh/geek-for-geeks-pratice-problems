@@ -138,12 +138,14 @@ Define `sum(arr, i)` = `arr[i] + sum(arr, i+1)`, with base case `sum(arr, n) = 0
 ### Python Code
 
 ```python
-def array_sum_recursive(arr, i=0):
-    # Base case: no elements left to add
-    if i == len(arr):
-        return 0
-    # Add current element to the sum of the rest of the array
-    return arr[i] + array_sum_recursive(arr, i + 1)
+class Solution:
+    def arraySumRecursive(self, arr, i=0):
+        # Base case: no elements left to add
+        if i == len(arr):
+            # Return 0 when index reaches end of array
+            return 0
+        # Add current element to the sum of the rest of the array
+        return arr[i] + self.arraySumRecursive(arr, i + 1)
 ```
 
 ### Worked Trace
@@ -185,22 +187,16 @@ Walk through the array once with a single loop, maintaining a running total in o
 ### Code
 
 ```python
-def array_sum_iterative(arr):
-    total = 0  # use a 64-bit-safe type; Python ints handle this automatically
-    for x in arr:
-        total += x
-    return total
-```
-
-```cpp
-// C++ — note the accumulator type chosen per the constraint analysis above
-long long arraySum(const vector<int>& arr) {
-    long long total = 0;   // long long, NOT int — avoids overflow for n<=1e6, |arr[i]|<=1e9
-    for (int x : arr) {
-        total += x;
-    }
-    return total;
-}
+class Solution:
+    def arraySumIterative(self, arr):
+        # Initialize total to 0; Python ints handle arbitrary size automatically
+        total = 0
+        # Loop through every element in the array
+        for x in arr:
+            # Add current element to the running total
+            total += x
+        # Return the final accumulated sum
+        return total
 ```
 
 ### Trace
@@ -221,15 +217,20 @@ The iterative single-pass accumulator from Section 5 **is** the optimal approach
 ### Confirmed Optimal
 
 ```python
-def array_sum_optimal(arr):
-    total = 0
-    for x in arr:
-        total += x
-    return total
+class Solution:
+    def arraySumOptimal(self, arr):
+        # Initialize total to 0
+        total = 0
+        # Loop through every element in the array
+        for x in arr:
+            # Add current element to the running total
+            total += x
+        # Return the final accumulated sum
+        return total
 
-# Equivalent, using the built-in:
-def array_sum_builtin(arr):
-    return sum(arr)
+    def arraySumBuiltin(self, arr):
+        # Use Python's built-in sum() for a micro-optimized single pass
+        return sum(arr)
 ```
 
 ### How built-in `sum()` functions work internally

@@ -161,28 +161,38 @@ move.
 ### Python Code
 
 ```python
-def is_sorted(arr):
-    return all(arr[i] <= arr[i + 1] for i in range(len(arr) - 1))
+class Solution:
+    def isSorted(self, arr):
+        # Check every adjacent pair is non-decreasing and return the overall result
+        return all(arr[i] <= arr[i + 1] for i in range(len(arr) - 1))
 
+    def canSortWithOneMoveBrute(self, arr):
+        # Store length of array
+        n = len(arr)
 
-def can_sort_with_one_move_brute(arr):
-    n = len(arr)
+        # If already sorted, zero moves are needed
+        if self.isSorted(arr):
+            # Return True immediately
+            return True
 
-    # Zero moves needed
-    if is_sorted(arr):
-        return True
+        # Try removing each index i as the element to relocate
+        for i in range(n):
+            # Store the value being picked up
+            value = arr[i]
+            # Build the array with arr[i] removed (O(n) removal)
+            remaining = arr[:i] + arr[i + 1:]
 
-    # Try removing each element, then inserting it at every possible slot
-    for i in range(n):
-        value = arr[i]
-        remaining = arr[:i] + arr[i + 1:]          # O(n) removal
+            # Try every possible reinsertion slot in the remaining array
+            for insert_pos in range(len(remaining) + 1):
+                # Build candidate array by reinserting value at insert_pos
+                candidate = remaining[:insert_pos] + [value] + remaining[insert_pos:]
+                # Check if this candidate arrangement is sorted
+                if self.isSorted(candidate):
+                    # Found a valid single relocation, return True
+                    return True
 
-        for insert_pos in range(len(remaining) + 1):  # n possible slots
-            candidate = remaining[:insert_pos] + [value] + remaining[insert_pos:]
-            if is_sorted(candidate):                # O(n) check
-                return True
-
-    return False
+        # No single relocation produced a sorted array
+        return False
 ```
 
 ### Worked Trace
@@ -246,33 +256,40 @@ This avoids ever materializing candidate arrays — it's pure index arithmetic.
 ### Python Code
 
 ```python
-def can_sort_with_one_move_better(arr):
-    n = len(arr)
-    if n <= 2:
-        return True  # 0 or 1 elements always sorted; 2 elements need at most a swap-equivalent single move... 
-                      # (see Edge Cases for the precise 2-element reasoning)
+class Solution:
+    def canSortWithOneMoveBetter(self, arr):
+        # Store length of array
+        n = len(arr)
 
-    violations = [i for i in range(n - 1) if arr[i] > arr[i + 1]]
+        # Arrays of 0, 1, or 2 elements are always fixable within one move
+        if n <= 2:
+            # Return True for this trivial case
+            return True
 
-    if not violations:
-        return True  # already sorted
+        # Collect every index i where arr[i] > arr[i+1] (a violation)
+        violations = [i for i in range(n - 1) if arr[i] > arr[i + 1]]
 
-    if len(violations) > 1:
-        # More than one distinct trouble spot generally can't be fixed by one move,
-        # UNLESS all violations collapse to the same relocatable element
-        # (handled precisely in the Optimal Approach). Conservative better-approach
-        # check: only proceed if exactly one violation.
-        return False
+        # If there are no violations, the array is already sorted
+        if not violations:
+            # Return True since zero moves are needed
+            return True
 
-    i = violations[0]  # the single violation: arr[i] > arr[i+1]
+        # More than one distinct violation generally can't be fixed by one move
+        if len(violations) > 1:
+            # Return False for the conservative better-approach check
+            return False
 
-    # Option A: remove arr[i] (the "too big, too early" element)
-    left_ok = (i == 0) or (arr[i - 1] <= arr[i + 1])
+        # Extract the single violation index: arr[i] > arr[i+1]
+        i = violations[0]
 
-    # Option B: remove arr[i+1] (the "too small, too late" element)
-    right_ok = (i + 2 >= n) or (arr[i] <= arr[i + 2])
+        # Option A: remove arr[i], valid if no left neighbor or left neighbor fits
+        left_ok = (i == 0) or (arr[i - 1] <= arr[i + 1])
 
-    return left_ok or right_ok
+        # Option B: remove arr[i+1], valid if no right-right neighbor or it fits
+        right_ok = (i + 2 >= n) or (arr[i] <= arr[i + 2])
+
+        # Answer is Yes if either relocation option works
+        return left_ok or right_ok
 ```
 
 ### Worked Trace
@@ -341,38 +358,58 @@ The **optimal, fully-correct single pass** therefore does this in one linear sca
 while maintaining O(1) state:
 
 ```python
-def can_sort_with_one_move_optimal(arr):
-    n = len(arr)
-    if n <= 2:
-        return True
+class Solution:
+    def canSortWithOneMoveOptimal(self, arr):
+        # Store length of array
+        n = len(arr)
 
-    violation_count = 0
-    violation_index = -1
+        # Arrays of 0, 1, or 2 elements are always fixable within one move
+        if n <= 2:
+            # Return True for this trivial case
+            return True
 
-    for i in range(n - 1):
-        if arr[i] > arr[i + 1]:
-            violation_count += 1
-            if violation_count == 1:
-                violation_index = i
-            elif violation_count > 2:
+        # Track how many violations have been seen so far
+        violation_count = 0
+        # Track the index of the first violation seen
+        violation_index = -1
+
+        # Single linear scan over adjacent pairs
+        for i in range(n - 1):
+            # Check if this pair is a violation
+            if arr[i] > arr[i + 1]:
+                # Increment the violation counter
+                violation_count += 1
+                # Record index if this is the first violation
+                if violation_count == 1:
+                    # Store the first violation's index
+                    violation_index = i
                 # More than 2 violations can never be fixed by one move
-                return False
-            else:
-                # Second violation: only tolerable if it is immediately
-                # adjacent to the first (same misplaced element causing both)
-                if i != violation_index + 1:
+                elif violation_count > 2:
+                    # Return False immediately
                     return False
+                else:
+                    # Second violation: only tolerable if immediately adjacent
+                    # to the first (same misplaced element causing both)
+                    if i != violation_index + 1:
+                        # Not adjacent, so one move cannot fix it
+                        return False
 
-    if violation_count == 0:
-        return True  # already sorted
+        # If no violations were found, the array is already sorted
+        if violation_count == 0:
+            # Return True since zero moves are needed
+            return True
 
-    i = violation_index
+        # Use the recorded violation index for boundary checks
+        i = violation_index
 
-    # Boundary-safe checks for both relocation directions
-    left_ok = (i == 0) or (arr[i - 1] <= arr[i + 1])
-    right_ok = (i + 2 >= n) or (arr[i] <= arr[i + 2])
+        # Option A: remove arr[i], valid if no left neighbor or left neighbor fits
+        left_ok = (i == 0) or (arr[i - 1] <= arr[i + 1])
 
-    return left_ok or right_ok
+        # Option B: remove arr[i+1], valid if no right-right neighbor or it fits
+        right_ok = (i + 2 >= n) or (arr[i] <= arr[i + 2])
+
+        # Answer is Yes if either relocation option works
+        return left_ok or right_ok
 ```
 
 Note: for the true two-adjacent-violation case (e.g. one very large element sitting

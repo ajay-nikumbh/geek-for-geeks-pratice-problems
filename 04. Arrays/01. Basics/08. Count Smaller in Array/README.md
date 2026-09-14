@@ -114,21 +114,35 @@ For each element `arr[i]`, scan the **entire array** and count how many elements
 ### Python Code
 
 ```python
-def count_smaller_brute(arr):
-    n = len(arr)
-    result = [0] * n
-    for i in range(n):
-        count = 0
-        for j in range(n):
-            if arr[j] < arr[i]:
-                count += 1
-        result[i] = count
-    return result
+class Solution:
+    def countSmallerBrute(self, arr):
+        # Store length of the array
+        n = len(arr)
+        # Initialize result array with zeros
+        result = [0] * n
+        # Outer loop: pick each element as the reference value
+        for i in range(n):
+            # Reset count of smaller elements for this reference value
+            count = 0
+            # Inner loop: scan the entire array
+            for j in range(n):
+                # Check if this element is strictly smaller than arr[i]
+                if arr[j] < arr[i]:
+                    # Increment the smaller-elements count
+                    count += 1
+            # Store the final count for index i
+            result[i] = count
+        # Return the fully populated result array
+        return result
 
 
 if __name__ == "__main__":
-    print(count_smaller_brute([7, 0, 1, 3]))   # [3, 0, 1, 2]
-    print(count_smaller_brute([6, 5, 4, 8]))   # [2, 1, 0, 3]
+    # Create an instance of Solution
+    sol = Solution()
+    # Run and print the first example
+    print(sol.countSmallerBrute([7, 0, 1, 3]))   # [3, 0, 1, 2]
+    # Run and print the second example
+    print(sol.countSmallerBrute([6, 5, 4, 8]))   # [2, 1, 0, 3]
 ```
 
 ### Worked Trace
@@ -174,18 +188,30 @@ Precompute a **sorted copy** of the array once — `O(n log n)`. Then, for each 
 ```python
 from bisect import bisect_left
 
-def count_smaller_better(arr):
-    sorted_arr = sorted(arr)          # O(n log n)
-    result = []
-    for val in arr:                   # O(n) elements
-        idx = bisect_left(sorted_arr, val)   # O(log n) each
-        result.append(idx)
-    return result
+
+class Solution:
+    def countSmallerBetter(self, arr):
+        # Build a sorted copy of the array once - O(n log n)
+        sorted_arr = sorted(arr)
+        # Initialize result list to collect counts
+        result = []
+        # Loop through each original element in input order
+        for val in arr:
+            # Binary search leftmost position of val in sorted_arr - O(log n)
+            idx = bisect_left(sorted_arr, val)
+            # That index equals the count of strictly smaller elements
+            result.append(idx)
+        # Return the final result list
+        return result
 
 
 if __name__ == "__main__":
-    print(count_smaller_better([7, 0, 1, 3]))   # [3, 0, 1, 2]
-    print(count_smaller_better([5, 3, 5, 1]))   # [2, 1, 2, 0]
+    # Create an instance of Solution
+    sol = Solution()
+    # Run and print the first example
+    print(sol.countSmallerBetter([7, 0, 1, 3]))   # [3, 0, 1, 2]
+    # Run and print the second example
+    print(sol.countSmallerBetter([5, 3, 5, 1]))   # [2, 1, 2, 0]
 ```
 
 ### Worked Trace
@@ -248,36 +274,57 @@ For arrays that include negative numbers, shift every value by an `offset = -min
 ### Python Code
 
 ```python
-def count_smaller_counting_sort(arr):
-    if not arr:
-        return []
+class Solution:
+    def countSmallerCountingSort(self, arr):
+        # Handle empty array edge case
+        if not arr:
+            # Return empty result for empty input
+            return []
 
-    min_val = min(arr)
-    max_val = max(arr)
-    offset = -min_val                      # shift so smallest value maps to index 0
-    range_size = max_val - min_val + 1     # must be small/bounded for this to help
+        # Find the minimum value in the array
+        min_val = min(arr)
+        # Find the maximum value in the array
+        max_val = max(arr)
+        # Compute offset so the smallest value maps to index 0
+        offset = -min_val
+        # Compute size of the value range (must be small/bounded to help)
+        range_size = max_val - min_val + 1
 
-    freq = [0] * range_size
-    for val in arr:
-        freq[val + offset] += 1
+        # Initialize frequency array with zeros
+        freq = [0] * range_size
+        # Loop through array to populate frequency counts
+        for val in arr:
+            # Increment frequency at the shifted index for this value
+            freq[val + offset] += 1
 
-    # prefix[i] = count of elements <= (i - offset) in original values
-    prefix = [0] * range_size
-    prefix[0] = freq[0]
-    for i in range(1, range_size):
-        prefix[i] = prefix[i - 1] + freq[i]
+        # Initialize prefix (cumulative count) array with zeros
+        prefix = [0] * range_size
+        # Base case: prefix at index 0 equals freq at index 0
+        prefix[0] = freq[0]
+        # Loop to build cumulative counts from index 1 onward
+        for i in range(1, range_size):
+            # prefix[i] = count of elements <= (i - offset)
+            prefix[i] = prefix[i - 1] + freq[i]
 
-    result = []
-    for val in arr:
-        idx = val + offset
-        # elements strictly smaller than val = elements with value <= (val - 1)
-        result.append(prefix[idx - 1] if idx > 0 else 0)
-    return result
+        # Initialize result list to collect final counts
+        result = []
+        # Loop through original array in input order
+        for val in arr:
+            # Compute shifted index for current value
+            idx = val + offset
+            # Elements strictly smaller than val = elements with value <= (val - 1)
+            result.append(prefix[idx - 1] if idx > 0 else 0)
+        # Return the final result list
+        return result
 
 
 if __name__ == "__main__":
-    print(count_smaller_counting_sort([7, 0, 1, 3]))   # [3, 0, 1, 2]
-    print(count_smaller_counting_sort([5, 3, 5, 1]))   # [2, 1, 2, 0]
+    # Create an instance of Solution
+    sol = Solution()
+    # Run and print the first example
+    print(sol.countSmallerCountingSort([7, 0, 1, 3]))   # [3, 0, 1, 2]
+    # Run and print the second example
+    print(sol.countSmallerCountingSort([5, 3, 5, 1]))   # [2, 1, 2, 0]
 ```
 
 ### Worked Trace

@@ -134,17 +134,28 @@ For each element, convert the integer to a string and compare it with its revers
 ### Code
 
 ```python
-def is_array_all_palindromes_brute(arr):
-    for num in arr:
-        s = str(num)
-        if s != s[::-1]:
-            return False
-    return True
+class Solution:
+    def isArrayAllPalindromesBrute(self, arr):
+        # Loop through every number in the array
+        for num in arr:
+            # Convert the number to its string representation
+            s = str(num)
+            # Compare the string with its reverse
+            if s != s[::-1]:
+                # Mismatch found, so not all elements are palindromes
+                return False
+        # All elements passed the palindrome check
+        return True
+
 
 # Driver
 if __name__ == "__main__":
-    print(is_array_all_palindromes_brute([555, 585, 2, 92222, 3223]))  # False
-    print(is_array_all_palindromes_brute([11, 121, 1, 4554]))          # True
+    # Create an instance of Solution
+    sol = Solution()
+    # Test with an array containing a non-palindromic number
+    print(sol.isArrayAllPalindromesBrute([555, 585, 2, 92222, 3223]))  # False
+    # Test with an array where all numbers are palindromes
+    print(sol.isArrayAllPalindromesBrute([11, 121, 1, 4554]))          # True
 ```
 
 ### Worked Trace
@@ -176,37 +187,61 @@ Avoid string conversion entirely. Extract the digits of each number mathematical
 ### Code
 
 ```python
-def is_palindrome_number_digit_array(num):
-    if num < 0:
-        return False  # sign breaks symmetry under this problem's convention
+class Solution:
+    def isPalindromeNumberDigitArray(self, num):
+        # Negative numbers are treated as not palindromic
+        if num < 0:
+            return False  # sign breaks symmetry under this problem's convention
 
-    digits = []
-    temp = num
-    if temp == 0:
-        digits = [0]
-    while temp > 0:
-        digits.append(temp % 10)
-        temp //= 10
+        # Initialize an empty list to hold digits
+        digits = []
+        # Copy num into a temp variable to preserve the original
+        temp = num
+        # Special-case zero since the extraction loop below won't run for it
+        if temp == 0:
+            # Seed digits with a single zero
+            digits = [0]
+        # Extract digits while temp still has value
+        while temp > 0:
+            # Append the last digit of temp to digits
+            digits.append(temp % 10)
+            # Remove the last digit from temp
+            temp //= 10
 
-    left, right = 0, len(digits) - 1
-    while left < right:
-        if digits[left] != digits[right]:
-            return False
-        left += 1
-        right -= 1
-    return True
+        # Initialize left pointer at the start of the digit list
+        left, right = 0, len(digits) - 1
+        # Move pointers toward each other until they meet
+        while left < right:
+            # Compare digits at both ends
+            if digits[left] != digits[right]:
+                # Mismatch found, not a palindrome
+                return False
+            # Move left pointer inward
+            left += 1
+            # Move right pointer inward
+            right -= 1
+        # All digit pairs matched, so it's a palindrome
+        return True
 
+    def isArrayAllPalindromesBetter(self, arr):
+        # Loop through every number in the array
+        for num in arr:
+            # Check if the current number is a palindrome
+            if not self.isPalindromeNumberDigitArray(num):
+                # Found a non-palindrome, stop early
+                return False
+        # All elements are palindromic numbers
+        return True
 
-def is_array_all_palindromes_better(arr):
-    for num in arr:
-        if not is_palindrome_number_digit_array(num):
-            return False
-    return True
 
 # Driver
 if __name__ == "__main__":
-    print(is_array_all_palindromes_better([555, 585, 2, 92222, 3223]))  # False
-    print(is_array_all_palindromes_better([11, 121, 1, 4554]))          # True
+    # Create an instance of Solution
+    sol = Solution()
+    # Test with an array containing a non-palindromic number
+    print(sol.isArrayAllPalindromesBetter([555, 585, 2, 92222, 3223]))  # False
+    # Test with an array where all numbers are palindromes
+    print(sol.isArrayAllPalindromesBetter([11, 121, 1, 4554]))          # True
 ```
 
 ### Worked Trace
@@ -252,33 +287,51 @@ This uses only a handful of scalar variables (`num`, `original`, `reversed_num`,
 ### Code
 
 ```python
-def is_palindrome_number_optimal(num):
-    if num < 0:
-        return False  # sign breaks symmetry under this problem's convention
+class Solution:
+    def isPalindromeNumberOptimal(self, num):
+        # Negative numbers are treated as not palindromic
+        if num < 0:
+            return False  # sign breaks symmetry under this problem's convention
 
-    original = num
-    reversed_num = 0
-    temp = num
+        # Keep the original number for the final comparison
+        original = num
+        # Accumulator for the reversed number, starts at 0
+        reversed_num = 0
+        # Copy num into temp so original stays untouched
+        temp = num
 
-    while temp > 0:
-        digit = temp % 10
-        # Overflow guard (relevant in fixed-width languages; shown here for completeness)
-        reversed_num = reversed_num * 10 + digit
-        temp //= 10
+        # Reverse the digits of temp into reversed_num
+        while temp > 0:
+            # Extract the last digit of temp
+            digit = temp % 10
+            # Overflow guard (relevant in fixed-width languages; shown here for completeness)
+            # Append the extracted digit to reversed_num
+            reversed_num = reversed_num * 10 + digit
+            # Remove the last digit from temp
+            temp //= 10
 
-    return reversed_num == original
+        # A number is a palindrome if it equals its own reversal
+        return reversed_num == original
 
+    def isArrayAllPalindromesOptimal(self, arr):
+        # Loop through every number in the array
+        for num in arr:
+            # Check if the current number is a palindrome
+            if not self.isPalindromeNumberOptimal(num):
+                # early exit: stop scanning the array immediately
+                return False
+        # All elements are palindromic numbers
+        return True
 
-def is_array_all_palindromes_optimal(arr):
-    for num in arr:
-        if not is_palindrome_number_optimal(num):
-            return False   # early exit: stop scanning the array immediately
-    return True
 
 # Driver
 if __name__ == "__main__":
-    print(is_array_all_palindromes_optimal([555, 585, 2, 92222, 3223]))  # False
-    print(is_array_all_palindromes_optimal([11, 121, 1, 4554]))          # True
+    # Create an instance of Solution
+    sol = Solution()
+    # Test with an array containing a non-palindromic number
+    print(sol.isArrayAllPalindromesOptimal([555, 585, 2, 92222, 3223]))  # False
+    # Test with an array where all numbers are palindromes
+    print(sol.isArrayAllPalindromesOptimal([11, 121, 1, 4554]))          # True
 ```
 
 ### Step-by-Step Trace

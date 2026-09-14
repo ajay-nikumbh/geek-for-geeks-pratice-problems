@@ -51,8 +51,10 @@ So for `-3`:
 
 This means a naive **odd check** written as:
 
-```cpp
-if (arr[i] % 2 == 1)   // WRONG for negative odd numbers in C++/Java/JS
+```python
+# WRONG for negative odd numbers in truncating-division languages (illustrative, not Python-safe reasoning)
+if arr[i] % 2 == 1:
+    ...
 ```
 
 will **fail to detect `-3` as odd**, because `-3 % 2` evaluates to `-1`, not `1`. The condition `== 1` is false, so `-3` silently gets skipped or miscounted.
@@ -111,20 +113,31 @@ Use two **separate loops** over the array — one loop dedicated to counting eve
 ### Code
 
 ```python
-def count_odd_even_brute(arr):
-    n = len(arr)
+class Solution:
+    def countOddEvenBrute(self, arr):
+        # Store length of array
+        n = len(arr)
 
-    even_count = 0
-    for i in range(n):
-        if arr[i] % 2 == 0:
-            even_count += 1
+        # Initialize even counter to zero
+        even_count = 0
+        # Loop over all indices for the first pass (evens)
+        for i in range(n):
+            # Check if current element is even
+            if arr[i] % 2 == 0:
+                # Increment even counter
+                even_count += 1
 
-    odd_count = 0
-    for i in range(n):
-        if arr[i] % 2 != 0:
-            odd_count += 1
+        # Initialize odd counter to zero
+        odd_count = 0
+        # Loop over all indices again for the second pass (odds)
+        for i in range(n):
+            # Check if current element is odd
+            if arr[i] % 2 != 0:
+                # Increment odd counter
+                odd_count += 1
 
-    return even_count, odd_count
+        # Return both counts as a tuple
+        return even_count, odd_count
 ```
 
 ### Worked Trace
@@ -171,17 +184,25 @@ Merge the two loops into **one single pass**. For each element, check its parity
 ### Code
 
 ```python
-def count_odd_even_better(arr):
-    even_count = 0
-    odd_count = 0
+class Solution:
+    def countOddEvenBetter(self, arr):
+        # Initialize even counter to zero
+        even_count = 0
+        # Initialize odd counter to zero
+        odd_count = 0
 
-    for x in arr:
-        if x % 2 == 0:
-            even_count += 1
-        else:
-            odd_count += 1
+        # Loop through array once, visiting every element
+        for x in arr:
+            # Check if current element is even
+            if x % 2 == 0:
+                # Increment even counter
+                even_count += 1
+            else:
+                # Otherwise it must be odd, increment odd counter
+                odd_count += 1
 
-    return even_count, odd_count
+        # Return both counts as a tuple
+        return even_count, odd_count
 ```
 
 Note the use of `else` rather than a second `if x % 2 != 0` check — since every integer is exactly one of odd or even, we don't need to re-evaluate the modulo; if it wasn't even, it must be odd. This also sidesteps the `% 2 == 1` pitfall automatically, since we never explicitly test for `== 1`.
@@ -232,29 +253,25 @@ Two's complement negation is computed as `~x + 1` (invert all bits, add 1). Flip
 ### Code
 
 ```python
-def count_odd_even_optimal(arr):
-    even_count = 0
-    odd_count = 0
+class Solution:
+    def countOddEvenOptimal(self, arr):
+        # Initialize even counter to zero
+        even_count = 0
+        # Initialize odd counter to zero
+        odd_count = 0
 
-    for x in arr:
-        if x & 1:          # 1 => odd, 0 => even, correct for all signs
-            odd_count += 1
-        else:
-            even_count += 1
+        # Loop through array once, visiting every element
+        for x in arr:
+            # Check least-significant bit: 1 => odd, 0 => even, correct for all signs
+            if x & 1:
+                # Increment odd counter
+                odd_count += 1
+            else:
+                # Increment even counter
+                even_count += 1
 
-    return even_count, odd_count
-```
-
-```cpp
-// C++
-pair<int,int> countOddEven(vector<int>& arr) {
-    int evenCount = 0, oddCount = 0;
-    for (int x : arr) {
-        if (x & 1) oddCount++;
-        else evenCount++;
-    }
-    return {evenCount, oddCount};
-}
+        # Return both counts as a tuple
+        return even_count, odd_count
 ```
 
 ### Worked Trace

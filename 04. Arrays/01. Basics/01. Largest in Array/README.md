@@ -102,20 +102,33 @@ For every element, check whether it is greater than or equal to every other elem
 ### Code (Python)
 
 ```python
-def largest_brute_force(arr):
-    n = len(arr)
-    if n == 0:
-        return None  # defensive guard, though GfG guarantees n >= 1
+class Solution:
+    def largestElement(self, arr):
+        # Get the number of elements in the array
+        n = len(arr)
+        # Defensive guard for empty array, though GfG guarantees n >= 1
+        if n == 0:
+            # Return None since there is no largest element
+            return None
 
-    for i in range(n):
-        is_largest = True
-        for j in range(n):
-            if arr[j] > arr[i]:
-                is_largest = False
-                break
-        if is_largest:
-            return arr[i]
-    return None
+        # Loop over every element as a candidate for the largest
+        for i in range(n):
+            # Assume current candidate is the largest until proven otherwise
+            is_largest = True
+            # Compare candidate against every other element
+            for j in range(n):
+                # If some element is bigger than the candidate
+                if arr[j] > arr[i]:
+                    # Candidate is not the largest
+                    is_largest = False
+                    # Stop checking further since candidate already lost
+                    break
+            # If candidate survived all comparisons
+            if is_largest:
+                # Return this candidate as the largest element
+                return arr[i]
+        # Fallback return, should not be reached given constraints
+        return None
 ```
 
 ### Trace Example
@@ -148,11 +161,16 @@ Sort the array in ascending order. The largest element is now trivially the last
 ### Code (Python)
 
 ```python
-def largest_sorting(arr):
-    if not arr:
-        return None
-    sorted_arr = sorted(arr)   # O(n log n), returns a new sorted list
-    return sorted_arr[-1]
+class Solution:
+    def largestElement(self, arr):
+        # Handle empty array defensively
+        if not arr:
+            # Return None since there is no largest element
+            return None
+        # Sort the array in ascending order, O(n log n), returns a new list
+        sorted_arr = sorted(arr)
+        # The largest element is now the last element of the sorted array
+        return sorted_arr[-1]
 ```
 
 ### Trace Example
@@ -183,23 +201,33 @@ You don't need the whole array sorted or need to re-verify each candidate — yo
 ### Code (Python)
 
 ```python
-def largest_optimal(arr):
-    if not arr:
-        return None  # GfG guarantees n >= 1, but guard for general use
+class Solution:
+    def largestElement(self, arr):
+        # GfG guarantees n >= 1, but guard for general use
+        if not arr:
+            # Return None since there is no largest element
+            return None
 
-    max_so_far = arr[0]        # safe init: handles negatives correctly
-    for i in range(1, len(arr)):
-        if arr[i] > max_so_far:
-            max_so_far = arr[i]
+        # Safe init: start max_so_far at the first element, handles negatives correctly
+        max_so_far = arr[0]
+        # Loop through the remaining elements starting from index 1
+        for i in range(1, len(arr)):
+            # If current element is bigger than max_so_far
+            if arr[i] > max_so_far:
+                # Update max_so_far since current element is bigger
+                max_so_far = arr[i]
 
-    return max_so_far
+        # Return the largest element found
+        return max_so_far
 ```
 
 Equivalent one-liner using Python's built-in (also `O(n)` internally):
 
 ```python
-def largest_optimal_builtin(arr):
-    return max(arr)
+class Solution:
+    def largestElement(self, arr):
+        # Use Python's built-in max() to find the largest element directly
+        return max(arr)
 ```
 
 ### Working Example Trace

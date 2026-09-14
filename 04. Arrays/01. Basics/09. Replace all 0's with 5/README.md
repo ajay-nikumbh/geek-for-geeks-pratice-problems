@@ -103,10 +103,16 @@ This is the most direct translation of "replace digit 0 with digit 5" into code,
 ### Python Code
 
 ```python
-def replace_zeros_brute(n: int) -> int:
-    s = str(n)                 # O(d) - build string from number
-    s = s.replace('0', '5')    # O(d) - scan + build new string
-    return int(s)              # O(d) - parse string back to int
+class Solution:
+    def replaceZerosBrute(self, n: int) -> int:
+        # Convert integer n to its string representation
+        s = str(n)
+
+        # Replace every '0' character with '5' in the string
+        s = s.replace('0', '5')
+
+        # Convert the resulting string back to an integer and return it
+        return int(s)
 ```
 
 ### Worked Trace (N = 1004)
@@ -142,15 +148,26 @@ This section's real teaching point is a classic interview trap: **naive string c
 ### Code — Inefficient Version (concatenation in a loop, O(d²))
 
 ```python
-def replace_zeros_naive_concat(n: int) -> int:
-    s = str(n)
-    result = ""                     # start with empty string
-    for ch in s:                    # O(d) iterations
-        if ch == '0':
-            result += '5'           # each += copies the ENTIRE string so far: O(d) worst case
-        else:
-            result += ch            # same cost
-    return int(result)
+class Solution:
+    def replaceZerosNaiveConcat(self, n: int) -> int:
+        # Convert integer n to its string representation
+        s = str(n)
+
+        # Start with an empty result string
+        result = ""
+
+        # Loop through every character in the string
+        for ch in s:
+            # Check if the current character is '0'
+            if ch == '0':
+                # Append '5' by concatenation (this copies the entire string so far)
+                result += '5'
+            else:
+                # Append the original character unchanged (same copy cost)
+                result += ch
+
+        # Convert the assembled string back to an integer and return it
+        return int(result)
 ```
 
 **Why this is O(d²):** on iteration `i`, `result` already has length `i`, and `result += ch` must allocate a new string of length `i+1` and copy all `i` existing characters into it (because strings are immutable in Python, Java, C#, etc.). Summing `1 + 2 + 3 + ... + d = O(d²)` total character copies.
@@ -158,13 +175,24 @@ def replace_zeros_naive_concat(n: int) -> int:
 ### Code — Efficient Version (list + single join, O(d))
 
 ```python
-def replace_zeros_better(n: int) -> int:
-    s = str(n)
-    chars = []                      # mutable buffer (dynamic array)
-    for ch in s:                    # O(d) iterations
-        chars.append('5' if ch == '0' else ch)   # O(1) amortized append
-    result = ''.join(chars)         # O(d) - single materialization
-    return int(result)
+class Solution:
+    def replaceZerosBetter(self, n: int) -> int:
+        # Convert integer n to its string representation
+        s = str(n)
+
+        # Initialize a mutable buffer (list) to collect characters
+        chars = []
+
+        # Loop through every character in the string
+        for ch in s:
+            # Append '5' if the character is '0', otherwise append it unchanged
+            chars.append('5' if ch == '0' else ch)
+
+        # Join all characters into the final string in a single pass
+        result = ''.join(chars)
+
+        # Convert the joined string back to an integer and return it
+        return int(result)
 ```
 
 **Why this is O(d):** `list.append` is O(1) amortized (dynamic array doubling), so the loop costs O(d) total. `''.join(chars)` builds the final string exactly once, in one O(d) pass, instead of rebuilding it after every character.
@@ -205,23 +233,43 @@ Below is Method B, which needs only one pass plus a final combine, and is the mo
 ### Python Code
 
 ```python
-def replace_zeros_optimal(n: int) -> int:
-    if n == 0:
-        return 5                     # edge case: single digit 0
+class Solution:
+    def replaceZerosOptimal(self, n: int) -> int:
+        # Handle the edge case where n is a single digit 0
+        if n == 0:
+            # Directly return 5 since the while loop below would never execute
+            return 5
 
-    place = 1                        # 10^0, 10^1, 10^2, ... for the digit currently extracted
-    result = 0
-    temp = n
+        # Initialize place value (10^0, 10^1, ...) for the digit currently extracted
+        place = 1
 
-    while temp > 0:
-        digit = temp % 10            # extract least-significant digit
-        if digit == 0:
-            digit = 5                # replace 0 -> 5
-        result += digit * place      # place it at the correct position in the result
-        place *= 10
-        temp //= 10                  # drop the extracted digit
+        # Initialize the accumulator for the rebuilt result
+        result = 0
 
-    return result
+        # Copy n into temp so we can destroy it during extraction
+        temp = n
+
+        # Loop until all digits have been extracted from temp
+        while temp > 0:
+            # Extract the least-significant digit of temp
+            digit = temp % 10
+
+            # Check if the extracted digit is zero
+            if digit == 0:
+                # Replace the zero digit with five
+                digit = 5
+
+            # Place the digit at its correct position in the result
+            result += digit * place
+
+            # Move the place value up by one power of ten for the next digit
+            place *= 10
+
+            # Drop the least-significant digit from temp
+            temp //= 10
+
+        # Return the fully rebuilt number
+        return result
 ```
 
 ### Step-by-Step Trace (N = 1004)

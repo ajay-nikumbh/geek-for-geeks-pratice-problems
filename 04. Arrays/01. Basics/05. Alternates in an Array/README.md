@@ -88,18 +88,29 @@ This is "brute force" in the sense that we touch every index and perform a condi
 ### Python Code
 
 ```python
-def print_alternates_brute(arr):
-    n = len(arr)
-    result = []
-    for i in range(n):          # visits ALL n indices
-        if i % 2 == 0:          # modulo check on every single index
-            result.append(arr[i])
-    return result
+class Solution:
+    def printAlternatesBrute(self, arr):
+        # Store length of the array
+        n = len(arr)
+        # Initialize empty result list to collect alternate elements
+        result = []
+        # Loop through every single index from 0 to n-1
+        for i in range(n):
+            # Check if current index is even using modulo
+            if i % 2 == 0:
+                # Append element at this even index to result
+                result.append(arr[i])
+        # Return the collected alternate elements
+        return result
 
 
 if __name__ == "__main__":
+    # Create an instance of Solution class
+    sol = Solution()
+    # Define the input array
     arr = [5, 1, 8, 2, 9, 3, 7]
-    print(print_alternates_brute(arr))   # [5, 8, 9, 7]
+    # Call the brute force method and print the result
+    print(sol.printAlternatesBrute(arr))   # [5, 8, 9, 7]
 ```
 
 ### Worked Trace
@@ -134,17 +145,27 @@ Since we always want indices `0, 2, 4, ...`, there's no need to visit the odd in
 ### Python Code
 
 ```python
-def print_alternates_better(arr):
-    n = len(arr)
-    result = []
-    for i in range(0, n, 2):    # jump directly: 0, 2, 4, ...
-        result.append(arr[i])
-    return result
+class Solution:
+    def printAlternatesBetter(self, arr):
+        # Store length of the array
+        n = len(arr)
+        # Initialize empty result list to collect alternate elements
+        result = []
+        # Loop directly over even indices, stepping by 2 each time
+        for i in range(0, n, 2):
+            # Append element at this index to result
+            result.append(arr[i])
+        # Return the collected alternate elements
+        return result
 
 
 if __name__ == "__main__":
+    # Create an instance of Solution class
+    sol = Solution()
+    # Define the input array
     arr = [5, 1, 8, 2, 9, 3, 7]
-    print(print_alternates_better(arr))   # [5, 8, 9, 7]
+    # Call the better method and print the result
+    print(sol.printAlternatesBetter(arr))   # [5, 8, 9, 7]
 ```
 
 ### Worked Trace
@@ -182,18 +203,26 @@ The "optimal" step here isn't a different algorithm — it's choosing the most *
 ### Python Code
 
 ```python
-def print_alternates_optimal(arr):
-    return arr[::2]     # start=0 (default), stop=n (default), step=2
+class Solution:
+    def printAlternatesOptimal(self, arr):
+        # Slice the array with default start=0, default stop=n, step=2
+        return arr[::2]
 
 
 if __name__ == "__main__":
+    # Create an instance of Solution class
+    sol = Solution()
+    # Define the input array
     arr = [5, 1, 8, 2, 9, 3, 7]
-    print(print_alternates_optimal(arr))   # [5, 8, 9, 7]
+    # Call the optimal method and print the result
+    print(sol.printAlternatesOptimal(arr))   # [5, 8, 9, 7]
 
-    # Edge cases
-    print(print_alternates_optimal([]))          # []
-    print(print_alternates_optimal([42]))         # [42]
-    print(print_alternates_optimal([1, 2]))       # [1]
+    # Edge case: empty array should return empty list
+    print(sol.printAlternatesOptimal([]))          # []
+    # Edge case: single element array should return that element
+    print(sol.printAlternatesOptimal([42]))         # [42]
+    # Edge case: two element array should return only first element
+    print(sol.printAlternatesOptimal([1, 2]))       # [1]
 ```
 
 ### How Slicing Works Internally
