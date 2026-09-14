@@ -2,7 +2,10 @@
 
 - **Topic:** Hashing
 - **Difficulty:** Easy
-- **Submissions:** 2499
+- **Submissions:** 2,499
+- **Accuracy:** 39.25%
+- **Companies:** —
+- **Related Tags:** Hash
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sum-indexes5459/1
 
 ## Approach

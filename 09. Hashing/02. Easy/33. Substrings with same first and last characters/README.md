@@ -2,7 +2,10 @@
 
 - **Topic:** Hashing
 - **Difficulty:** Easy
-- **Submissions:** 31584
+- **Submissions:** 31,584
+- **Accuracy:** 50.0%
+- **Companies:** Amazon
+- **Related Tags:** Hash, Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/substrings-with-similar-first-and-last-characters3644/1
 
 ## Approach

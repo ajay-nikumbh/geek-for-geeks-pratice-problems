@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 16357
+- **Submissions:** 16,357
+- **Accuracy:** 43.23%
+- **Companies:** Amazon, Hike
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/reverse-alternate-levels-of-a-perfect-binary-tree/1
 
 ## Approach

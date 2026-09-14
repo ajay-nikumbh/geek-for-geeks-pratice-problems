@@ -1,8 +1,11 @@
 # Disarium Number
 
 - **Topic:** Mathematics
-- **Difficulty:** Basic
-- **Submissions:** 8895
+- **Difficulty:** Basics
+- **Submissions:** 8,895
+- **Accuracy:** 61.94%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/disarium-number1045/1
 
 ## Approach

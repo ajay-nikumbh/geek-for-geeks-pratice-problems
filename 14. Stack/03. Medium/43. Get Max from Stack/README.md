@@ -2,7 +2,10 @@
 
 - **Topic:** Stack
 - **Difficulty:** Medium
-- **Submissions:** 5609
+- **Submissions:** 5,609
+- **Accuracy:** 42.64%
+- **Companies:** —
+- **Related Tags:** Stack
 - **Problem Link:** https://www.geeksforgeeks.org/problems/get-max-from-stack/1
 
 ## Approach

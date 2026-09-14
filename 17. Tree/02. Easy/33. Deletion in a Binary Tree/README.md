@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Easy
-- **Submissions:** 22874
+- **Submissions:** 22,874
+- **Accuracy:** 22.28%
+- **Companies:** —
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/deletion-in-a-binary-tree/1
 
 ## Approach

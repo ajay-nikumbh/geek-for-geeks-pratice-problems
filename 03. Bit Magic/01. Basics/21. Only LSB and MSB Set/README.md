@@ -1,8 +1,11 @@
 # Only LSB and MSB Set
 
 - **Topic:** Bit Magic
-- **Difficulty:** Basic
-- **Submissions:** 4143
+- **Difficulty:** Basics
+- **Submissions:** 4,143
+- **Accuracy:** 43.81%
+- **Companies:** —
+- **Related Tags:** Bit Magic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/first-and-last-bit2357/1
 
 ## Approach

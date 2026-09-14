@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 9627
+- **Submissions:** 9,627
+- **Accuracy:** 35.1%
+- **Companies:** —
+- **Related Tags:** Set, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/maximum-product-of-increasing-subsequence-of-size-32027/1
 
 ## Approach

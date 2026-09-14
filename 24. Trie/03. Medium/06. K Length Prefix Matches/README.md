@@ -2,7 +2,10 @@
 
 - **Topic:** Trie
 - **Difficulty:** Medium
-- **Submissions:** 41093
+- **Submissions:** 41,093
+- **Accuracy:** 53.02%
+- **Companies:** Samsung
+- **Related Tags:** Strings, Trie, Advanced Data Structure
 - **Problem Link:** https://www.geeksforgeeks.org/problems/prefix-match-with-other-strings/1
 
 ## Approach

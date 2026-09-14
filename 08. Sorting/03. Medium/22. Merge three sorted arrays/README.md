@@ -2,7 +2,10 @@
 
 - **Topic:** Sorting
 - **Difficulty:** Medium
-- **Submissions:** 25871
+- **Submissions:** 25,871
+- **Accuracy:** 65.94%
+- **Companies:** —
+- **Related Tags:** Arrays, Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/merge-three-sorted-arrays-1587115620/1
 
 ## Approach

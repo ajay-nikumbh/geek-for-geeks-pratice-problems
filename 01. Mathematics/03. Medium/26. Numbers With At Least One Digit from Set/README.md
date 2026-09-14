@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Medium
-- **Submissions:** 15908
+- **Submissions:** 15,908
+- **Accuracy:** 57.08%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-numbers-containing-specific-digits/1
 
 ## Approach

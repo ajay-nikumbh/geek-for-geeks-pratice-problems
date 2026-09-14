@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 30203
+- **Submissions:** 30,203
+- **Accuracy:** 54.83%
+- **Companies:** —
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/largest-subtree-sum-in-a-tree/1
 
 ## Approach

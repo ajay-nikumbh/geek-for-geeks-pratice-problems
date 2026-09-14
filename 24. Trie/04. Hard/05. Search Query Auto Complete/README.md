@@ -2,7 +2,10 @@
 
 - **Topic:** Trie
 - **Difficulty:** Hard
-- **Submissions:** 12733
+- **Submissions:** 12,733
+- **Accuracy:** 43.24%
+- **Companies:** Cisco, Facebook, Amazon, Microsoft, Google, Uber
+- **Related Tags:** Strings, Trie, Advanced Data Structure
 - **Problem Link:** https://www.geeksforgeeks.org/problems/search-query-auto-complete/1
 
 ## Approach

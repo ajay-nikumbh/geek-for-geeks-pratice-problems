@@ -2,7 +2,10 @@
 
 - **Topic:** Hashing
 - **Difficulty:** Medium
-- **Submissions:** 6093
+- **Submissions:** 6,093
+- **Accuracy:** 29.14%
+- **Companies:** —
+- **Related Tags:** Arrays, Hash
 - **Problem Link:** https://www.geeksforgeeks.org/problems/smallest-subarray-with-all-occurrences-of-a-most-frequent-element2258/1
 
 ## Approach

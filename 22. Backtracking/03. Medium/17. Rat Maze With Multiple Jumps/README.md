@@ -2,7 +2,10 @@
 
 - **Topic:** Backtracking
 - **Difficulty:** Medium
-- **Submissions:** 41227
+- **Submissions:** 41,227
+- **Accuracy:** 38.46%
+- **Companies:** —
+- **Related Tags:** Matrix, Backtracking
 - **Problem Link:** https://www.geeksforgeeks.org/problems/rat-maze-with-multiple-jumps3852/1
 
 ## Approach

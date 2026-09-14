@@ -2,7 +2,10 @@
 
 - **Topic:** Greedy
 - **Difficulty:** Easy
-- **Submissions:** 62501
+- **Submissions:** 62,501
+- **Accuracy:** 44.25%
+- **Companies:** Microsoft
+- **Related Tags:** Strings, Greedy, constructive algo
 - **Problem Link:** https://www.geeksforgeeks.org/problems/largest-number-with-given-sum-1587115620/1
 
 ## Approach

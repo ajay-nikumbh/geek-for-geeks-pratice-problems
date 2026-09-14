@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 15520
+- **Submissions:** 15,520
+- **Accuracy:** 52.11%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming, Mathematics, permutation
 - **Problem Link:** https://www.geeksforgeeks.org/problems/filling-bucket0529/1
 
 ## Approach

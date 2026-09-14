@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Hard
-- **Submissions:** 76081
+- **Submissions:** 76,081
+- **Accuracy:** 50.13%
+- **Companies:** Amazon, Facebook
+- **Related Tags:** Arrays, Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/buy-and-sell-a-share-at-most-twice/1
 
 ## Approach

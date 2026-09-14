@@ -1,8 +1,11 @@
 # All 0s Together in a Binary String
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 6313
+- **Difficulty:** Basics
+- **Submissions:** 6,313
+- **Accuracy:** 32.57%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/the-muskteers3519/1
 
 ## Approach

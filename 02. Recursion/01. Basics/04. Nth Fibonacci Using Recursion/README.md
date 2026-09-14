@@ -1,8 +1,11 @@
 # Nth Fibonacci Using Recursion
 
 - **Topic:** Recursion
-- **Difficulty:** Basic
-- **Submissions:** 80036
+- **Difficulty:** Basics
+- **Submissions:** 80,036
+- **Accuracy:** 78.37%
+- **Companies:** —
+- **Related Tags:** Recursion
 - **Problem Link:** https://www.geeksforgeeks.org/problems/fibonacci-using-recursion/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Medium
-- **Submissions:** 53962
+- **Submissions:** 53,962
+- **Accuracy:** 53.15%
+- **Companies:** —
+- **Related Tags:** Strings, Map
 - **Problem Link:** https://www.geeksforgeeks.org/problems/check-if-a-string-is-repetition-of-its-substring-of-k-length3302/1
 
 ## Approach

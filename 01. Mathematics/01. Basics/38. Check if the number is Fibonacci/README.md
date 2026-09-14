@@ -1,8 +1,11 @@
 # Check if the number is Fibonacci
 
 - **Topic:** Mathematics
-- **Difficulty:** Basic
-- **Submissions:** 22951
+- **Difficulty:** Basics
+- **Submissions:** 22,951
+- **Accuracy:** 51.19%
+- **Companies:** MAQ Software, Adobe
+- **Related Tags:** Mathematics, Fibonacci
 - **Problem Link:** https://www.geeksforgeeks.org/problems/check-if-the-number-is-fibonacci4654/1
 
 ## Approach

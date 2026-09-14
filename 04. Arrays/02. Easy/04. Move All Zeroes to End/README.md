@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 483998
+- **Submissions:** 483,998
+- **Accuracy:** 45.51%
+- **Companies:** Paytm, Amazon, Microsoft, Samsung, SAP Labs, Linkedin, Bloomberg, NPCI
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/move-all-zeroes-to-end-of-array0751/1
 
 ## Approach

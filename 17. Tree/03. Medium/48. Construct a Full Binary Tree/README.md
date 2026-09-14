@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 30806
+- **Submissions:** 30,806
+- **Accuracy:** 74.63%
+- **Companies:** —
+- **Related Tags:** Traversal, Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/construct-a-full-binary-tree--170648/1
 
 ## Approach

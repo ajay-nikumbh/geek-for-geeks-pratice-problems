@@ -2,7 +2,10 @@
 
 - **Topic:** Backtracking
 - **Difficulty:** Hard
-- **Submissions:** 33126
+- **Submissions:** 33,126
+- **Accuracy:** 51.93%
+- **Companies:** JUSPAY
+- **Related Tags:** Graph, Backtracking
 - **Problem Link:** https://www.geeksforgeeks.org/problems/largest-sum-cycle--170645/1
 
 ## Approach

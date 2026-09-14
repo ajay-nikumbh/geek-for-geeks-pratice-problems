@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 1047
+- **Submissions:** 1,047
+- **Accuracy:** 40.86%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/make-a-string-from-another-string--141625/1
 
 ## Approach

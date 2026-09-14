@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 3139
+- **Submissions:** 3,139
+- **Accuracy:** 37.55%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/rearrange-string-as-alternate-x-and-y-occurences3835/1
 
 ## Approach

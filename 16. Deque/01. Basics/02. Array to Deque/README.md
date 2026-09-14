@@ -1,8 +1,11 @@
 # Array to Deque
 
 - **Topic:** Deque
-- **Difficulty:** Basic
-- **Submissions:** 21101
+- **Difficulty:** Basics
+- **Submissions:** 21,101
+- **Accuracy:** 80.33%
+- **Companies:** —
+- **Related Tags:** Java, STL, Java-Collections, Deque
 - **Problem Link:** https://www.geeksforgeeks.org/problems/insertion-in-deque/1
 
 ## Approach

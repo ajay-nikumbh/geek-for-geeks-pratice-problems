@@ -2,7 +2,10 @@
 
 - **Topic:** Queue
 - **Difficulty:** Medium
-- **Submissions:** 3590
+- **Submissions:** 3,590
+- **Accuracy:** 68.72%
+- **Companies:** —
+- **Related Tags:** Queue, STL
 - **Problem Link:** https://www.geeksforgeeks.org/problems/minimum-distance-on-a-grid/1
 
 ## Approach

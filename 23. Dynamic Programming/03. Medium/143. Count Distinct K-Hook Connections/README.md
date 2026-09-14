@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 9544
+- **Submissions:** 9,544
+- **Accuracy:** 47.48%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming, Combinatorial
 - **Problem Link:** https://www.geeksforgeeks.org/problems/little-murph-and-knots0402/1
 
 ## Approach

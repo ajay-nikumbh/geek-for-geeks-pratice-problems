@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 15982
+- **Submissions:** 15,982
+- **Accuracy:** 50.86%
+- **Companies:** —
+- **Related Tags:** DFS, Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/party-in-town3951/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Easy
-- **Submissions:** 146678
+- **Submissions:** 146,678
+- **Accuracy:** 48.96%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/find-all-factorial-numbers-less-than-or-equal-to-n3548/1
 
 ## Approach

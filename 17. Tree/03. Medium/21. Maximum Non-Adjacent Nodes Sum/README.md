@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 104770
+- **Submissions:** 104,770
+- **Accuracy:** 55.35%
+- **Companies:** Flipkart, Amazon, Google, NPCI
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/maximum-sum-of-non-adjacent-nodes/1
 
 ## Approach

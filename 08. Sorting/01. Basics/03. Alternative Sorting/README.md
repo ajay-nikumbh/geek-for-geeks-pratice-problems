@@ -1,8 +1,11 @@
 # Alternative Sorting
 
 - **Topic:** Sorting
-- **Difficulty:** Basic
-- **Submissions:** 49989
+- **Difficulty:** Basics
+- **Submissions:** 49,989
+- **Accuracy:** 50.2%
+- **Companies:** Zoho
+- **Related Tags:** Arrays, Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/alternative-sorting1311/1
 
 ## Approach

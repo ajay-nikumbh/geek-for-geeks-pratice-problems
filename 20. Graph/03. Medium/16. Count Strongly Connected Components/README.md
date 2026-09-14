@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Medium
-- **Submissions:** 140450
+- **Submissions:** 140,450
+- **Accuracy:** 50.61%
+- **Companies:** —
+- **Related Tags:** Graph
 - **Problem Link:** https://www.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1
 
 ## Approach

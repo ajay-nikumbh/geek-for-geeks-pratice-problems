@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Easy
-- **Submissions:** 2685
+- **Submissions:** 2,685
+- **Accuracy:** 49.86%
+- **Companies:** Samsung
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/faulty-keyboard2842/1
 
 ## Approach

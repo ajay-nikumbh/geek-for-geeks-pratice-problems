@@ -1,8 +1,11 @@
 # Missing Characters in Panagram
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 18550
+- **Difficulty:** Basics
+- **Submissions:** 18,550
+- **Accuracy:** 41.51%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/missing-characters-in-panagram/1
 
 ## Approach

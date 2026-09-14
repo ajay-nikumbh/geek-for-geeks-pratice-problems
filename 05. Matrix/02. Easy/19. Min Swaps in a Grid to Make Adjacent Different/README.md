@@ -2,7 +2,10 @@
 
 - **Topic:** Matrix
 - **Difficulty:** Easy
-- **Submissions:** 13494
+- **Submissions:** 13,494
+- **Accuracy:** 48.42%
+- **Companies:** —
+- **Related Tags:** Matrix
 - **Problem Link:** https://www.geeksforgeeks.org/problems/distributing-question-papers2513/1
 
 ## Approach

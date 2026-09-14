@@ -2,7 +2,10 @@
 
 - **Topic:** Greedy
 - **Difficulty:** Medium
-- **Submissions:** 26596
+- **Submissions:** 26,596
+- **Accuracy:** 50.86%
+- **Companies:** VMWare
+- **Related Tags:** Greedy, Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/second-smallest-number--170647/1
 
 ## Approach

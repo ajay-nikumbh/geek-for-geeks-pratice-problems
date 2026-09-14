@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 25247
+- **Submissions:** 25,247
+- **Accuracy:** 54.5%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/another-coin-change-problem--170647/1
 
 ## Approach

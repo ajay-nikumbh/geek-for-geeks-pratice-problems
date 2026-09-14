@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 8351
+- **Submissions:** 8,351
+- **Accuracy:** 60.83%
+- **Companies:** —
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/construct-tree-from-inorder-and-levelorder/1
 
 ## Approach

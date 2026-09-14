@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 2764
+- **Submissions:** 2,764
+- **Accuracy:** 46.6%
+- **Companies:** Accolite
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/max-sum-submatrix2725/1
 
 ## Approach

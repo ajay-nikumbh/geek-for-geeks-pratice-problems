@@ -1,8 +1,11 @@
 # Palindrome Array
 
 - **Topic:** Arrays
-- **Difficulty:** Basic
-- **Submissions:** 92391
+- **Difficulty:** Basics
+- **Submissions:** 92,391
+- **Accuracy:** 43.54%
+- **Companies:** —
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/perfect-arrays4645/1
 
 ## Approach

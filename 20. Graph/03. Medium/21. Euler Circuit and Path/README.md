@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Medium
-- **Submissions:** 109739
+- **Submissions:** 109,739
+- **Accuracy:** 50.89%
+- **Companies:** —
+- **Related Tags:** Graph
 - **Problem Link:** https://www.geeksforgeeks.org/problems/euler-circuit-and-path/1
 
 ## Approach

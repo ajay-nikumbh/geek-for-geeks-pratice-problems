@@ -2,7 +2,10 @@
 
 - **Topic:** Sorting
 - **Difficulty:** Medium
-- **Submissions:** 17214
+- **Submissions:** 17,214
+- **Accuracy:** 45.05%
+- **Companies:** —
+- **Related Tags:** Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/help-a-thief5938/1
 
 ## Approach

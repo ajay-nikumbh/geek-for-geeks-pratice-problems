@@ -1,8 +1,11 @@
 # Remove Consonants
 
 - **Topic:** Searching
-- **Difficulty:** Basic
-- **Submissions:** 37513
+- **Difficulty:** Basics
+- **Submissions:** 37,513
+- **Accuracy:** 22.63%
+- **Companies:** —
+- **Related Tags:** Searching, Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/c-program-to-remove-consonants-from-a-string1945/1
 
 ## Approach

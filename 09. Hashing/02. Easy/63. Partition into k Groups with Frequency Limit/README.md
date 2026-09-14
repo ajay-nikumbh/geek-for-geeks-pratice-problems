@@ -2,7 +2,10 @@
 
 - **Topic:** Hashing
 - **Difficulty:** Easy
-- **Submissions:** 2940
+- **Submissions:** 2,940
+- **Accuracy:** 41.63%
+- **Companies:** —
+- **Related Tags:** Hash
 - **Problem Link:** https://www.geeksforgeeks.org/problems/ana-and-sweets5331/1
 
 ## Approach

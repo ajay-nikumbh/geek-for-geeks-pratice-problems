@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 58089
+- **Submissions:** 58,089
+- **Accuracy:** 48.74%
+- **Companies:** Zoho
+- **Related Tags:** Arrays, Division, Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/total-count2415/1
 
 ## Approach

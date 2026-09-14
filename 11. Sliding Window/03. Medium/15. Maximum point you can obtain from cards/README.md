@@ -2,7 +2,10 @@
 
 - **Topic:** Sliding Window
 - **Difficulty:** Medium
-- **Submissions:** 14327
+- **Submissions:** 14,330
+- **Accuracy:** 51.04%
+- **Companies:** —
+- **Related Tags:** sliding-window, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/maximum-point-you-can-obtain-from-cards/1
 
 ## Approach

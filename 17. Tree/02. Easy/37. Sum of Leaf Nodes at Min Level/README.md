@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Easy
-- **Submissions:** 18095
+- **Submissions:** 18,095
+- **Accuracy:** 46.19%
+- **Companies:** Microsoft
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sum-of-leaf-nodes-at-min-level/1
 
 ## Approach

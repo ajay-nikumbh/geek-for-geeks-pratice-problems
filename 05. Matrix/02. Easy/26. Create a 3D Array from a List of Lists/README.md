@@ -2,7 +2,10 @@
 
 - **Topic:** Matrix
 - **Difficulty:** Easy
-- **Submissions:** 1698
+- **Submissions:** 1,698
+- **Accuracy:** 21.66%
+- **Companies:** —
+- **Related Tags:** Arrays, Matrix
 - **Problem Link:** https://www.geeksforgeeks.org/problems/create-a-3d-array-from-a-list-of-lists/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Sorting
 - **Difficulty:** Medium
-- **Submissions:** 22616
+- **Submissions:** 22,616
+- **Accuracy:** 57.01%
+- **Companies:** —
+- **Related Tags:** Arrays, Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/even-swap/1
 
 ## Approach

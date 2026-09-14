@@ -1,8 +1,11 @@
 # Reverse Vowels
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 55754
+- **Difficulty:** Basics
+- **Submissions:** 55,754
+- **Accuracy:** 40.16%
+- **Companies:** Zoho, Flipkart
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/reversing-the-vowels5304/1
 
 ## Approach

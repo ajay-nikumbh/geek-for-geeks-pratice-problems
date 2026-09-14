@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Medium
-- **Submissions:** 76825
+- **Submissions:** 76,825
+- **Accuracy:** 50.83%
+- **Companies:** Flipkart, Amazon, Microsoft, Samsung, Ola Cabs, Google, Salesforce
+- **Related Tags:** DFS, Graph, BFS
 - **Problem Link:** https://www.geeksforgeeks.org/problems/length-of-largest-region-of-1s-1587115620/1
 
 ## Approach

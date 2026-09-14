@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Easy
-- **Submissions:** 3628
+- **Submissions:** 3,628
+- **Accuracy:** 31.08%
+- **Companies:** —
+- **Related Tags:** Arrays, Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/maximum-value5946/1
 
 ## Approach

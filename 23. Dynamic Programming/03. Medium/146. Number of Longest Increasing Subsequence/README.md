@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 8309
+- **Submissions:** 8,309
+- **Accuracy:** 58.61%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/number-of-longest-increasing-subsequence/1
 
 ## Approach

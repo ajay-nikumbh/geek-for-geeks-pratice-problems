@@ -1,8 +1,11 @@
 # Two Max Adjacent in an Array
 
 - **Topic:** Arrays
-- **Difficulty:** Basic
-- **Submissions:** 11408
+- **Difficulty:** Basics
+- **Submissions:** 11,408
+- **Accuracy:** 49.66%
+- **Companies:** —
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/why-is-melody-so-chocolaty0446/1
 
 ## Approach

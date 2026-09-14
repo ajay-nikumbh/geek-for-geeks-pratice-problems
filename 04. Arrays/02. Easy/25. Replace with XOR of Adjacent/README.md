@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 73574
+- **Submissions:** 73,574
+- **Accuracy:** 75.8%
+- **Companies:** —
+- **Related Tags:** Arrays, Bit Magic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/replace-with-xor-of-adjacent/1
 
 ## Approach

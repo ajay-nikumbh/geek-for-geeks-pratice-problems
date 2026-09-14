@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 2879
+- **Submissions:** 2,879
+- **Accuracy:** 12.02%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/non-decreasing-subsequence5737/1
 
 ## Approach

@@ -1,8 +1,11 @@
 # Maximum Number in a String
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 75174
+- **Difficulty:** Basics
+- **Submissions:** 75,174
+- **Accuracy:** 38.41%
+- **Companies:** Amazon, TCS
+- **Related Tags:** Strings, Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/extract-maximum2943/1
 
 ## Approach

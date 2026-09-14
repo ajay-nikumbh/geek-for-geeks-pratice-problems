@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Hard
-- **Submissions:** 77722
+- **Submissions:** 77,722
+- **Accuracy:** 30.64%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming, Backtracking
 - **Problem Link:** https://www.geeksforgeeks.org/problems/print-all-lcs-sequences3413/1
 
 ## Approach

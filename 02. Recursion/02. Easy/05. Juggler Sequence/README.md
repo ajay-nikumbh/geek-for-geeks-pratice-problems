@@ -2,7 +2,10 @@
 
 - **Topic:** Recursion
 - **Difficulty:** Easy
-- **Submissions:** 50605
+- **Submissions:** 50,605
+- **Accuracy:** 52.04%
+- **Companies:** —
+- **Related Tags:** Mathematics, Recursion, series
 - **Problem Link:** https://www.geeksforgeeks.org/problems/juggler-sequence3930/1
 
 ## Approach

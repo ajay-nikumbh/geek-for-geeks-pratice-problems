@@ -2,7 +2,10 @@
 
 - **Topic:** Sorting
 - **Difficulty:** Medium
-- **Submissions:** 2337
+- **Submissions:** 2,337
+- **Accuracy:** 66.26%
+- **Companies:** Microsoft
+- **Related Tags:** Sorting, Merge Sort
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sort-last-m-elements--155156/1
 
 ## Approach

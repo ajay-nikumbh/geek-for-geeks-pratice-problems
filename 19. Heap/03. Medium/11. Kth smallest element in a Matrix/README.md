@@ -2,7 +2,10 @@
 
 - **Topic:** Heap
 - **Difficulty:** Medium
-- **Submissions:** 86374
+- **Submissions:** 86,374
+- **Accuracy:** 61.42%
+- **Companies:** Accolite, Amazon, Samsung
+- **Related Tags:** Matrix, Heap, Binary Search
 - **Problem Link:** https://www.geeksforgeeks.org/problems/kth-element-in-matrix/1
 
 ## Approach

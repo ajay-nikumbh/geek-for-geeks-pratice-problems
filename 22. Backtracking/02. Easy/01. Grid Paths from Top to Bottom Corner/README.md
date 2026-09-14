@@ -2,7 +2,10 @@
 
 - **Topic:** Backtracking
 - **Difficulty:** Easy
-- **Submissions:** 13752
+- **Submissions:** 13,752
+- **Accuracy:** 64.94%
+- **Companies:** —
+- **Related Tags:** Matrix, Backtracking
 - **Problem Link:** https://www.geeksforgeeks.org/problems/find-all-possible-paths-from-top-to-bottom/1
 
 ## Approach

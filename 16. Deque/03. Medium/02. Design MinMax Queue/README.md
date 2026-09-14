@@ -2,7 +2,10 @@
 
 - **Topic:** Deque
 - **Difficulty:** Medium
-- **Submissions:** 11923
+- **Submissions:** 11,923
+- **Accuracy:** 66.09%
+- **Companies:** NPCI
+- **Related Tags:** Deque, implementation, Queue
 - **Problem Link:** https://www.geeksforgeeks.org/problems/design-minmax-queue/1
 
 ## Approach

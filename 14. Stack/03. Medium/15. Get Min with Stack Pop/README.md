@@ -2,7 +2,10 @@
 
 - **Topic:** Stack
 - **Difficulty:** Medium
-- **Submissions:** 79179
+- **Submissions:** 79,179
+- **Accuracy:** 49.04%
+- **Companies:** —
+- **Related Tags:** Stack, STL
 - **Problem Link:** https://www.geeksforgeeks.org/problems/get-min-at-pop/1
 
 ## Approach

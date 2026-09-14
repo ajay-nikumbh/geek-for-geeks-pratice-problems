@@ -2,7 +2,10 @@
 
 - **Topic:** Linked List
 - **Difficulty:** Easy
-- **Submissions:** 1297
+- **Submissions:** 1,297
+- **Accuracy:** 93.9%
+- **Companies:** —
+- **Related Tags:** Linked List
 - **Problem Link:** https://www.geeksforgeeks.org/problems/size-of-doubly-linked-list--114556/1
 
 ## Approach

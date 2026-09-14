@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Hard
-- **Submissions:** 139158
+- **Submissions:** 139,158
+- **Accuracy:** 38.36%
+- **Companies:** —
+- **Related Tags:** Binary Search, Mathematics, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/minimize-max-distance-to-gas-station/1
 
 ## Approach

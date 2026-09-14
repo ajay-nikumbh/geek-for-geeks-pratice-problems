@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 12592
+- **Submissions:** 12,592
+- **Accuracy:** 54.99%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-binary-strings1944/1
 
 ## Approach

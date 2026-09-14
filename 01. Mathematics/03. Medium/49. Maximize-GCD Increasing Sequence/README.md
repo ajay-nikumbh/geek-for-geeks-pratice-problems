@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Medium
-- **Submissions:** 2170
+- **Submissions:** 2,170
+- **Accuracy:** 32.54%
+- **Companies:** —
+- **Related Tags:** Mathematics, Numbers
 - **Problem Link:** https://www.geeksforgeeks.org/problems/series-with-largest-gcd-and-sum-equals-to-n1151/1
 
 ## Approach

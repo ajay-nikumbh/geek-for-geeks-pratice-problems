@@ -1,8 +1,11 @@
 # Adam Number
 
 - **Topic:** Mathematics
-- **Difficulty:** Basic
-- **Submissions:** 5171
+- **Difficulty:** Basics
+- **Submissions:** 5,171
+- **Accuracy:** 40.68%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/adam-number2650/1
 
 ## Approach

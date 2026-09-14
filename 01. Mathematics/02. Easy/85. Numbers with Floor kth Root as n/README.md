@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Easy
-- **Submissions:** 3407
+- **Submissions:** 3,407
+- **Accuracy:** 47.77%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/akaashs-assignment0828/1
 
 ## Approach

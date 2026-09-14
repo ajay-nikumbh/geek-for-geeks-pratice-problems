@@ -2,7 +2,10 @@
 
 - **Topic:** Stack
 - **Difficulty:** Medium
-- **Submissions:** 17644
+- **Submissions:** 17,644
+- **Accuracy:** 50.11%
+- **Companies:** NPCI
+- **Related Tags:** Stack, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/maximum-people-visible-in-a-line/1
 
 ## Approach

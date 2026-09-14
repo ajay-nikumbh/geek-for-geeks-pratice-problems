@@ -2,7 +2,10 @@
 
 - **Topic:** Bit Magic
 - **Difficulty:** Medium
-- **Submissions:** 266445
+- **Submissions:** 266,445
+- **Accuracy:** 35.77%
+- **Companies:** —
+- **Related Tags:** Bit Magic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-total-set-bits-1587115620/1
 
 ## Approach

@@ -1,8 +1,11 @@
 # 2's Complement
 
 - **Topic:** Bit Magic
-- **Difficulty:** Basic
-- **Submissions:** 6406
+- **Difficulty:** Basics
+- **Submissions:** 6,406
+- **Accuracy:** 32.3%
+- **Companies:** Adobe
+- **Related Tags:** Bit Magic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/2s-complement3124/1
 
 ## Approach

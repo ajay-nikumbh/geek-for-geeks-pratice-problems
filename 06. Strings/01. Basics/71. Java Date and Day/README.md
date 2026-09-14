@@ -1,8 +1,11 @@
 # Java Date and Day
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 3802
+- **Difficulty:** Basics
+- **Submissions:** 3,802
+- **Accuracy:** 67.64%
+- **Companies:** —
+- **Related Tags:** Strings, Java, Date-Time
 - **Problem Link:** https://www.geeksforgeeks.org/problems/java-date-and-day5024/1
 
 ## Approach

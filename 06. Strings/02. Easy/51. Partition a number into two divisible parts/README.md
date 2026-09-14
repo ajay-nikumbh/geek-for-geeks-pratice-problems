@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 10585
+- **Submissions:** 10,585
+- **Accuracy:** 49.89%
+- **Companies:** Oracle
+- **Related Tags:** Strings, Mathematics, Modular Arithmetic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/partition-a-number-into-two-divisible-parts3605/1
 
 ## Approach

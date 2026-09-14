@@ -2,7 +2,10 @@
 
 - **Topic:** Sorting
 - **Difficulty:** Easy
-- **Submissions:** 4073
+- **Submissions:** 4,073
+- **Accuracy:** 55.02%
+- **Companies:** —
+- **Related Tags:** Arrays, Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/maximum-number-of-partitions-that-can-be-sorted-individually-to-make-sorted2926/1
 
 ## Approach

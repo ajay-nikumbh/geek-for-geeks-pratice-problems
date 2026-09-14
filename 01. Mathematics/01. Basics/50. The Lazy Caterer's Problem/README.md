@@ -1,8 +1,11 @@
 # The Lazy Caterer's Problem
 
 - **Topic:** Mathematics
-- **Difficulty:** Basic
-- **Submissions:** 14106
+- **Difficulty:** Basics
+- **Submissions:** 14,106
+- **Accuracy:** 60.14%
+- **Companies:** Visa
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/the-lazy-caterers-problem2527/1
 
 ## Approach

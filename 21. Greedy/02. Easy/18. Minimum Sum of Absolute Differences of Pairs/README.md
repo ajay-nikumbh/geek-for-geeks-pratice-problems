@@ -2,7 +2,10 @@
 
 - **Topic:** Greedy
 - **Difficulty:** Easy
-- **Submissions:** 44994
+- **Submissions:** 44,994
+- **Accuracy:** 77.05%
+- **Companies:** —
+- **Related Tags:** Arrays, Greedy, Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/minimum-sum-of-absolute-differences-of-pairs/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 15035
+- **Submissions:** 15,035
+- **Accuracy:** 45.48%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming, Greedy, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/max-sum-without-adjacents-2/1
 
 ## Approach

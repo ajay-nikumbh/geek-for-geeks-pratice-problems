@@ -2,7 +2,10 @@
 
 - **Topic:** Greedy
 - **Difficulty:** Medium
-- **Submissions:** 19597
+- **Submissions:** 19,597
+- **Accuracy:** 50.0%
+- **Companies:** Microsoft
+- **Related Tags:** Greedy
 - **Problem Link:** https://www.geeksforgeeks.org/problems/binary-searchable-elements/1
 
 ## Approach

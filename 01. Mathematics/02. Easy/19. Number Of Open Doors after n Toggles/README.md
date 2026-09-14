@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Easy
-- **Submissions:** 62853
+- **Submissions:** 62,853
+- **Accuracy:** 36.15%
+- **Companies:** TCS
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/number-of-open-doors1552/1
 
 ## Approach

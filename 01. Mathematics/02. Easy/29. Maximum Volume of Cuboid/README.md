@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Easy
-- **Submissions:** 26284
+- **Submissions:** 26,284
+- **Accuracy:** 53.16%
+- **Companies:** —
+- **Related Tags:** Mathematics, Geometric
 - **Problem Link:** https://www.geeksforgeeks.org/problems/magical-box5306/1
 
 ## Approach

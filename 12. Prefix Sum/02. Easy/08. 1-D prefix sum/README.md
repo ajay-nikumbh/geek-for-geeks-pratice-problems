@@ -2,7 +2,10 @@
 
 - **Topic:** Prefix Sum
 - **Difficulty:** Easy
-- **Submissions:** 9787
+- **Submissions:** 9,787
+- **Accuracy:** 75.24%
+- **Companies:** —
+- **Related Tags:** Prefix Sum, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/1-d-prefix-sum/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Searching
 - **Difficulty:** Easy
-- **Submissions:** 176014
+- **Submissions:** 176,014
+- **Accuracy:** 41.77%
+- **Companies:** Zoho, Amazon
+- **Related Tags:** Arrays, Searching
 - **Problem Link:** https://www.geeksforgeeks.org/problems/index-of-an-extra-element/1
 
 ## Approach

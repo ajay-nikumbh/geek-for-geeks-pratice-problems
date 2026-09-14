@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 9854
+- **Submissions:** 9,854
+- **Accuracy:** 76.65%
+- **Companies:** —
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/construct-tree-from-preorder-postorder/1
 
 ## Approach

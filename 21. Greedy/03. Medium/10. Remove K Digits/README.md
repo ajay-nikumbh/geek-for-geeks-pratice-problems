@@ -2,7 +2,10 @@
 
 - **Topic:** Greedy
 - **Difficulty:** Medium
-- **Submissions:** 107588
+- **Submissions:** 107,588
+- **Accuracy:** 26.8%
+- **Companies:** Microsoft, NPCI
+- **Related Tags:** Stack, Greedy, Deque
 - **Problem Link:** https://www.geeksforgeeks.org/problems/remove-k-digits/1
 
 ## Approach

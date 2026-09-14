@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Medium
-- **Submissions:** 68691
+- **Submissions:** 68,691
+- **Accuracy:** 19.13%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/find-the-n-th-character5925/1
 
 ## Approach

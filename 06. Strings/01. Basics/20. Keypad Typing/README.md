@@ -1,8 +1,11 @@
 # Keypad Typing
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 42797
+- **Difficulty:** Basics
+- **Submissions:** 42,797
+- **Accuracy:** 61.49%
+- **Companies:** Amazon
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/keypad-typing0119/1
 
 ## Approach

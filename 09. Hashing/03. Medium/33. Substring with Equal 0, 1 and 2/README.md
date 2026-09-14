@@ -2,7 +2,10 @@
 
 - **Topic:** Hashing
 - **Difficulty:** Medium
-- **Submissions:** 15055
+- **Submissions:** 15,055
+- **Accuracy:** 49.75%
+- **Companies:** —
+- **Related Tags:** Hash, Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/equal-0-1-and-23208/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Medium
-- **Submissions:** 19901
+- **Submissions:** 19,901
+- **Accuracy:** 63.43%
+- **Companies:** Oracle
+- **Related Tags:** Mathematics, Geometric, implementation
 - **Problem Link:** https://www.geeksforgeeks.org/problems/fill-the-matrix--170647/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Backtracking
 - **Difficulty:** Hard
-- **Submissions:** 27194
+- **Submissions:** 27,194
+- **Accuracy:** 72.98%
+- **Companies:** Google
+- **Related Tags:** Strings, Graph, Backtracking
 - **Problem Link:** https://www.geeksforgeeks.org/problems/find-the-string/1
 
 ## Approach

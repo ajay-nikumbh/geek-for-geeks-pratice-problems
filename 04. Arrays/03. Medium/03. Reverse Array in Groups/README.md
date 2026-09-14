@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 386316
+- **Submissions:** 386,316
+- **Accuracy:** 37.48%
+- **Companies:** Adobe
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/reverse-array-in-groups0255/1
 
 ## Approach

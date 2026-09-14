@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 23177
+- **Submissions:** 23,177
+- **Accuracy:** 57.57%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/check-if-the-number-is-balanced3014/1
 
 ## Approach

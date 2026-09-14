@@ -2,7 +2,10 @@
 
 - **Topic:** Backtracking
 - **Difficulty:** Medium
-- **Submissions:** 12676
+- **Submissions:** 12,676
+- **Accuracy:** 78.19%
+- **Companies:** NPCI
+- **Related Tags:** Backtracking, Arrays, Recursion
 - **Problem Link:** https://www.geeksforgeeks.org/problems/generate-permutations-of-an-array/1
 
 ## Approach

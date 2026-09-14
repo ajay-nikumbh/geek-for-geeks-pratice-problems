@@ -2,7 +2,10 @@
 
 - **Topic:** Matrix
 - **Difficulty:** Easy
-- **Submissions:** 54510
+- **Submissions:** 54,510
+- **Accuracy:** 49.05%
+- **Companies:** —
+- **Related Tags:** Matrix
 - **Problem Link:** https://www.geeksforgeeks.org/problems/toeplitz-matrix/1
 
 ## Approach

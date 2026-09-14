@@ -1,8 +1,11 @@
 # The Spider Steps
 
 - **Topic:** Greedy
-- **Difficulty:** Basic
-- **Submissions:** 9870
+- **Difficulty:** Basics
+- **Submissions:** 9,870
+- **Accuracy:** 46.23%
+- **Companies:** —
+- **Related Tags:** Greedy, logical-thinking
 - **Problem Link:** https://www.geeksforgeeks.org/problems/the-spider-steps3600/1
 
 ## Approach

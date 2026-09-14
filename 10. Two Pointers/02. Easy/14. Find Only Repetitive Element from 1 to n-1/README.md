@@ -2,7 +2,10 @@
 
 - **Topic:** Two Pointers
 - **Difficulty:** Easy
-- **Submissions:** 27360
+- **Submissions:** 27,360
+- **Accuracy:** 59.22%
+- **Companies:** NPCI
+- **Related Tags:** two-pointer-algorithm, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/find-repetitive-element-from-1-to-n-1/1
 
 ## Approach

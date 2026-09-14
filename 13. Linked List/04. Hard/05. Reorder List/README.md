@@ -2,7 +2,10 @@
 
 - **Topic:** Linked List
 - **Difficulty:** Hard
-- **Submissions:** 68106
+- **Submissions:** 68,106
+- **Accuracy:** 47.9%
+- **Companies:** Amazon, Microsoft, OYO Rooms, Intuit
+- **Related Tags:** Linked List
 - **Problem Link:** https://www.geeksforgeeks.org/problems/reorder-list/1
 
 ## Approach

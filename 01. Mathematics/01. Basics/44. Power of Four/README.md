@@ -1,8 +1,11 @@
 # Power of Four
 
 - **Topic:** Mathematics
-- **Difficulty:** Basic
-- **Submissions:** 18743
+- **Difficulty:** Basics
+- **Submissions:** 18,743
+- **Accuracy:** 40.48%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/power-of-four/1
 
 ## Approach

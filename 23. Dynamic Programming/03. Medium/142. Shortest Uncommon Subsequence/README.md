@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 9694
+- **Submissions:** 9,694
+- **Accuracy:** 49.07%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/shortest-uncommon-subsequence5746/1
 
 ## Approach

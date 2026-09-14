@@ -1,8 +1,11 @@
 # Longest Substring with All 1's
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 23555
+- **Difficulty:** Basics
+- **Submissions:** 23,555
+- **Accuracy:** 41.96%
+- **Companies:** Microsoft
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/longest-substring-containing-1/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 2355
+- **Submissions:** 2,355
+- **Accuracy:** 77.09%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/remove-a-character-from-a-given-position/1
 
 ## Approach

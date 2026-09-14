@@ -2,7 +2,10 @@
 
 - **Topic:** Recursion
 - **Difficulty:** Easy
-- **Submissions:** 51016
+- **Submissions:** 51,016
+- **Accuracy:** 47.78%
+- **Companies:** —
+- **Related Tags:** Recursion
 - **Problem Link:** https://www.geeksforgeeks.org/problems/power-set-using-recursion/1
 
 ## Approach

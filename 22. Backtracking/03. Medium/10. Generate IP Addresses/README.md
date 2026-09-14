@@ -2,7 +2,10 @@
 
 - **Topic:** Backtracking
 - **Difficulty:** Medium
-- **Submissions:** 57650
+- **Submissions:** 57,650
+- **Accuracy:** 38.71%
+- **Companies:** Amazon
+- **Related Tags:** Strings, Backtracking
 - **Problem Link:** https://www.geeksforgeeks.org/problems/generate-ip-addresses/1
 
 ## Approach

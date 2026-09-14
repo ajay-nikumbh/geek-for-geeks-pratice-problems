@@ -1,8 +1,11 @@
 # Cricket Average
 
 - **Topic:** Mathematics
-- **Difficulty:** Basic
-- **Submissions:** 3126
+- **Difficulty:** Basics
+- **Submissions:** 3,126
+- **Accuracy:** 28.01%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/cricket-average2031/1
 
 ## Approach

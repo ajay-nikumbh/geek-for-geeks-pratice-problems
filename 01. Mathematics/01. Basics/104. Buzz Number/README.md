@@ -1,8 +1,11 @@
 # Buzz Number
 
 - **Topic:** Mathematics
-- **Difficulty:** Basic
-- **Submissions:** 1498
+- **Difficulty:** Basics
+- **Submissions:** 1,498
+- **Accuracy:** 65.87%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/buzz-number/1
 
 ## Approach

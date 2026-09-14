@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 12749
+- **Submissions:** 12,749
+- **Accuracy:** 50.46%
+- **Companies:** Amazon
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sum-of-lengths-of-non-overlapping-subarrays2237/1
 
 ## Approach

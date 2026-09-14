@@ -2,7 +2,10 @@
 
 - **Topic:** Segment Tree
 - **Difficulty:** Medium
-- **Submissions:** 12499
+- **Submissions:** 12,499
+- **Accuracy:** 50.13%
+- **Companies:** —
+- **Related Tags:** Arrays, Segment-Tree, Advanced Data Structure
 - **Problem Link:** https://www.geeksforgeeks.org/problems/range-min-max-queries4557/1
 
 ## Approach

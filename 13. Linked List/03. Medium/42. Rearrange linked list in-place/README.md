@@ -2,7 +2,10 @@
 
 - **Topic:** Linked List
 - **Difficulty:** Medium
-- **Submissions:** 9330
+- **Submissions:** 9,330
+- **Accuracy:** 56.31%
+- **Companies:** —
+- **Related Tags:** Linked List
 - **Problem Link:** https://www.geeksforgeeks.org/problems/rearrange-linked-list-in-place/1
 
 ## Approach

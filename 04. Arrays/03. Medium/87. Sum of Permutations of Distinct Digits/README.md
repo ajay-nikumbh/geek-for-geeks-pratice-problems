@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 7303
+- **Submissions:** 7,303
+- **Accuracy:** 31.32%
+- **Companies:** —
+- **Related Tags:** Arrays, Modular Arithmetic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sum-of-permutations/1
 
 ## Approach

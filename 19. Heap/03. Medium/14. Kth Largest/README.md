@@ -2,7 +2,10 @@
 
 - **Topic:** Heap
 - **Difficulty:** Medium
-- **Submissions:** 37556
+- **Submissions:** 37,556
+- **Accuracy:** 64.92%
+- **Companies:** —
+- **Related Tags:** Heap, STL
 - **Problem Link:** https://www.geeksforgeeks.org/problems/kth-largest-element5034/1
 
 ## Approach

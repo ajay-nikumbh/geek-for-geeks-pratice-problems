@@ -2,7 +2,10 @@
 
 - **Topic:** Greedy
 - **Difficulty:** Easy
-- **Submissions:** 87546
+- **Submissions:** 87,546
+- **Accuracy:** 24.78%
+- **Companies:** —
+- **Related Tags:** Greedy, Puzzles
 - **Problem Link:** https://www.geeksforgeeks.org/problems/check-if-it-is-possible-to-survive-on-island4922/1
 
 ## Approach

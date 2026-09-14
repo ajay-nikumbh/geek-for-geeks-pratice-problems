@@ -2,7 +2,10 @@
 
 - **Topic:** Linked List
 - **Difficulty:** Easy
-- **Submissions:** 114537
+- **Submissions:** 114,537
+- **Accuracy:** 39.61%
+- **Companies:** Amazon
+- **Related Tags:** Linked List
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-pairs-whose-sum-is-equal-to-x/1
 
 ## Approach

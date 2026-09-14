@@ -2,7 +2,10 @@
 
 - **Topic:** Sorting
 - **Difficulty:** Easy
-- **Submissions:** 452973
+- **Submissions:** 452,973
+- **Accuracy:** 39.37%
+- **Companies:** —
+- **Related Tags:** Arrays, Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/1
 
 ## Approach

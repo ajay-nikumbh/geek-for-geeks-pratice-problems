@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Easy
-- **Submissions:** 26091
+- **Submissions:** 26,091
+- **Accuracy:** 49.73%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/chicks-in-a-zoo1159/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Queue
 - **Difficulty:** Medium
-- **Submissions:** 33419
+- **Submissions:** 33,419
+- **Accuracy:** 62.41%
+- **Companies:** —
+- **Related Tags:** Stack, Queue, implementation
 - **Problem Link:** https://www.geeksforgeeks.org/problems/interleave-the-first-half-of-the-queue-with-second-half/1
 
 ## Approach

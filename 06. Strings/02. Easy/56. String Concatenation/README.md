@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 9277
+- **Submissions:** 9,277
+- **Accuracy:** 37.29%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/string-concatenation-1614157859/1
 
 ## Approach

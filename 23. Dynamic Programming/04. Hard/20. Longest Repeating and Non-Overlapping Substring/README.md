@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Hard
-- **Submissions:** 46385
+- **Submissions:** 46,385
+- **Accuracy:** 46.71%
+- **Companies:** MakeMyTrip, Walmart
+- **Related Tags:** Strings, Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/longest-repeating-and-non-overlapping-substring3421/1
 
 ## Approach

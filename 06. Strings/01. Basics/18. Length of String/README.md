@@ -1,8 +1,11 @@
 # Length of String
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 44364
+- **Difficulty:** Basics
+- **Submissions:** 44,364
+- **Accuracy:** 82.01%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/length-of-string/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Matrix
 - **Difficulty:** Easy
-- **Submissions:** 1176
+- **Submissions:** 1,176
+- **Accuracy:** 55.04%
+- **Companies:** —
+- **Related Tags:** Matrix
 - **Problem Link:** https://www.geeksforgeeks.org/problems/kronecker-product0918/1
 
 ## Approach

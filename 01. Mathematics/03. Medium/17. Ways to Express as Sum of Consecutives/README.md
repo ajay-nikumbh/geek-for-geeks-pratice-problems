@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Medium
-- **Submissions:** 34545
+- **Submissions:** 34,545
+- **Accuracy:** 24.63%
+- **Companies:** Visa, Walmart, Linkedin
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-of-sum-of-consecutives3741/1
 
 ## Approach

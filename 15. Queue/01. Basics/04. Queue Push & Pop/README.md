@@ -1,8 +1,11 @@
 # Queue Push & Pop
 
 - **Topic:** Queue
-- **Difficulty:** Basic
-- **Submissions:** 27850
+- **Difficulty:** Basics
+- **Submissions:** 27,850
+- **Accuracy:** 74.53%
+- **Companies:** —
+- **Related Tags:** Queue
 - **Problem Link:** https://www.geeksforgeeks.org/problems/queue-designer/1
 
 ## Approach

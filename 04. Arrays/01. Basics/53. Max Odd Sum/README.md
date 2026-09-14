@@ -1,8 +1,11 @@
 # Max Odd Sum
 
 - **Topic:** Arrays
-- **Difficulty:** Basic
-- **Submissions:** 7090
+- **Difficulty:** Basics
+- **Submissions:** 7,090
+- **Accuracy:** 29.28%
+- **Companies:** —
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/max-odd-sum0651/1
 
 ## Approach

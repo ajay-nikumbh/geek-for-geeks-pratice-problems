@@ -1,8 +1,11 @@
 # Check for 0 Between 1's in Binary String
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 7644
+- **Difficulty:** Basics
+- **Submissions:** 7,644
+- **Accuracy:** 36.27%
+- **Companies:** —
+- **Related Tags:** Strings, Binary Representation
 - **Problem Link:** https://www.geeksforgeeks.org/problems/check-binary-string0402/1
 
 ## Approach

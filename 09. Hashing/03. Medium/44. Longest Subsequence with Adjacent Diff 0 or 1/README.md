@@ -3,6 +3,9 @@
 - **Topic:** Hashing
 - **Difficulty:** Medium
 - **Submissions:** 944
+- **Accuracy:** 38.92%
+- **Companies:** —
+- **Related Tags:** Hash, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/longest-subsequence-with-difference/1
 
 ## Approach

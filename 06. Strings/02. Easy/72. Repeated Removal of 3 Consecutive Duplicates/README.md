@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 3969
+- **Submissions:** 3,969
+- **Accuracy:** 40.81%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/three-consecutive-duplicates2434/1
 
 ## Approach

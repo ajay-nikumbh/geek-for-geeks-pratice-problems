@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 65353
+- **Submissions:** 65,353
+- **Accuracy:** 23.98%
+- **Companies:** —
+- **Related Tags:** Tree, Recursion
 - **Problem Link:** https://www.geeksforgeeks.org/problems/duplicate-subtrees/1
 
 ## Approach

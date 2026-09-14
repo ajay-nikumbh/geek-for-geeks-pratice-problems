@@ -2,7 +2,10 @@
 
 - **Topic:** Hashing
 - **Difficulty:** Medium
-- **Submissions:** 64917
+- **Submissions:** 64,917
+- **Accuracy:** 22.61%
+- **Companies:** —
+- **Related Tags:** Set, Arrays, Hash, Map
 - **Problem Link:** https://www.geeksforgeeks.org/problems/smaller-on-left20360700/1
 
 ## Approach

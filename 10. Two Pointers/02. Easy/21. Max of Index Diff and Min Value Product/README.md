@@ -2,7 +2,10 @@
 
 - **Topic:** Two Pointers
 - **Difficulty:** Easy
-- **Submissions:** 8025
+- **Submissions:** 8,025
+- **Accuracy:** 39.08%
+- **Companies:** —
+- **Related Tags:** Arrays, two-pointer-algorithm
 - **Problem Link:** https://www.geeksforgeeks.org/problems/find-maximum-value/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 27854
+- **Submissions:** 27,854
+- **Accuracy:** 37.94%
+- **Companies:** Amazon
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/professor-and-parties2000/1
 
 ## Approach

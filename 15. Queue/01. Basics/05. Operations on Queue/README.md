@@ -1,8 +1,11 @@
 # Operations on Queue
 
 - **Topic:** Queue
-- **Difficulty:** Basic
-- **Submissions:** 2020
+- **Difficulty:** Basics
+- **Submissions:** 2,020
+- **Accuracy:** 73.58%
+- **Companies:** Amazon
+- **Related Tags:** Queue
 - **Problem Link:** https://www.geeksforgeeks.org/problems/operations-on-queue--114617/1
 
 ## Approach

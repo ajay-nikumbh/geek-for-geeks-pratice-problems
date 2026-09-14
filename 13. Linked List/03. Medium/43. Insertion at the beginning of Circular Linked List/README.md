@@ -2,7 +2,10 @@
 
 - **Topic:** Linked List
 - **Difficulty:** Medium
-- **Submissions:** 2002
+- **Submissions:** 2,002
+- **Accuracy:** 90.64%
+- **Companies:** —
+- **Related Tags:** Linked List
 - **Problem Link:** https://www.geeksforgeeks.org/problems/insertion-at-the-beginning-of-circular-linked-list/1
 
 ## Approach

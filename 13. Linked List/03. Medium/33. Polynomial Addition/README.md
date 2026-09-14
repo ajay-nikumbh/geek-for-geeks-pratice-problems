@@ -2,7 +2,10 @@
 
 - **Topic:** Linked List
 - **Difficulty:** Medium
-- **Submissions:** 27382
+- **Submissions:** 27,382
+- **Accuracy:** 55.38%
+- **Companies:** Amazon
+- **Related Tags:** Linked List, Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/polynomial-addition/1
 
 ## Approach

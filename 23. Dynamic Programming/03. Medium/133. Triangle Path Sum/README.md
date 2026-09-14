@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 13311
+- **Submissions:** 13,311
+- **Accuracy:** 54.11%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/triangle-path-sum/1
 
 ## Approach

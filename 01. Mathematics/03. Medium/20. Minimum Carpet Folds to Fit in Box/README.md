@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Medium
-- **Submissions:** 23912
+- **Submissions:** 23,912
+- **Accuracy:** 50.52%
+- **Companies:** Nutanix
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/carpet-into-box--170645/1
 
 ## Approach

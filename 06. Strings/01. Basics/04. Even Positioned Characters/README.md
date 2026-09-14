@@ -1,8 +1,11 @@
 # Even Positioned Characters
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 159270
+- **Difficulty:** Basics
+- **Submissions:** 159,270
+- **Accuracy:** 61.13%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/for-loop-2/1
 
 ## Approach

@@ -3,6 +3,9 @@
 - **Topic:** Matrix
 - **Difficulty:** Medium
 - **Submissions:** 449
+- **Accuracy:** 73.51%
+- **Companies:** —
+- **Related Tags:** Arrays, Matrix
 - **Problem Link:** https://www.geeksforgeeks.org/problems/prefix-sum-of-matrix-or-2d-array/1
 
 ## Approach

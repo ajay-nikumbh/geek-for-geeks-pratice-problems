@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 2491
+- **Submissions:** 2,491
+- **Accuracy:** 32.26%
+- **Companies:** —
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-number4832/1
 
 ## Approach

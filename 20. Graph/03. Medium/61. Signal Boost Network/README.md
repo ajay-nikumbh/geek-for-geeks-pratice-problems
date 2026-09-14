@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Medium
-- **Submissions:** 9560
+- **Submissions:** 9,560
+- **Accuracy:** 44.05%
+- **Companies:** —
+- **Related Tags:** DFS, Graph, Binary Search
 - **Problem Link:** https://www.geeksforgeeks.org/problems/fill-the-tank3026/1
 
 ## Approach

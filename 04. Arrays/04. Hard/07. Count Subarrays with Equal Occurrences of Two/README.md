@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Hard
-- **Submissions:** 22900
+- **Submissions:** 22,900
+- **Accuracy:** 57.74%
+- **Companies:** —
+- **Related Tags:** Arrays, STL
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sub-arrays-with-equal-number-of-occurences3901/1
 
 ## Approach

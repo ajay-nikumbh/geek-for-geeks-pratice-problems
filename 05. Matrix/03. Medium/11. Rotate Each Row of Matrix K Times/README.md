@@ -2,7 +2,10 @@
 
 - **Topic:** Matrix
 - **Difficulty:** Medium
-- **Submissions:** 44556
+- **Submissions:** 44,556
+- **Accuracy:** 41.89%
+- **Companies:** Amazon
+- **Related Tags:** Matrix, Modular Arithmetic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/left-rotate-matrix-k-times2351/1
 
 ## Approach

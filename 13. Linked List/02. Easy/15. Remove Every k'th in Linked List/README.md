@@ -2,7 +2,10 @@
 
 - **Topic:** Linked List
 - **Difficulty:** Easy
-- **Submissions:** 104504
+- **Submissions:** 104,504
+- **Accuracy:** 29.88%
+- **Companies:** —
+- **Related Tags:** Linked List
 - **Problem Link:** https://www.geeksforgeeks.org/problems/remove-every-kth-node/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Hashing
 - **Difficulty:** Medium
-- **Submissions:** 21784
+- **Submissions:** 21,784
+- **Accuracy:** 53.72%
+- **Companies:** Intuit
+- **Related Tags:** Hash, Matrix, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-number-of-free-cell--170646/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 21706
+- **Submissions:** 21,706
+- **Accuracy:** 46.22%
+- **Companies:** Amazon
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/mountain-subarray-problem/1
 
 ## Approach

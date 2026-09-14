@@ -2,7 +2,10 @@
 
 - **Topic:** Greedy
 - **Difficulty:** Easy
-- **Submissions:** 9059
+- **Submissions:** 9,059
+- **Accuracy:** 55.57%
+- **Companies:** —
+- **Related Tags:** Arrays, Greedy
 - **Problem Link:** https://www.geeksforgeeks.org/problems/hungry-pizza-lovers3148/1
 
 ## Approach

@@ -1,8 +1,11 @@
 # Same Frequency in Two Halves
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 9885
+- **Difficulty:** Basics
+- **Submissions:** 9,885
+- **Accuracy:** 46.87%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/riyas-test1450/1
 
 ## Approach

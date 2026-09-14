@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 13679
+- **Submissions:** 13,679
+- **Accuracy:** 51.61%
+- **Companies:** —
+- **Related Tags:** Binary Search, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-x-in-range-of-a-sorted-array/1
 
 ## Approach

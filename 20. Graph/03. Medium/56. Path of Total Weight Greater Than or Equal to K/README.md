@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Medium
-- **Submissions:** 12928
+- **Submissions:** 12,928
+- **Accuracy:** 48.03%
+- **Companies:** —
+- **Related Tags:** Graph
 - **Problem Link:** https://www.geeksforgeeks.org/problems/path-of-greater-than-equal-to-k-length1034/1
 
 ## Approach

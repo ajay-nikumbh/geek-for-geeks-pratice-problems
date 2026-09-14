@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 673191
+- **Submissions:** 673,191
+- **Accuracy:** 20.58%
+- **Companies:** Amazon, Microsoft, Tesco
+- **Related Tags:** Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1
 
 ## Approach

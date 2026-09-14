@@ -2,7 +2,10 @@
 
 - **Topic:** Two Pointers
 - **Difficulty:** Easy
-- **Submissions:** 231043
+- **Submissions:** 231,043
+- **Accuracy:** 25.67%
+- **Companies:** Amazon, Arcesium
+- **Related Tags:** two-pointer-algorithm, Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-the-triplets4615/1
 
 ## Approach

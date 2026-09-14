@@ -1,8 +1,11 @@
 # Remove Common and Concat
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 86400
+- **Difficulty:** Basics
+- **Submissions:** 86,400
+- **Accuracy:** 30.78%
+- **Companies:** Microsoft
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/remove-common-characters-and-concatenate-1587115621/1
 
 ## Approach

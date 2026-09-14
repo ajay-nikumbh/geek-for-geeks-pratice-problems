@@ -2,7 +2,10 @@
 
 - **Topic:** Sliding Window
 - **Difficulty:** Medium
-- **Submissions:** 25574
+- **Submissions:** 25,578
+- **Accuracy:** 62.09%
+- **Companies:** NPCI
+- **Related Tags:** sliding-window, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/subarrays-with-at-most-k-distinct-integers/1
 
 ## Approach

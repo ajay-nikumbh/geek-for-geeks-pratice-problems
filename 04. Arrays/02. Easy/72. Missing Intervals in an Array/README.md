@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 15418
+- **Submissions:** 15,418
+- **Accuracy:** 40.17%
+- **Companies:** Google
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/missing-ranges-of-numbers1019/1
 
 ## Approach

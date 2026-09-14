@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Medium
-- **Submissions:** 10262
+- **Submissions:** 10,262
+- **Accuracy:** 65.62%
+- **Companies:** —
+- **Related Tags:** Graph, Topological Sort, Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/max-dag-edges/1
 
 ## Approach

@@ -3,6 +3,9 @@
 - **Topic:** Tree
 - **Difficulty:** Medium
 - **Submissions:** 559
+- **Accuracy:** 41.71%
+- **Companies:** —
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/tree-transformation--170645/1
 
 ## Approach

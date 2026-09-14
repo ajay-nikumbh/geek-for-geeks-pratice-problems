@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 26461
+- **Submissions:** 26,461
+- **Accuracy:** 49.98%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/divisible-by-73224/1
 
 ## Approach

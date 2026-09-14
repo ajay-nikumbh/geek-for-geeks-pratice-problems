@@ -2,7 +2,10 @@
 
 - **Topic:** Stack
 - **Difficulty:** Medium
-- **Submissions:** 2035
+- **Submissions:** 2,035
+- **Accuracy:** 78.31%
+- **Companies:** —
+- **Related Tags:** Stack, Design-Pattern
 - **Problem Link:** https://www.geeksforgeeks.org/problems/design-browser-history/1
 
 ## Approach

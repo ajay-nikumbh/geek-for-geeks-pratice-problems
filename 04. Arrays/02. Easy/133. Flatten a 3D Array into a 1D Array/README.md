@@ -3,6 +3,9 @@
 - **Topic:** Arrays
 - **Difficulty:** Easy
 - **Submissions:** 580
+- **Accuracy:** 80.62%
+- **Companies:** —
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/flatten-a-3d-array-into-a-1d-array/1
 
 ## Approach

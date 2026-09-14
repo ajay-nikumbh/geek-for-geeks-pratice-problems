@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Hard
-- **Submissions:** 22722
+- **Submissions:** 22,722
+- **Accuracy:** 64.62%
+- **Companies:** —
+- **Related Tags:** Binary Search, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/cake-distribution-problem--170647/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Hard
-- **Submissions:** 14673
+- **Submissions:** 14,673
+- **Accuracy:** 56.27%
+- **Companies:** —
+- **Related Tags:** Graph, BFS
 - **Problem Link:** https://www.geeksforgeeks.org/problems/level-of-nodes1147/1
 
 ## Approach

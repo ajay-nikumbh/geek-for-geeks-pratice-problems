@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 8082
+- **Submissions:** 8,082
+- **Accuracy:** 60.19%
+- **Companies:** Adobe
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/replace-a-word5553/1
 
 ## Approach

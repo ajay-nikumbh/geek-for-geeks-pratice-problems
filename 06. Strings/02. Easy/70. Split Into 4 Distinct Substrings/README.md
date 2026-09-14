@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 4760
+- **Submissions:** 4,760
+- **Accuracy:** 41.5%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/split-the-string2424/1
 
 ## Approach

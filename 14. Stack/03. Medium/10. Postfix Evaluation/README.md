@@ -2,7 +2,10 @@
 
 - **Topic:** Stack
 - **Difficulty:** Medium
-- **Submissions:** 150261
+- **Submissions:** 150,261
+- **Accuracy:** 63.04%
+- **Companies:** —
+- **Related Tags:** Stack
 - **Problem Link:** https://www.geeksforgeeks.org/problems/evaluation-of-postfix-expression1735/1
 
 ## Approach

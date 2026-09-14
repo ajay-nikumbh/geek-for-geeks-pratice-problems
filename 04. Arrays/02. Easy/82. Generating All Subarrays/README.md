@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 10668
+- **Submissions:** 10,668
+- **Accuracy:** 59.13%
+- **Companies:** —
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/generating-all-subarrays/1
 
 ## Approach

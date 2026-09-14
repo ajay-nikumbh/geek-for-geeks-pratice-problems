@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 8891
+- **Submissions:** 8,891
+- **Accuracy:** 50.68%
+- **Companies:** —
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/number-of-root-to-leaf-paths/1
 
 ## Approach

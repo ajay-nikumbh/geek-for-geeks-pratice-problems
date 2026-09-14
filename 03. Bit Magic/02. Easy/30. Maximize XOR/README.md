@@ -2,7 +2,10 @@
 
 - **Topic:** Bit Magic
 - **Difficulty:** Easy
-- **Submissions:** 1762
+- **Submissions:** 1,762
+- **Accuracy:** 29.19%
+- **Companies:** —
+- **Related Tags:** Mathematics, Bit Magic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/maximize-xor0829/1
 
 ## Approach

@@ -1,8 +1,11 @@
 # Negate Bits
 
 - **Topic:** Mathematics
-- **Difficulty:** Basic
-- **Submissions:** 2153
+- **Difficulty:** Basics
+- **Submissions:** 2,153
+- **Accuracy:** 59.74%
+- **Companies:** —
+- **Related Tags:** Mathematics, CPP, Binary Representation, Operators
 - **Problem Link:** https://www.geeksforgeeks.org/problems/c-nega-bit2019/1
 
 ## Approach

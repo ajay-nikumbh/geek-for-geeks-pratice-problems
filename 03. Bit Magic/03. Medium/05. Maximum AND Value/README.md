@@ -2,7 +2,10 @@
 
 - **Topic:** Bit Magic
 - **Difficulty:** Medium
-- **Submissions:** 65457
+- **Submissions:** 65,457
+- **Accuracy:** 31.11%
+- **Companies:** Microsoft
+- **Related Tags:** Bit Magic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/maximum-and-value-1587115620/1
 
 ## Approach

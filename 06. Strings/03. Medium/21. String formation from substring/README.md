@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Medium
-- **Submissions:** 29174
+- **Submissions:** 29,174
+- **Accuracy:** 33.49%
+- **Companies:** Amazon, MakeMyTrip
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/string-formation-from-substring2734/1
 
 ## Approach

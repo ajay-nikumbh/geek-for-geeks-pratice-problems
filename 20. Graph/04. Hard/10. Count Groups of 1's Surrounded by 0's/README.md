@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Hard
-- **Submissions:** 29192
+- **Submissions:** 29,192
+- **Accuracy:** 61.43%
+- **Companies:** Google
+- **Related Tags:** DFS, Matrix, Graph, BFS, union-find
 - **Problem Link:** https://www.geeksforgeeks.org/problems/find-number-of-closed-islands/1
 
 ## Approach

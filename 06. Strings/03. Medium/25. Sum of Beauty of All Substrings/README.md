@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Medium
-- **Submissions:** 23206
+- **Submissions:** 23,206
+- **Accuracy:** 57.41%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sum-of-beauty-of-all-substrings-1662962118/1
 
 ## Approach

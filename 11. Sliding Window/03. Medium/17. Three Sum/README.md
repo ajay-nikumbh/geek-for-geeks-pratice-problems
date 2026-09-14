@@ -2,7 +2,10 @@
 
 - **Topic:** Sliding Window
 - **Difficulty:** Medium
-- **Submissions:** 10375
+- **Submissions:** 10,401
+- **Accuracy:** 50.11%
+- **Companies:** —
+- **Related Tags:** sliding-window, Sorting, two-pointer-algorithm
 - **Problem Link:** https://www.geeksforgeeks.org/problems/three-sum/1
 
 ## Approach

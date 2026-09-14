@@ -2,7 +2,10 @@
 
 - **Topic:** Greedy
 - **Difficulty:** Easy
-- **Submissions:** 146032
+- **Submissions:** 146,032
+- **Accuracy:** 20.26%
+- **Companies:** Accolite
+- **Related Tags:** Greedy, Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/largest-number-possible5028/1
 
 ## Approach

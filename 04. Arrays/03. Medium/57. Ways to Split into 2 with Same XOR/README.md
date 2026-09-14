@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 23380
+- **Submissions:** 23,380
+- **Accuracy:** 54.99%
+- **Companies:** —
+- **Related Tags:** Arrays, Bit Magic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/split-the-array0238/1
 
 ## Approach

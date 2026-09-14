@@ -1,8 +1,11 @@
 # Binary Search
 
 - **Topic:** Searching
-- **Difficulty:** Basic
-- **Submissions:** 411331
+- **Difficulty:** Basics
+- **Submissions:** 411,331
+- **Accuracy:** 48.03%
+- **Companies:** Paytm
+- **Related Tags:** Searching, Binary Search
 - **Problem Link:** https://www.geeksforgeeks.org/problems/who-will-win-1587115621/1
 
 ## Approach

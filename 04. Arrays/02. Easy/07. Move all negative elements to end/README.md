@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 260237
+- **Submissions:** 260,237
+- **Accuracy:** 56.24%
+- **Companies:** —
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/move-all-negative-elements-to-end1813/1
 
 ## Approach

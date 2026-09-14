@@ -2,7 +2,10 @@
 
 - **Topic:** Stack
 - **Difficulty:** Medium
-- **Submissions:** 62584
+- **Submissions:** 62,584
+- **Accuracy:** 50.06%
+- **Companies:** —
+- **Related Tags:** Arrays, Stack
 - **Problem Link:** https://www.geeksforgeeks.org/problems/opposite-sign-pair-reduction/1
 
 ## Approach

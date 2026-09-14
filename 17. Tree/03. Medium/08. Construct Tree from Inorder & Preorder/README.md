@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 258516
+- **Submissions:** 258,516
+- **Accuracy:** 34.59%
+- **Companies:** Accolite, Amazon, Microsoft
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/construct-tree-1/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Prefix Sum
 - **Difficulty:** Medium
-- **Submissions:** 40806
+- **Submissions:** 40,806
+- **Accuracy:** 52.63%
+- **Companies:** NPCI
+- **Related Tags:** Prefix Sum, Hash
 - **Problem Link:** https://www.geeksforgeeks.org/problems/longest-subarray-with-majority-greater-than-k/1
 
 ## Approach

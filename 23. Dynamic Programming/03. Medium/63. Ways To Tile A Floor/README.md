@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 66027
+- **Submissions:** 66,027
+- **Accuracy:** 32.31%
+- **Companies:** Amazon, NPCI
+- **Related Tags:** Fibonacci, Dynamic Programming, Recursion
 - **Problem Link:** https://www.geeksforgeeks.org/problems/ways-to-tile-a-floor5836/1
 
 ## Approach

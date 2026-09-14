@@ -2,7 +2,10 @@
 
 - **Topic:** Greedy
 - **Difficulty:** Easy
-- **Submissions:** 107352
+- **Submissions:** 107,352
+- **Accuracy:** 45.43%
+- **Companies:** —
+- **Related Tags:** Greedy, Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/shop-in-candy-store1145/1
 
 ## Approach

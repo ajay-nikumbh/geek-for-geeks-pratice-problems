@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 46785
+- **Submissions:** 46,785
+- **Accuracy:** 49.46%
+- **Companies:** Intuit, NPCI
+- **Related Tags:** Arrays, Mathematics, sieve
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-special-numbers--170647/1
 
 ## Approach

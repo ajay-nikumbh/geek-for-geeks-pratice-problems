@@ -2,7 +2,10 @@
 
 - **Topic:** Bit Magic
 - **Difficulty:** Easy
-- **Submissions:** 111689
+- **Submissions:** 111,689
+- **Accuracy:** 32.89%
+- **Companies:** Amazon, Microsoft, Adobe
+- **Related Tags:** Mathematics, Bit Magic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/is-binary-number-multiple-of-30654/1
 
 ## Approach

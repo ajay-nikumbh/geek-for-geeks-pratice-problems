@@ -1,8 +1,11 @@
 # First n Fibonacci using DP
 
 - **Topic:** Dynamic Programming
-- **Difficulty:** Basic
-- **Submissions:** 140807
+- **Difficulty:** Basics
+- **Submissions:** 140,807
+- **Accuracy:** 51.0%
+- **Companies:** Bloomberg
+- **Related Tags:** Recursion, Fibonacci, Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/fibonacci-series-up-to-nth-term/1
 
 ## Approach

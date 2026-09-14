@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 2915
+- **Submissions:** 2,915
+- **Accuracy:** 41.7%
+- **Companies:** —
+- **Related Tags:** Strings, permutation
 - **Problem Link:** https://www.geeksforgeeks.org/problems/lexicographically-previous-permutation3620/1
 
 ## Approach

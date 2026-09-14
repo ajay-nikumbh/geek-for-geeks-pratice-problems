@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Medium
-- **Submissions:** 2342
+- **Submissions:** 2,342
+- **Accuracy:** 16.29%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/carmichael-numbers3703/1
 
 ## Approach

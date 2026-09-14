@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 3077
+- **Submissions:** 3,077
+- **Accuracy:** 23.84%
+- **Companies:** —
+- **Related Tags:** Arrays, Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-the-pairs-with-maximum-difference4807/1
 
 ## Approach

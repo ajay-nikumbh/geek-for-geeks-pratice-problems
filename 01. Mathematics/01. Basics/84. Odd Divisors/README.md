@@ -1,8 +1,11 @@
 # Odd Divisors
 
 - **Topic:** Mathematics
-- **Difficulty:** Basic
-- **Submissions:** 3783
+- **Difficulty:** Basics
+- **Submissions:** 3,783
+- **Accuracy:** 43.71%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/odd-divisors5347/1
 
 ## Approach

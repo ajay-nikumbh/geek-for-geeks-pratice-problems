@@ -2,7 +2,10 @@
 
 - **Topic:** Bit Magic
 - **Difficulty:** Easy
-- **Submissions:** 1301
+- **Submissions:** 1,301
+- **Accuracy:** 43.4%
+- **Companies:** —
+- **Related Tags:** Bit Magic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/numbers-having-alternate-bits-in-range-1-to-n2350/1
 
 ## Approach

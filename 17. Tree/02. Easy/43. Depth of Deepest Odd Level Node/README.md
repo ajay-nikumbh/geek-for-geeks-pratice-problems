@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Easy
-- **Submissions:** 9586
+- **Submissions:** 9,586
+- **Accuracy:** 45.12%
+- **Companies:** —
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/depth-of-node/1
 
 ## Approach

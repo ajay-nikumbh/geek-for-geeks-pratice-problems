@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Hard
-- **Submissions:** 206247
+- **Submissions:** 206,247
+- **Accuracy:** 49.64%
+- **Companies:** Flipkart, Microsoft, FactSet
+- **Related Tags:** Dynamic Programming, Matrix
 - **Problem Link:** https://www.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1
 
 ## Approach

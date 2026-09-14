@@ -2,7 +2,10 @@
 
 - **Topic:** Hashing
 - **Difficulty:** Easy
-- **Submissions:** 24176
+- **Submissions:** 24,176
+- **Accuracy:** 42.44%
+- **Companies:** Amazon, OYO Rooms
+- **Related Tags:** Arrays, Hash
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sum-equals-to-sum4006/1
 
 ## Approach

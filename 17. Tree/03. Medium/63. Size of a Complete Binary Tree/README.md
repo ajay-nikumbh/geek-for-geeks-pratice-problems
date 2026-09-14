@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 16591
+- **Submissions:** 16,591
+- **Accuracy:** 71.6%
+- **Companies:** —
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-number-of-nodes-in-a-binary-tree/1
 
 ## Approach

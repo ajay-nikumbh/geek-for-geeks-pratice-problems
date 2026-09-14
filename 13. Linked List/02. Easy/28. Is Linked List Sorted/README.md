@@ -2,7 +2,10 @@
 
 - **Topic:** Linked List
 - **Difficulty:** Easy
-- **Submissions:** 39010
+- **Submissions:** 39,010
+- **Accuracy:** 37.09%
+- **Companies:** —
+- **Related Tags:** Linked List
 - **Problem Link:** https://www.geeksforgeeks.org/problems/is-linked-list-sorted/1
 
 ## Approach

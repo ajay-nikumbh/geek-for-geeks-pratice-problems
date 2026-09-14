@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Easy
-- **Submissions:** 1735
+- **Submissions:** 1,735
+- **Accuracy:** 80.93%
+- **Companies:** —
+- **Related Tags:** Graph
 - **Problem Link:** https://www.geeksforgeeks.org/problems/convert-adjacency-list-to-adjacency-matrix/1
 
 ## Approach

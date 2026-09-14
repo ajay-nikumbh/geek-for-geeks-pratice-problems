@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 23478
+- **Submissions:** 23,478
+- **Accuracy:** 65.83%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-the-substrings--141634/1
 
 ## Approach

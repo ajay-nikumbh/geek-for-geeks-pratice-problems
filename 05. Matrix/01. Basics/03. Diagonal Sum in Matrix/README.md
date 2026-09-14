@@ -1,8 +1,11 @@
 # Diagonal Sum in Matrix
 
 - **Topic:** Matrix
-- **Difficulty:** Basic
-- **Submissions:** 39080
+- **Difficulty:** Basics
+- **Submissions:** 39,080
+- **Accuracy:** 52.31%
+- **Companies:** —
+- **Related Tags:** Matrix
 - **Problem Link:** https://www.geeksforgeeks.org/problems/diagonal-sum0158/1
 
 ## Approach

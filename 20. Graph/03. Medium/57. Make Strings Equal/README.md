@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Medium
-- **Submissions:** 11043
+- **Submissions:** 11,043
+- **Accuracy:** 53.56%
+- **Companies:** —
+- **Related Tags:** Graph, Shortest Path
 - **Problem Link:** https://www.geeksforgeeks.org/problems/make-strings-equal--150209/1
 
 ## Approach

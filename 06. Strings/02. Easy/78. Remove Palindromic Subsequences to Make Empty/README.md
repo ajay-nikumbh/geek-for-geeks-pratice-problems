@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 2610
+- **Submissions:** 2,610
+- **Accuracy:** 56.21%
+- **Companies:** —
+- **Related Tags:** Strings, palindrome
 - **Problem Link:** https://www.geeksforgeeks.org/problems/palindromic-subsequences1335/1
 
 ## Approach

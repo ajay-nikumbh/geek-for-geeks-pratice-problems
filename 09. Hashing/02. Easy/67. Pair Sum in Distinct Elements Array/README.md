@@ -2,7 +2,10 @@
 
 - **Topic:** Hashing
 - **Difficulty:** Easy
-- **Submissions:** 2360
+- **Submissions:** 2,360
+- **Accuracy:** 79.01%
+- **Companies:** —
+- **Related Tags:** Hash
 - **Problem Link:** https://www.geeksforgeeks.org/problems/hashing-for-pair-1--110939/1
 
 ## Approach

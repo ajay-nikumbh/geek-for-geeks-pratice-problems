@@ -2,7 +2,10 @@
 
 - **Topic:** Stack
 - **Difficulty:** Medium
-- **Submissions:** 43251
+- **Submissions:** 43,251
+- **Accuracy:** 46.92%
+- **Companies:** NPCI
+- **Related Tags:** Arrays, Stack
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sum-of-subarray-minimum/1
 
 ## Approach

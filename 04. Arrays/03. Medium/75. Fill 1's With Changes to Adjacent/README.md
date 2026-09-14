@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 11153
+- **Submissions:** 11,153
+- **Accuracy:** 24.64%
+- **Companies:** Amazon
+- **Related Tags:** Arrays, Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/fill-array-by-1s0920/1
 
 ## Approach

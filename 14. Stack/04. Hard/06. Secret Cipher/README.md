@@ -2,7 +2,10 @@
 
 - **Topic:** Stack
 - **Difficulty:** Hard
-- **Submissions:** 16548
+- **Submissions:** 16,548
+- **Accuracy:** 49.98%
+- **Companies:** —
+- **Related Tags:** Stack
 - **Problem Link:** https://www.geeksforgeeks.org/problems/secret-cipher--141631/1
 
 ## Approach

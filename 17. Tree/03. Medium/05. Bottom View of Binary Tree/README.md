@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 368658
+- **Submissions:** 368,658
+- **Accuracy:** 54.18%
+- **Companies:** Paytm, Flipkart, Accolite, Amazon, OYO Rooms, Walmart, CouponDunia
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1
 
 ## Approach

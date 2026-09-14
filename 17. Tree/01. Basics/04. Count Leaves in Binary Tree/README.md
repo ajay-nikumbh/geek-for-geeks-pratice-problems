@@ -1,8 +1,11 @@
 # Count Leaves in Binary Tree
 
 - **Topic:** Tree
-- **Difficulty:** Basic
-- **Submissions:** 134990
+- **Difficulty:** Basics
+- **Submissions:** 134,990
+- **Accuracy:** 76.44%
+- **Companies:** Samsung, Ola Cabs
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-leaves-in-binary-tree/1
 
 ## Approach

@@ -1,8 +1,11 @@
 # Check for Binary String
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 164209
+- **Difficulty:** Basics
+- **Submissions:** 164,209
+- **Accuracy:** 30.94%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/check-for-binary/1
 
 ## Approach

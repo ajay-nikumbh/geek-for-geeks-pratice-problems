@@ -1,8 +1,11 @@
 # Sum of Binary Tree
 
 - **Topic:** Tree
-- **Difficulty:** Basic
-- **Submissions:** 63137
+- **Difficulty:** Basics
+- **Submissions:** 63,137
+- **Accuracy:** 77.27%
+- **Companies:** FactSet
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sum-of-binary-tree/1
 
 ## Approach

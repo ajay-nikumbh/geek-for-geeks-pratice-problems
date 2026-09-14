@@ -2,7 +2,10 @@
 
 - **Topic:** Stack
 - **Difficulty:** Medium
-- **Submissions:** 10431
+- **Submissions:** 10,431
+- **Accuracy:** 51.33%
+- **Companies:** —
+- **Related Tags:** Stack, STL
 - **Problem Link:** https://www.geeksforgeeks.org/problems/shopkeeper-profit/1
 
 ## Approach

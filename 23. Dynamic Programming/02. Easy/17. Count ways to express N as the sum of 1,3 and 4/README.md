@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Easy
-- **Submissions:** 7229
+- **Submissions:** 7,229
+- **Accuracy:** 34.2%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming, Modular Arithmetic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-ways-to-express-n-as-the-sum-of-13-and-44024/1
 
 ## Approach

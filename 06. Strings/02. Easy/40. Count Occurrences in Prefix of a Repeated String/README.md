@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 16954
+- **Submissions:** 16,954
+- **Accuracy:** 25.5%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/aryas-long-string5840/1
 
 ## Approach

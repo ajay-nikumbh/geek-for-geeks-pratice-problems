@@ -2,7 +2,10 @@
 
 - **Topic:** Hashing
 - **Difficulty:** Medium
-- **Submissions:** 20978
+- **Submissions:** 20,978
+- **Accuracy:** 36.72%
+- **Companies:** —
+- **Related Tags:** Hash, Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/transfiguration--141631/1
 
 ## Approach

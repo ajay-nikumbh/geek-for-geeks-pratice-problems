@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 52436
+- **Submissions:** 52,436
+- **Accuracy:** 31.52%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/target-sum-1626326450/1
 
 ## Approach

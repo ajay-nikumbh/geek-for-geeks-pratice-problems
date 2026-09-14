@@ -2,7 +2,10 @@
 
 - **Topic:** Sorting
 - **Difficulty:** Easy
-- **Submissions:** 609056
+- **Submissions:** 609,056
+- **Accuracy:** 33.75%
+- **Companies:** Amazon
+- **Related Tags:** Searching, Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/floor-in-a-sorted-array-1587115620/1
 
 ## Approach

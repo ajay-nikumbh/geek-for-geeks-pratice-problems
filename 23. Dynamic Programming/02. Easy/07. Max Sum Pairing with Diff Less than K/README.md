@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Easy
-- **Submissions:** 50607
+- **Submissions:** 50,607
+- **Accuracy:** 63.41%
+- **Companies:** —
+- **Related Tags:** Arrays, Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/pairs-with-specific-difference1533/1
 
 ## Approach

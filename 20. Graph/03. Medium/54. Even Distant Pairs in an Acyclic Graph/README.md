@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Medium
-- **Submissions:** 14143
+- **Submissions:** 14,143
+- **Accuracy:** 34.09%
+- **Companies:** —
+- **Related Tags:** Graph
 - **Problem Link:** https://www.geeksforgeeks.org/problems/nodes-at-even-distance0532/1
 
 ## Approach

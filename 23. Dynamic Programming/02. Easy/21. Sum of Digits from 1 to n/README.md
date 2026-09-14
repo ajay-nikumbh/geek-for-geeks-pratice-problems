@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Easy
-- **Submissions:** 5401
+- **Submissions:** 5,401
+- **Accuracy:** 33.23%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/compute-sum-of-digits-in-all-numbers-from-1-to-n2855/1
 
 ## Approach

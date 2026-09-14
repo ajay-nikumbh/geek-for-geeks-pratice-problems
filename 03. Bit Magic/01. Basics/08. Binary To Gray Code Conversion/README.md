@@ -1,8 +1,11 @@
 # Binary To Gray Code Conversion
 
 - **Topic:** Bit Magic
-- **Difficulty:** Basic
-- **Submissions:** 33337
+- **Difficulty:** Basics
+- **Submissions:** 33,337
+- **Accuracy:** 81.04%
+- **Companies:** —
+- **Related Tags:** Bit Magic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/gray-code-1587115620/1
 
 ## Approach

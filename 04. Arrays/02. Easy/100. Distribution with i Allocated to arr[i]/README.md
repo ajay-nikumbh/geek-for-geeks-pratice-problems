@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 4821
+- **Submissions:** 4,821
+- **Accuracy:** 41.52%
+- **Companies:** —
+- **Related Tags:** Arrays, Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/stuffs-division5735/1
 
 ## Approach

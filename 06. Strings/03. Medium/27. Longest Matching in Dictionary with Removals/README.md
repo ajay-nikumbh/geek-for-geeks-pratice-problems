@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Medium
-- **Submissions:** 22580
+- **Submissions:** 22,580
+- **Accuracy:** 43.54%
+- **Companies:** Walmart, Google
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/find-largest-word-in-dictionary2430/1
 
 ## Approach

@@ -1,8 +1,11 @@
 # Swapping Triangles in Matrix
 
 - **Topic:** Matrix
-- **Difficulty:** Basic
-- **Submissions:** 4641
+- **Difficulty:** Basics
+- **Submissions:** 4,641
+- **Accuracy:** 73.54%
+- **Companies:** —
+- **Related Tags:** Matrix
 - **Problem Link:** https://www.geeksforgeeks.org/problems/swapping-triangles5209/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Easy
-- **Submissions:** 1217
+- **Submissions:** 1,217
+- **Accuracy:** 13.61%
+- **Companies:** —
+- **Related Tags:** Misc, Dynamic Programming, Recursion
 - **Problem Link:** https://www.geeksforgeeks.org/problems/ritikas-money4334/1
 
 ## Approach

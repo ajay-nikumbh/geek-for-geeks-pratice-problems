@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Easy
-- **Submissions:** 41538
+- **Submissions:** 41,538
+- **Accuracy:** 70.24%
+- **Companies:** —
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sum-of-leaf-nodes/1
 
 ## Approach

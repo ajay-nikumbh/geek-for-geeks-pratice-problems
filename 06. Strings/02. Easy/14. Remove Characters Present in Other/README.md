@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 66746
+- **Submissions:** 66,746
+- **Accuracy:** 59.6%
+- **Companies:** Zoho, Amazon
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/remove-character3815/1
 
 ## Approach

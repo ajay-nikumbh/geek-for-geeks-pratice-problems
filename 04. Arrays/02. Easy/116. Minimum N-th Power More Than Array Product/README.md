@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 2966
+- **Submissions:** 2,966
+- **Accuracy:** 13.24%
+- **Companies:** —
+- **Related Tags:** Arrays, Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/minimum-element-whose-n-th-power-is-greater-than-product-of-an-array4640/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 1032
+- **Submissions:** 1,032
+- **Accuracy:** 26.55%
+- **Companies:** —
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/minimum-platforms-2--170647/1
 
 ## Approach

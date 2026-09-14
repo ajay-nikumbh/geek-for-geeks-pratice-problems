@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 20774
+- **Submissions:** 20,774
+- **Accuracy:** 58.7%
+- **Companies:** Media.net
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/single-valued-subtree/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Easy
-- **Submissions:** 11719
+- **Submissions:** 11,719
+- **Accuracy:** 65.37%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sum-of-squares-of-first-n-natural-numbers/1
 
 ## Approach

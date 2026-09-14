@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 7101
+- **Submissions:** 7,101
+- **Accuracy:** 23.05%
+- **Companies:** Walmart
+- **Related Tags:** Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/maximum-sum-subsequence-of-length-k3053/1
 
 ## Approach

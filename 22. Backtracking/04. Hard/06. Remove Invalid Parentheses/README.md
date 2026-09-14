@@ -2,7 +2,10 @@
 
 - **Topic:** Backtracking
 - **Difficulty:** Hard
-- **Submissions:** 22520
+- **Submissions:** 22,520
+- **Accuracy:** 43.53%
+- **Companies:** —
+- **Related Tags:** Backtracking
 - **Problem Link:** https://www.geeksforgeeks.org/problems/remove-invalid-parentheses/1
 
 ## Approach

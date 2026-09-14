@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Easy
-- **Submissions:** 1398
+- **Submissions:** 1,398
+- **Accuracy:** 27.28%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/nth-smart-number5909/1
 
 ## Approach

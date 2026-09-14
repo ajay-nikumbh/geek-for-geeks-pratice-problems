@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 1010
+- **Submissions:** 1,010
+- **Accuracy:** 20.11%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming, Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/stacking-up-discs1315/1
 
 ## Approach

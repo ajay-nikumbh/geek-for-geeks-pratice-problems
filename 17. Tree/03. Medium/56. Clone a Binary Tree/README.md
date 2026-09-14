@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Medium
-- **Submissions:** 21917
+- **Submissions:** 21,917
+- **Accuracy:** 67.71%
+- **Companies:** Amazon, Synopsys
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/clone-a-binary-tree/1
 
 ## Approach

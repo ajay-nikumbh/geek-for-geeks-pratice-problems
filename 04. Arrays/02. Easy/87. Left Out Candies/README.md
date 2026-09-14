@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 9395
+- **Submissions:** 9,395
+- **Accuracy:** 44.22%
+- **Companies:** Amazon
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/left-out-candies5652/1
 
 ## Approach

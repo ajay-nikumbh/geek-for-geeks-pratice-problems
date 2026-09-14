@@ -2,7 +2,10 @@
 
 - **Topic:** Hashing
 - **Difficulty:** Easy
-- **Submissions:** 63237
+- **Submissions:** 63,237
+- **Accuracy:** 25.32%
+- **Companies:** Amazon, Yatra.com
+- **Related Tags:** Arrays, Hash
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-the-elements1529/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 10458
+- **Submissions:** 10,458
+- **Accuracy:** 11.84%
+- **Companies:** —
+- **Related Tags:** Arrays, Prime Number
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-divisors-of-product-of-array-elements0244/1
 
 ## Approach

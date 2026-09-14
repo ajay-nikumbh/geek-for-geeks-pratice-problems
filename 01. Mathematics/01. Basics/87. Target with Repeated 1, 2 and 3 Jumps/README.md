@@ -1,8 +1,11 @@
 # Target with Repeated 1, 2 and 3 Jumps
 
 - **Topic:** Mathematics
-- **Difficulty:** Basic
-- **Submissions:** 3163
+- **Difficulty:** Basics
+- **Submissions:** 3,163
+- **Accuracy:** 46.69%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/jumping-geek3420/1
 
 ## Approach

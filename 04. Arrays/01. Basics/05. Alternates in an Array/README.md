@@ -1,8 +1,11 @@
 # Alternates in an Array
 
 - **Topic:** Arrays
-- **Difficulty:** Basic
-- **Submissions:** 251885
+- **Difficulty:** Basics
+- **Submissions:** 251,885
+- **Accuracy:** 52.74%
+- **Companies:** —
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/print-alternate-elements-of-an-array/1
 
 ## Approach

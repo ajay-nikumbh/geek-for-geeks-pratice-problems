@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 35871
+- **Submissions:** 35,871
+- **Accuracy:** 50.0%
+- **Companies:** —
+- **Related Tags:** Arrays, Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/array-operations--170648/1
 
 ## Approach

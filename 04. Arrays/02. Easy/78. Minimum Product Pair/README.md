@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 12127
+- **Submissions:** 12,127
+- **Accuracy:** 42.42%
+- **Companies:** —
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/minimum-product-pair3608/1
 
 ## Approach

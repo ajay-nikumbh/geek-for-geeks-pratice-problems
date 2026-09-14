@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 17972
+- **Submissions:** 17,972
+- **Accuracy:** 26.56%
+- **Companies:** Amazon
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/even-and-odd-elements-at-even-and-odd-positions1342/1
 
 ## Approach

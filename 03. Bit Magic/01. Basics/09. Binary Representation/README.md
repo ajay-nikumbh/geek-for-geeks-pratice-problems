@@ -1,8 +1,11 @@
 # Binary Representation
 
 - **Topic:** Bit Magic
-- **Difficulty:** Basic
-- **Submissions:** 28178
+- **Difficulty:** Basics
+- **Submissions:** 28,178
+- **Accuracy:** 51.35%
+- **Companies:** Microsoft
+- **Related Tags:** Bit Magic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/binary-representation5003/1
 
 ## Approach

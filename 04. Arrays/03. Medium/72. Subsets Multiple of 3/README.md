@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 13270
+- **Submissions:** 13,270
+- **Accuracy:** 35.92%
+- **Companies:** Amazon
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/possible-groups2013/1
 
 ## Approach

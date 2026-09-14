@@ -1,8 +1,11 @@
 # Snake Case
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 13168
+- **Difficulty:** Basics
+- **Submissions:** 13,168
+- **Accuracy:** 43.62%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/snake-case0219/1
 
 ## Approach

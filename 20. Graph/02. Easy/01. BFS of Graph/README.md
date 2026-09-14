@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Easy
-- **Submissions:** 582859
+- **Submissions:** 582,859
+- **Accuracy:** 44.09%
+- **Companies:** Flipkart, Amazon, Microsoft, Samsung, Ola Cabs, Adobe, SAP Labs
+- **Related Tags:** Graph, BFS
 - **Problem Link:** https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1
 
 ## Approach

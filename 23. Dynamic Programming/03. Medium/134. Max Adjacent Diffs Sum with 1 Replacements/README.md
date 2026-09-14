@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 13162
+- **Submissions:** 13,162
+- **Accuracy:** 54.41%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/modify-array-to-maximize-sum-of-adjacent-differences1729/1
 
 ## Approach

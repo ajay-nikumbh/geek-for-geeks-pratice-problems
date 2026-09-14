@@ -1,8 +1,11 @@
 # Max Product K Sized Subarray
 
 - **Topic:** Arrays
-- **Difficulty:** Basic
-- **Submissions:** 13912
+- **Difficulty:** Basics
+- **Submissions:** 13,912
+- **Accuracy:** 47.51%
+- **Companies:** —
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/largest-product/1
 
 ## Approach

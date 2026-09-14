@@ -2,7 +2,10 @@
 
 - **Topic:** Tree
 - **Difficulty:** Easy
-- **Submissions:** 10489
+- **Submissions:** 10,489
+- **Accuracy:** 45.39%
+- **Companies:** —
+- **Related Tags:** Tree
 - **Problem Link:** https://www.geeksforgeeks.org/problems/k-ary-tree1235/1
 
 ## Approach

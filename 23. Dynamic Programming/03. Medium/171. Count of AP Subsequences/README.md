@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 2526
+- **Submissions:** 2,526
+- **Accuracy:** 31.31%
+- **Companies:** —
+- **Related Tags:** Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-of-ap-subsequences0016/1
 
 ## Approach

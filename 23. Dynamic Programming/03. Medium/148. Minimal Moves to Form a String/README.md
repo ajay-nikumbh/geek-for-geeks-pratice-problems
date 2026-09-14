@@ -2,7 +2,10 @@
 
 - **Topic:** Dynamic Programming
 - **Difficulty:** Medium
-- **Submissions:** 7580
+- **Submissions:** 7,580
+- **Accuracy:** 49.1%
+- **Companies:** —
+- **Related Tags:** Strings, Dynamic Programming
 - **Problem Link:** https://www.geeksforgeeks.org/problems/minimal-moves-to-form-a-string4331/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Prefix Sum
 - **Difficulty:** Medium
-- **Submissions:** 37500
+- **Submissions:** 37,500
+- **Accuracy:** 54.13%
+- **Companies:** —
+- **Related Tags:** Arrays, Prefix Sum
 - **Problem Link:** https://www.geeksforgeeks.org/problems/minimize-the-difference/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Sorting
 - **Difficulty:** Medium
-- **Submissions:** 31828
+- **Submissions:** 31,828
+- **Accuracy:** 30.77%
+- **Companies:** Microsoft
+- **Related Tags:** Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/triplets-with-sum-with-given-range/1
 
 ## Approach

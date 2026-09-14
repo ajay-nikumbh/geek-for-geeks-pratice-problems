@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Hard
-- **Submissions:** 10115
+- **Submissions:** 10,115
+- **Accuracy:** 63.93%
+- **Companies:** —
+- **Related Tags:** Graph, DFS, BFS
 - **Problem Link:** https://www.geeksforgeeks.org/problems/shortest-cycle/1
 
 ## Approach

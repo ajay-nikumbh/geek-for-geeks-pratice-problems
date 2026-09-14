@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Easy
-- **Submissions:** 1745
+- **Submissions:** 1,745
+- **Accuracy:** 75.61%
+- **Companies:** —
+- **Related Tags:** Graph
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-number-of-edges-in-an-undirected-graph/1
 
 ## Approach

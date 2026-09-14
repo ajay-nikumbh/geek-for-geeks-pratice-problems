@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 3012
+- **Submissions:** 3,012
+- **Accuracy:** 53.12%
+- **Companies:** —
+- **Related Tags:** Arrays, STL
 - **Problem Link:** https://www.geeksforgeeks.org/problems/finding-pairs2835/1
 
 ## Approach

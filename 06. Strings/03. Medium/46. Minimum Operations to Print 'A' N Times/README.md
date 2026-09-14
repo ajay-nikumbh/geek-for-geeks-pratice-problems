@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Medium
-- **Submissions:** 8020
+- **Submissions:** 8,020
+- **Accuracy:** 75.91%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/special-keyboard-2/1
 
 ## Approach

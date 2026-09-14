@@ -2,7 +2,10 @@
 
 - **Topic:** Hashing
 - **Difficulty:** Medium
-- **Submissions:** 120162
+- **Submissions:** 120,162
+- **Accuracy:** 42.39%
+- **Companies:** Amazon, Microsoft
+- **Related Tags:** Searching, Hash, Sorting
 - **Problem Link:** https://www.geeksforgeeks.org/problems/relative-sorting4323/1
 
 ## Approach

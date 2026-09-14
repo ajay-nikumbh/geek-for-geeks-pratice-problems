@@ -1,8 +1,11 @@
 # Sum of All Digit Subsequences
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 4725
+- **Difficulty:** Basics
+- **Submissions:** 4,725
+- **Accuracy:** 57.54%
+- **Companies:** —
+- **Related Tags:** Strings, CPP
 - **Problem Link:** https://www.geeksforgeeks.org/problems/sum-of-all-sub-sequences-of-a-number3437/1
 
 ## Approach

@@ -2,7 +2,10 @@
 
 - **Topic:** Two Pointers
 - **Difficulty:** Medium
-- **Submissions:** 2469
+- **Submissions:** 2,469
+- **Accuracy:** 49.49%
+- **Companies:** Bloomberg, Amazon, Microsoft, Google, Uber
+- **Related Tags:** two-pointer-algorithm, Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/interval-list-intersections/1
 
 ## Approach

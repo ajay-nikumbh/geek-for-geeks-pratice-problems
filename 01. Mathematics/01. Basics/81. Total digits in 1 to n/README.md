@@ -1,8 +1,11 @@
 # Total digits in 1 to n
 
 - **Topic:** Mathematics
-- **Difficulty:** Basic
-- **Submissions:** 4775
+- **Difficulty:** Basics
+- **Submissions:** 4,775
+- **Accuracy:** 56.44%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/total-digits4030/1
 
 ## Approach

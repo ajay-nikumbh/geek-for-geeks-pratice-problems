@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Medium
-- **Submissions:** 49715
+- **Submissions:** 49,715
+- **Accuracy:** 42.44%
+- **Companies:** —
+- **Related Tags:** Arrays, Prime Number, sieve
 - **Problem Link:** https://www.geeksforgeeks.org/problems/transform-to-prime4635/1
 
 ## Approach

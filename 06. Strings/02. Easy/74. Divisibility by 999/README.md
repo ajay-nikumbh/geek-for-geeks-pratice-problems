@@ -2,7 +2,10 @@
 
 - **Topic:** Strings
 - **Difficulty:** Easy
-- **Submissions:** 3609
+- **Submissions:** 3,609
+- **Accuracy:** 39.6%
+- **Companies:** —
+- **Related Tags:** Strings, Division
 - **Problem Link:** https://www.geeksforgeeks.org/problems/divisibility-by-9990149/1
 
 ## Approach

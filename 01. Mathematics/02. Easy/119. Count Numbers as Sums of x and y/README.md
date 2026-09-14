@@ -2,7 +2,10 @@
 
 - **Topic:** Mathematics
 - **Difficulty:** Easy
-- **Submissions:** 1537
+- **Submissions:** 1,537
+- **Accuracy:** 46.31%
+- **Companies:** —
+- **Related Tags:** Mathematics
 - **Problem Link:** https://www.geeksforgeeks.org/problems/count-numbers-which-can-be-constructed-using-two-numbers0636/1
 
 ## Approach

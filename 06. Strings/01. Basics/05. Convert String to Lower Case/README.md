@@ -1,8 +1,11 @@
 # Convert String to Lower Case
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 124346
+- **Difficulty:** Basics
+- **Submissions:** 124,346
+- **Accuracy:** 75.27%
+- **Companies:** —
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/convert-string-to-lowercase/1
 
 ## Approach

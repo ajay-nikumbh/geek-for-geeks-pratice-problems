@@ -2,7 +2,10 @@
 
 - **Topic:** Graph
 - **Difficulty:** Medium
-- **Submissions:** 192454
+- **Submissions:** 192,454
+- **Accuracy:** 38.39%
+- **Companies:** Microsoft
+- **Related Tags:** Arrays, Sorting, Graph
 - **Problem Link:** https://www.geeksforgeeks.org/problems/minimum-swaps/1
 
 ## Approach

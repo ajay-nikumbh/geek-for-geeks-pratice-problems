@@ -1,8 +1,11 @@
 # Shortest direction
 
 - **Topic:** Strings
-- **Difficulty:** Basic
-- **Submissions:** 9874
+- **Difficulty:** Basics
+- **Submissions:** 9,874
+- **Accuracy:** 52.03%
+- **Companies:** Flipkart
+- **Related Tags:** Strings
 - **Problem Link:** https://www.geeksforgeeks.org/problems/shortest-direction4201/1
 
 ## Approach

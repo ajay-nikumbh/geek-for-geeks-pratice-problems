@@ -2,7 +2,10 @@
 
 - **Topic:** Bit Magic
 - **Difficulty:** Easy
-- **Submissions:** 6117
+- **Submissions:** 6,117
+- **Accuracy:** 69.77%
+- **Companies:** —
+- **Related Tags:** Bit Magic
 - **Problem Link:** https://www.geeksforgeeks.org/problems/set-all-the-bits-in-given-range-of-a-number4538/1
 
 ## Approach

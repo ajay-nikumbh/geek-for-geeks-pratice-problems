@@ -2,7 +2,10 @@
 
 - **Topic:** Arrays
 - **Difficulty:** Easy
-- **Submissions:** 124209
+- **Submissions:** 124,209
+- **Accuracy:** 28.78%
+- **Companies:** —
+- **Related Tags:** Arrays
 - **Problem Link:** https://www.geeksforgeeks.org/problems/product-of-array-element/1
 
 ## Approach
