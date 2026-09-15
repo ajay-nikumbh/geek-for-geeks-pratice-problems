@@ -6,12 +6,13 @@
 
 Problems grouped by core technique instead of just difficulty — useful once you've seen a few and want to drill a specific idea.
 
-| Difficulty | Patterns File |
-|---|---|
-| Basics (56 problems) | [`01. Basics/PATTERNS.md`](01.%20Basics/PATTERNS.md) |
-| Easy (135 problems) | [`02. Easy/PATTERNS.md`](02.%20Easy/PATTERNS.md) |
-| Medium (103 problems) | [`03. Medium/PATTERNS.md`](03.%20Medium/PATTERNS.md) |
-| Hard (10 problems) | [`04. Hard/PATTERNS.md`](04.%20Hard/PATTERNS.md) |
+| Difficulty | Problems | Patterns | Most Common Pattern | Problems in It | GfG Topic Link | Patterns File | Problems Folder |
+|---|---|---|---|---|---|---|---|
+| Basics | 56 | 9 | Single Pass Linear Scan / Aggregation | 11 | [Explore](https://www.geeksforgeeks.org/explore?category%5B%5D=Arrays) | [`PATTERNS.md`](01.%20Basics/PATTERNS.md) | [`01. Basics/`](01.%20Basics/) |
+| Easy | 135 | 13 | Simple Linear Scan / Min-Max Tracking | 23 | [Explore](https://www.geeksforgeeks.org/explore?category%5B%5D=Arrays) | [`PATTERNS.md`](02.%20Easy/PATTERNS.md) | [`02. Easy/`](02.%20Easy/) |
+| Medium | 103 | 16 | Greedy Array Rearrangement / Scheduling | 15 | [Explore](https://www.geeksforgeeks.org/explore?category%5B%5D=Arrays) | [`PATTERNS.md`](03.%20Medium/PATTERNS.md) | [`03. Medium/`](03.%20Medium/) |
+| Hard | 10 | 6 | Binary Search on the Answer (Minimize the Maximum) | 2 | [Explore](https://www.geeksforgeeks.org/explore?category%5B%5D=Arrays) | [`PATTERNS.md`](04.%20Hard/PATTERNS.md) | [`04. Hard/`](04.%20Hard/) |
+| **Total** | **304** | **44** | | | | | |
 
 ## Basics (56)
 
