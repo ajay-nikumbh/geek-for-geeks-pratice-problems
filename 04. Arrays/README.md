@@ -2,6 +2,17 @@
 
 [← Back to root](../README.md) · [GfG topic problems](https://www.geeksforgeeks.org/explore?category%5B%5D=Arrays)
 
+## Patterns
+
+Problems grouped by core technique instead of just difficulty — useful once you've seen a few and want to drill a specific idea.
+
+| Difficulty | Patterns File |
+|---|---|
+| Basics (56 problems) | [`01. Basics/PATTERNS.md`](01.%20Basics/PATTERNS.md) |
+| Easy (135 problems) | [`02. Easy/PATTERNS.md`](02.%20Easy/PATTERNS.md) |
+| Medium (103 problems) | [`03. Medium/PATTERNS.md`](03.%20Medium/PATTERNS.md) |
+| Hard (10 problems) | [`04. Hard/PATTERNS.md`](04.%20Hard/PATTERNS.md) |
+
 ## Basics (56)
 
 | # | Problem | Difficulty | Accuracy | Companies | Related Tags | Folder |
