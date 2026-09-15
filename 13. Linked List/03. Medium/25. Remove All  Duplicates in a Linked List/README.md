@@ -1,14 +1,14 @@
 # Remove All Duplicates in a Linked List
 
-> **Topic:** Linked List  
-> **Difficulty:** Medium  
-> **Submissions:** 48,912  
-> **Accuracy:** 41.27%  
-> **Companies:** Microsoft  
-> **Related Tags:** Linked List  
-> **Problem Link:** https://www.geeksforgeeks.org/problems/remove-all-occurences-of-duplicates-in-a-linked-list/1
-
----
+| Field | Value |
+|---|---|
+| Topic | Linked List |
+| Difficulty | Medium |
+| Submissions | 48,912 |
+| Accuracy | 41.27% |
+| Companies | Microsoft |
+| Related Tags | Linked List |
+| Problem Link | [https://www.geeksforgeeks.org/problems/remove-all-occurences-of-duplicates-in-a-linked-list/1](https://www.geeksforgeeks.org/problems/remove-all-occurences-of-duplicates-in-a-linked-list/1) |
 
 ## Problem Statement
 
