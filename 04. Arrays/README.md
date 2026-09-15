@@ -33,6 +33,7 @@ Same core technique shows up at every difficulty — this view merges those occu
 | 23 | [Index-Value Difference / Max-Diff Tricks](#index-value-difference-max-diff-tricks) | Reframe a max/min difference question in terms of index and value together, tracking running extremes. | O(n) | O(1) | 2 | 0 | 0 | 2 | 0 |
 | 24 | [Brute-Force Enumeration / Generation](#brute-force-enumeration-generation) | Directly enumerate all subarrays, pairs, or combinations because the problem asks to generate or examine every such structure. | O(n^2) or worse | O(n) to O(n^2) | 1 | 0 | 1 | 0 | 0 |
 | 25 | [Circular Array / Kadane's Algorithm](#circular-array-kadane-s-algorithm) | Extend Kadane's max-subarray idea to a circular array: answer is max(standard Kadane, total sum − minimum subarray sum). | O(n) | O(1) | 1 | 0 | 0 | 0 | 1 |
+| | **Total (25 patterns)** | | | | **304** | **56** | **135** | **103** | **10** |
 
 ### Greedy (35)
 
