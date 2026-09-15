@@ -1,14 +1,8 @@
 # Delete Nodes with Greater on Right
 
-| Field | Value |
-|---|---|
-| Topic | Linked List |
-| Difficulty | Easy |
-| Submissions | 163,868 |
-| Accuracy | 35.51% |
-| Companies | Amazon |
-| Related Tags | Linked List |
-| Problem Link | [https://www.geeksforgeeks.org/problems/delete-nodes-having-greater-value-on-right/1](https://www.geeksforgeeks.org/problems/delete-nodes-having-greater-value-on-right/1) |
+| Topic | Difficulty | Submissions | Accuracy | Companies | Related Tags | Problem Link |
+|---|---|---|---|---|---|---|
+| Linked List | Easy | 163,868 | 35.51% | Amazon | Linked List | [https://www.geeksforgeeks.org/problems/delete-nodes-having-greater-value-on-right/1](https://www.geeksforgeeks.org/problems/delete-nodes-having-greater-value-on-right/1) |
 
 ## Problem Statement
 
@@ -45,8 +39,6 @@ Output: 4 -> NULL
 
 Explanation: The list is strictly increasing, so every node except the last one has something bigger to its right. Only the final node, `4`, survives.
 
----
-
 # 1. Interview Intuition
 
 The problem statement sounds like "look ahead" logic:
@@ -75,8 +67,6 @@ Now walking the reversed list from left to right is exactly the same as walking 
 > **Core trick:** if a node's value is strictly less than the running maximum (built from the right side), it must be deleted, because that running maximum represents a bigger value that appears to its right in the original list.
 
 This single trick converts an `O(n^2)` look-ahead problem into two linear passes: reverse, then filter using a running max (and reverse back if the original orientation must be preserved).
-
----
 
 # 2. Core Linked List Idea
 
@@ -120,8 +110,6 @@ Filtered reversed list:
 
 This matches the expected output exactly.
 
----
-
 # 3. Most Important Edge Case — Strictly Increasing List
 
 Consider:
@@ -148,8 +136,6 @@ Reverse back: 4
 > **Key insight:** the **rightmost (last) node always survives**, no matter what, because there is nothing to its right that could be bigger. Everything else is a candidate for deletion.
 
 The opposite edge case — a strictly **decreasing** list, e.g. `9 -> 7 -> 5 -> 3` — results in **nothing being deleted**, since every node is already bigger than everything to its right. This is the sanity check that confirms the algorithm: when the list is already "non-increasing," the running-max sweep keeps every single node.
-
----
 
 # 4. Approach 1 — Brute Force Thinking
 
@@ -265,8 +251,6 @@ Space = O(1)     (only pointers, no extra data structure)
 
 This is correct, but for large lists the quadratic scanning is wasteful — we are re-deriving "what's the max to the right" over and over for overlapping suffixes.
 
----
-
 # 5. Optimal Approach — Reverse + Track Max
 
 The whole inefficiency of the brute force comes from repeatedly asking "what's the max of everything to my right?" for every node, from scratch.
@@ -307,8 +291,6 @@ for node in reversed_list:
 ```
 
 Since the reversed list is processed destructively (we already own its `next` pointers from the reversal step), we simply relink the surviving nodes into a new chain and cut the `next` pointer of any survivor's successor node before reassigning it, avoiding stale links.
-
----
 
 # 6. Pointer Movement
 
@@ -370,8 +352,6 @@ Filtered reversed list:
 
 This is the final answer.
 
----
-
 # 7. Algorithm
 
 ### Step 1
@@ -411,8 +391,6 @@ Reverse the filtered result list again to restore the original left-to-right ord
 ### Step 7
 
 Return the new head.
-
----
 
 # 8. Optimal Python Solution
 
@@ -504,8 +482,6 @@ class Solution:
         return final_head
 ```
 
----
-
 # 9. Complete Dry Run
 
 Input:
@@ -567,8 +543,6 @@ Filtered reversed list:
 
 This matches the expected output `[15, 11, 6, 3]`.
 
----
-
 # 10. Complexity Analysis
 
 Let:
@@ -606,8 +580,6 @@ Total extra space = O(1)
 
 This is a massive improvement over the brute force's `O(n^2)` time for the same `O(1)` space.
 
----
-
 # 11. Why This Is Optimal
 
 Every node in the list must be **inspected at least once** to determine whether a bigger value exists to its right — there is no way around examining each element, so `O(n)` is an unavoidable lower bound for time.
@@ -621,8 +593,6 @@ The reversal trick lets us compute "the running maximum from the right" using on
 - A stack to simulate right-to-left processing (`O(n)` space).
 
 Because reversal itself is `O(n)` time and `O(1)` space, and the filtering sweep is also `O(n)` time and `O(1)` space, doing this twice (reverse, then reverse back) still keeps the overall complexity at the optimal `O(n)` time and `O(1)` extra space — matching the theoretical lower bound in both dimensions.
-
----
 
 # 12. Common Mistakes
 
@@ -666,8 +636,6 @@ can leave a dangling pointer to a deleted node, corrupting the list before the s
 
 Reversing but forgetting to reverse back leaves the answer in **reverse order** relative to what the problem expects. The two reversals are symmetric and both required.
 
----
-
 # 13. Visual Cheat Sheet
 
 ## The Whole Pipeline
@@ -699,17 +667,12 @@ if V >= M:
 else:
     drop node
 
-
 After processing all nodes, only "record-breaking" values (from the right) remain.
 ```
-
----
 
 # 14. Interview Explanation in 30 Seconds
 
 > Since this is a singly linked list, I can't peek at values to a node's right directly. So I reverse the list first — that turns "is there something bigger to my right" into "have I already seen something bigger," which I can answer with a simple running maximum while walking left to right. Any node smaller than the running maximum gets dropped; anything that ties or beats it survives and becomes the new maximum. Once the sweep is done, I reverse the filtered list back to restore the original order. The whole thing is two reversals plus one linear sweep — `O(n)` time and `O(1)` extra space.
-
----
 
 # 15. Interviewer Follow-Up Questions
 
@@ -760,8 +723,6 @@ Yes — conceptually. In arrays, "next greater element" is typically solved usin
 
 Yes — push all node values onto a stack in one forward pass (`O(n)` space), then pop from the stack while tracking a running maximum, rebuilding the list from right to left. This achieves the same result with `O(n)` explicit space instead of the `O(1)`-space reversal trick, and is a reasonable thing to mention as an alternative if reversal feels awkward to implement live.
 
----
-
 # 16. Comparison — This Problem vs "Next Greater Element" (Array)
 
 | Aspect | Next Greater Element (Array) | Delete Nodes with Greater on Right (Linked List) |
@@ -774,8 +735,6 @@ Yes — push all node values onto a stack in one forward pass (`O(n)` space), th
 | Underlying pattern | Suffix maximum / monotonic stack | Suffix maximum via reversal |
 
 > Both problems boil down to computing a **suffix maximum** efficiently. Arrays get an `O(n)` solution using a monotonic stack directly; linked lists get there by reversing first, since a stack-like right-to-left walk isn't natively possible without one.
-
----
 
 # 17. Pattern Recognition
 
@@ -800,8 +759,6 @@ This single question resolves an entire family of problems:
 - Check if a linked list is a palindrome (reverse the second half, compare).
 - Add two numbers represented as linked lists, least significant digit last (reverse, then simulate addition left to right).
 - Reverse-related problems in general: whenever "backward-looking" information is needed and only forward pointers exist, reversal is the bridge.
-
----
 
 # 18. Final Solution
 
@@ -888,8 +845,6 @@ class Solution:
         return final_head
 ```
 
----
-
 # 19. Interview Takeaways
 
 ```text
@@ -918,8 +873,6 @@ class Solution:
 The key sentence to remember is:
 
 > **When a linked-list problem needs information "from the right" but you can only move forward, reverse the list — it turns an impossible backward look into a simple forward scan.**
-
----
 
 ## Related Problems to Practice
 

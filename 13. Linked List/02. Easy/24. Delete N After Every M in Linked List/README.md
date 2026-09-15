@@ -1,14 +1,8 @@
 # Delete N After Every M in Linked List
 
-| Field | Value |
-|---|---|
-| Topic | Linked List |
-| Difficulty | Easy |
-| Submissions | 64,805 |
-| Accuracy | 32.83% |
-| Companies | Amazon, Microsoft |
-| Related Tags | Linked List |
-| Problem Link | [https://www.geeksforgeeks.org/problems/delete-n-nodes-after-m-nodes-of-a-linked-list/1](https://www.geeksforgeeks.org/problems/delete-n-nodes-after-m-nodes-of-a-linked-list/1) |
+| Topic | Difficulty | Submissions | Accuracy | Companies | Related Tags | Problem Link |
+|---|---|---|---|---|---|---|
+| Linked List | Easy | 64,805 | 32.83% | Amazon, Microsoft | Linked List | [https://www.geeksforgeeks.org/problems/delete-n-nodes-after-m-nodes-of-a-linked-list/1](https://www.geeksforgeeks.org/problems/delete-n-nodes-after-m-nodes-of-a-linked-list/1) |
 
 ## Problem Statement
 
@@ -57,8 +51,6 @@ Output:
 1 -> 4 -> 7
 ```
 
----
-
 # 1. Interview Intuition
 
 This problem is a **generalization** of two very common linked-list patterns:
@@ -85,8 +77,6 @@ while list is not fully processed:
 ```
 
 The outer loop keeps repeating this two-phase cycle until we run out of nodes. This "keep phase, then delete phase, repeat" shape is the entire trick of the problem — once you see it as two nested loops instead of one, the implementation becomes mechanical.
-
----
 
 # 2. Core Linked List Idea
 
@@ -116,8 +106,6 @@ After relinking:
 ```
 
 So the algorithm is really just: walk `M` steps forward (remembering where you stopped), then walk `N` steps forward while cutting those nodes out of the chain, and repeat.
-
----
 
 # 3. Most Important Edge Case
 
@@ -172,8 +160,6 @@ We simply keep walking forward until `current` becomes `None`, then stop. Nothin
 Output: 1 -> 2 -> NULL
 ```
 
----
-
 # 4. Approach 1 — Brute Force Thinking
 
 A brute-force approach converts the list into an array-like structure first:
@@ -209,8 +195,6 @@ Space = O(n)
 ```
 
 This works, but it throws away the fact that a linked list can delete a run of nodes in `O(1)` per run using pure pointer relinking — no array, no rebuilding. Interviewers expect the **in-place pointer version**.
-
----
 
 # 5. Optimal Approach — Two Nested Loops with Pointer Relinking
 
@@ -252,8 +236,6 @@ while current is not None:
 - `lastKept` always tracks the last node we decided to **keep**, i.e. the node whose `next` pointer needs to be rewired.
 - The inner `for` loop for deletion doesn't need to physically "remove" each node one by one — Python's garbage collector reclaims the deleted chain automatically once nothing points to it. We only need to find **where the deleted run ends** (`toDelete`), then do a single pointer update: `lastKept.next = toDelete`.
 - Every `if current is None` / `if toDelete is None` check protects against the list ending mid-phase (Case 3 and Case 4 from the edge cases above).
-
----
 
 # 6. Pointer Movement
 
@@ -320,8 +302,6 @@ Final result:
 1 -> 2 -> 5 -> 6 -> 9 -> 10 -> NULL
 ```
 
----
-
 # 7. Algorithm
 
 ### Step 1
@@ -359,8 +339,6 @@ Set `current = toDelete` and repeat from Step 3.
 ### Step 9
 
 Return `head` (the head never changes because `M >= 1` guarantees the first node is always kept).
-
----
 
 # 8. Optimal Python Solution
 
@@ -433,8 +411,6 @@ class Solution:
         # Return the head, which never changes since M >= 1 keeps the first node.
         return head
 ```
-
----
 
 # 9. Complete Dry Run
 
@@ -517,8 +493,6 @@ lastKept.next = None
 
 This matches the expected output exactly.
 
----
-
 # 10. Complexity Analysis
 
 Let:
@@ -543,8 +517,6 @@ Only a constant number of pointer variables (`current`, `lastKept`, `toDelete`, 
 | Time | `O(n)` |
 | Extra Space | `O(1)` |
 
----
-
 # 11. Why This Is Optimal
 
 At minimum, any correct solution must **inspect every node once** — you cannot know whether a node should be kept or deleted without visiting it, and you cannot know where a deleted run ends without walking through it.
@@ -557,8 +529,6 @@ Total iterations of delete-phase loop  =  n  (each node counted exactly once)
 ```
 
 Since we must touch every node once, and we do exactly that, `O(n)` time with `O(1)` space is optimal.
-
----
 
 # 12. Common Mistakes
 
@@ -578,8 +548,6 @@ while count < N and toDelete is not None:
     count += 1
 ```
 
----
-
 ## Mistake 2 — Off-by-One on the M Count
 
 `current` (or `lastKept`) already represents **one kept node** before any advancing happens. Advancing `M` times would keep `M + 1` nodes. The loop must run only `M - 1` additional times:
@@ -591,25 +559,17 @@ while count < M and lastKept.next is not None:
     count += 1
 ```
 
----
-
 ## Mistake 3 — Losing the "Last Kept Node" Reference
 
 If you advance `current` directly through the keep phase without saving a separate `lastKept` pointer, you lose the node whose `next` pointer needs to be rewired once the delete phase finishes. Always keep `lastKept` as a distinct variable, untouched by the delete phase.
-
----
 
 ## Mistake 4 — Infinite Loop When `M = 0` Is Mishandled
 
 If `M = 0` is allowed and the keep-phase loop is written as `while count < M`, the loop body never executes, `lastKept` stays equal to `current`, and if the delete logic isn't adjusted to actually consume nodes, the outer loop can spin forever without `current` ever advancing. Either explicitly assume `M >= 1` (as GfG's constraints guarantee) or use a dummy-node design that handles `M = 0` by deleting starting from the head.
 
----
-
 ## Mistake 5 — Not Handling `N = 0`
 
 If `N = 0` isn't special-cased and the delete loop is written incorrectly (e.g., a `do-while` style that always removes at least one node), the list gets corrupted even though nothing should have been deleted. A `while count < N` loop naturally does zero iterations when `N = 0`, but it's worth verifying this explicitly.
-
----
 
 # 13. Visual Cheat Sheet
 
@@ -648,23 +608,17 @@ List ends inside delete run  -> lastKept.next becomes None (tail is truncated)
 N = 0                        -> list unchanged
 ```
 
----
-
 # 14. Interview Explanation in 30 Seconds
 
 A strong interview explanation would be:
 
 > This is a generalized "keep some, delete some, repeat" pattern. I use one outer loop that repeats until the list ends. Inside each cycle, I have two inner phases: first I advance `M - 1` steps to find the last node I want to keep, then I advance `N` steps from there to find the first surviving node after the deleted run. A single pointer update, `lastKept.next = toDelete`, removes the whole deleted block at once. I guard every inner loop against `None` so the traversal never crashes when the list doesn't divide evenly into `M + N` blocks. Even though there are nested loops, every node is visited exactly once overall, so the total time is `O(n)` with `O(1)` extra space.
 
----
-
 # 15. Interviewer Follow-Up Questions
 
 ## Q1. What if M or N can be 0?
 
 If `N = 0`, nothing is ever deleted — return the list unchanged (the inner delete loop naturally runs zero times). If `M = 0` were allowed, the first "kept" node would not exist, so you'd need a dummy node pointing before the head to act as `lastKept`, allowing the very first block of nodes to be deleted too. Most versions of this problem (including this GfG problem) guarantee `M >= 1`.
-
----
 
 ## Q2. Can this be done recursively?
 
@@ -693,31 +647,21 @@ def skipMdeleteN(self, head, M, N):
 
 This is elegant but uses `O(n / (M + N))` recursion depth — extra stack space compared to the `O(1)`-space iterative version.
 
----
-
 ## Q3. How is this different from "remove every k-th node"?
 
 "Remove every k-th node" is the special case where you keep `k - 1` nodes and delete exactly `1` node, repeating. In this problem's terms, that's `M = k - 1, N = 1`. This problem generalizes it by allowing an arbitrary run of deletions (`N`) instead of always deleting a single node.
-
----
 
 ## Q4. What's the amortized argument for the nested loop being O(n), not O(n × something)?
 
 Even though there's a loop inside a loop, the **inner loops never re-examine a node that a previous iteration already touched**. Every node belongs to exactly one keep-block or one delete-block, and each node is advanced over exactly once across the entire run. So summing the work of all inner-loop iterations across every outer-loop cycle still totals `n`, not `n × (M + N)`. This is analogous to how a two-pointer sliding window is `O(n)` even though it "looks like" nested loops.
 
----
-
 ## Q5. Does the head ever change?
 
 No, as long as `M >= 1`. The first `M` nodes (or fewer, if the list is shorter than `M`) are always kept, so the original head is always still the head after processing.
 
----
-
 ## Q6. What happens if M + N is larger than the list length?
 
 The keep phase simply keeps walking until `current` hits `None`, at which point the outer loop breaks — nothing is ever deleted because the delete phase never gets a chance to run. The whole list is returned unchanged.
-
----
 
 # 16. Comparison Table — Family of Periodic Deletion Problems
 
@@ -728,8 +672,6 @@ The keep phase simply keeps walking until `current` hits `None`, at which point 
 | **Delete N After Every M (this problem)** | `M` | `N` | General form |
 
 All three problems share the exact same nested-loop skeleton — only the values plugged into `M` and `N` differ. Recognizing this lets you solve all three with **one reusable mental template**.
-
----
 
 # 17. Pattern Recognition
 
@@ -744,8 +686,6 @@ outer loop:
 ```
 
 Once you identify a problem as belonging to this family, the implementation is a direct plug-in of `M` and `N` into this same template.
-
----
 
 # 18. Final Solution
 
@@ -819,8 +759,6 @@ class Solution:
         return head
 ```
 
----
-
 # 19. Interview Takeaways
 
 Remember these points:
@@ -851,8 +789,6 @@ Remember these points:
 The key sentence to remember is:
 
 > **A repeating keep/delete cycle on a linked list is just one outer loop with two inner phases — the node at the boundary between "keep" and "delete" is the one whose `next` pointer must change.**
-
----
 
 ## Related Problems to Practice
 

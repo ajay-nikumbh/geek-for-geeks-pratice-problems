@@ -1,14 +1,8 @@
 # Delete Node Without Linked List Head
 
-| Field | Value |
-|---|---|
-| Topic | Linked List |
-| Difficulty | Medium |
-| Submissions | 228,637 |
-| Accuracy | 78.57% |
-| Companies | Amazon, Microsoft, Samsung, Visa, Goldman Sachs, Kritikal Solutions |
-| Related Tags | Linked List |
-| Problem Link | [https://www.geeksforgeeks.org/problems/delete-without-head-pointer/1](https://www.geeksforgeeks.org/problems/delete-without-head-pointer/1) |
+| Topic | Difficulty | Submissions | Accuracy | Companies | Related Tags | Problem Link |
+|---|---|---|---|---|---|---|
+| Linked List | Medium | 228,637 | 78.57% | Amazon, Microsoft, Samsung, Visa, Goldman Sachs, Kritikal Solutions | Linked List | [https://www.geeksforgeeks.org/problems/delete-without-head-pointer/1](https://www.geeksforgeeks.org/problems/delete-without-head-pointer/1) |
 
 ## Problem Statement
 
@@ -47,8 +41,6 @@ After deletion:
 ```text
 10 -> 30 -> 40 -> NULL
 ```
-
----
 
 # 1. Interview Intuition
 
@@ -109,8 +101,6 @@ The node object that used to be called `C` is thrown away instead of `B`. But si
 
 This is the entire trick. It converts an "impossible without head" problem into an `O(1)` pointer operation.
 
----
-
 # 2. Core Linked List Idea
 
 Let's visualize this precisely with four nodes:
@@ -127,7 +117,6 @@ We are given a pointer to `B`. We do not have `A`.
 Before:
 
 A --> [B: 20] --> [C: 30] --> [D: 40] --> NULL
-
 
 Copy C.data into B.data:
 
@@ -155,8 +144,6 @@ A -> 30 -> 40 -> NULL
 ```
 
 which is functionally identical to `A -> C -> D`. The node object we physically removed was `C`, but the **value** that disappeared from the sequence was `B`'s original value (`20`). That's exactly the deletion we were asked to perform.
-
----
 
 # 3. Most Important Edge Case — The Node to Delete Is the Last Node
 
@@ -189,8 +176,6 @@ This is a classic interviewer follow-up: *"What if it's the last node?"* The hon
 
 > Without a reference to the previous node or the head, deleting the true last node is **impossible** using only a pointer to that node. That's precisely why the problem guarantees it won't happen.
 
----
-
 # 4. Approach 1 — "Brute Force" Thinking
 
 Normally, a brute-force section explores an inefficient-but-workable alternative. Here, that section looks unusually short, and that's the whole point of teaching this problem.
@@ -222,8 +207,6 @@ That approach costs `O(n)` time because you must **search** for the previous nod
 
 This absence of a fallback is exactly why this question separates candidates who have seen the trick from those who haven't — there's no partial credit for "traversing slowly."
 
----
-
 # 5. Optimal Approach — Copy-and-Bypass Trick
 
 Since there is only one viable technique, let's state it with full precision.
@@ -243,8 +226,6 @@ That's it — two lines, no traversal, no head required.
 - Line 2 removes the actual successor node from the chain, since we *do* have a direct reference to it via `node.next`.
 - The node we truly deallocate (the former `node.next`) is one we can always reach — we never needed `head` for it in the first place.
 
----
-
 # 6. Pointer Movement
 
 Two distinct micro-steps happen — let's separate them completely.
@@ -256,9 +237,7 @@ Before:
 
 ... -> [node: 20] -> [next: 30] -> [next.next: 40] -> ...
 
-
 node.data = node.next.data
-
 
 After copy:
 
@@ -273,11 +252,9 @@ After copy:
 ```text
 node.next = node.next.next
 
-
 Before:
 
 [node: 30] --> [next: 30] --> [next.next: 40]
-
 
 After:
 
@@ -287,8 +264,6 @@ After:
 ```
 
 Combining both steps, the net visible effect on the list is that the value `20` (originally in `node`) has vanished from the sequence, exactly as if `node` itself had been unlinked.
-
----
 
 # 7. Algorithm
 
@@ -316,8 +291,6 @@ node.next = node.next.next
 
 Done. No return value is needed — the mutation is in place and visible to anyone still holding the head.
 
----
-
 # 8. Optimal Python Solution
 
 ```python
@@ -341,8 +314,6 @@ class Solution:
         # No return is required — the list is mutated in place,
         # and the change is visible from the original head reference.
 ```
-
----
 
 # 9. Complete Dry Run
 
@@ -403,8 +374,6 @@ A(10) -> B(30) -------------> D(40) -> NULL
 
 This is exactly what we wanted: the value `20` is gone, and the sequence reads as if `B` had been truly deleted.
 
----
-
 # 10. Complexity Analysis
 
 Let:
@@ -434,8 +403,6 @@ Space Complexity = O(1)
 | Time | `O(1)` |
 | Extra Space | `O(1)` |
 
----
-
 # 11. Why This Is Optimal
 
 Here is the paradox that makes this problem famous:
@@ -454,8 +421,6 @@ That is `O(n)` in the worst case, because "finding the previous node" is inheren
 But in this problem, we sidestep the search entirely. We don't need the previous node — we only need the **next** node, which is always one hop away regardless of list size. That's why the "obvious" `O(n)` approach isn't just suboptimal here, it isn't even *available* (no head to start from) — and the trick that replaces it happens to be **strictly faster**, at `O(1)`.
 
 This is a rare case in interviews where removing information (the head) doesn't make the problem harder — it forces a different technique that turns out to be more efficient.
-
----
 
 # 12. Common Mistakes
 
@@ -481,9 +446,7 @@ A --------> [node: 20] --------> [next: 30] --------> [next.next: 40]
       the caller's node reference AND our local
       parameter "node" both point to this same object
 
-
 Inside the function: node = node.next
-
 
 After the assignment:
 
@@ -525,8 +488,6 @@ node.data = node.next.data
 
 If you stop here, the old "next" node is still in the list — you've just created a **duplicate value**, not removed a node. Both steps are mandatory.
 
----
-
 # 13. Visual Cheat Sheet
 
 ## The Trick, End to End
@@ -536,11 +497,9 @@ Before:
 
 ... -> [node: X] -> [succ: Y] -> [rest...]
 
-
 Copy:  node.data = succ.data
 
 ... -> [node: Y] -> [succ: Y] -> [rest...]
-
 
 Bypass:  node.next = succ.next
 
@@ -568,15 +527,11 @@ A -> [node] -> [next] -> ...
 We want:  A.next = next     <-- IMPOSSIBLE, we have no reference to A
 ```
 
----
-
 # 14. Interview Explanation in 30 Seconds
 
 A strong interview explanation would be:
 
 > Since I don't have the head, I can't reach the node before the one I need to delete, so I can't relink its `next` pointer directly. Instead, I copy the value from the next node into the given node, and then set the given node's `next` to skip over that next node. Effectively, the given node "becomes" its successor, and I delete the successor instead, which I *can* reach. This runs in `O(1)` time and space, and it only works because the problem guarantees the node isn't the last one — if it were, there'd be no next node to copy from, and the problem would be unsolvable with just this pointer.
-
----
 
 # 15. Interviewer Follow-Up Questions
 
@@ -600,8 +555,6 @@ This is the sharpest follow-up. The trick changes the **identity** of the object
 
 Yes — this is the same underlying idea used in **BST (Binary Search Tree) deletion** when removing a node with two children: instead of trying to detach the node directly (which would require re-wiring several subtrees), you copy the value of the **in-order successor** (or predecessor) into the node, and then delete that successor node instead, which is structurally easier to remove (it has at most one child). It's the same principle: *"When you can't easily unlink a node directly, copy the next thing's value into it and delete that other, easier-to-remove node instead."*
 
----
-
 # 16. Comparison Table
 
 | Scenario | Requires Head? | Time | Space | Notes |
@@ -612,8 +565,6 @@ Yes — this is the same underlying idea used in **BST (Binary Search Tree) dele
 | Doubly linked list, any node, no head | No | `O(1)` | `O(1)` | Trivial via `node.prev` / `node.next`, no trick needed |
 
 The crucial caveat under the second row: **the trick only works when there is a next node**. Without that guarantee, the elegant `O(1)` solution simply does not exist.
-
----
 
 # 17. Pattern Recognition
 
@@ -635,8 +586,6 @@ Whenever you find yourself unable to reach the "owner" of the pointer you need t
 ```
 
 If yes, you've found an `O(1)` trick instead of a traversal.
-
----
 
 # 18. Final Solution
 
@@ -661,8 +610,6 @@ class Solution:
         # No return is required — the list is mutated in place,
         # and the change is visible from the original head reference.
 ```
-
----
 
 # 19. Interview Takeaways
 
@@ -693,8 +640,6 @@ Remember these points:
 The key sentence to remember is:
 
 > **When you can't unlink the node you have, make it become the node you can reach — then delete that one instead.**
-
----
 
 ## Related Problems to Practice
 

@@ -1,14 +1,8 @@
 # Linked List — Delete at Position
 
-| Field | Value |
-|---|---|
-| Topic | Linked List |
-| Difficulty | Easy |
-| Submissions | 262,233 |
-| Accuracy | 39.85% |
-| Companies | Samsung, Adobe |
-| Related Tags | Linked List |
-| Problem Link | [https://www.geeksforgeeks.org/problems/delete-a-node-in-single-linked-list/1](https://www.geeksforgeeks.org/problems/delete-a-node-in-single-linked-list/1) |
+| Topic | Difficulty | Submissions | Accuracy | Companies | Related Tags | Problem Link |
+|---|---|---|---|---|---|---|
+| Linked List | Easy | 262,233 | 39.85% | Samsung, Adobe | Linked List | [https://www.geeksforgeeks.org/problems/delete-a-node-in-single-linked-list/1](https://www.geeksforgeeks.org/problems/delete-a-node-in-single-linked-list/1) |
 
 ## Problem Statement
 
@@ -21,8 +15,6 @@ The position is **1-indexed**:
 - and so on.
 
 Return the head of the modified linked list.
-
----
 
 # 1. Interview Intuition
 
@@ -77,8 +69,6 @@ and the list becomes:
 
 That single pointer update removes `30` from the chain.
 
----
-
 # 2. Core Linked List Idea
 
 Consider three nodes:
@@ -109,8 +99,6 @@ Before:
 
 A --------> B --------> C
 
-
-
 After:
 
 A --------------------> C
@@ -119,8 +107,6 @@ B is no longer reachable from the linked list.
 ```
 
 This is the fundamental operation behind deleting a node from a singly linked list.
-
----
 
 # 3. Most Important Edge Case — Deleting the Head
 
@@ -156,7 +142,6 @@ head
  v
 10 -> 20 -> 30 -> NULL
 
-
 After:
 
       head
@@ -168,8 +153,6 @@ After:
 The new head becomes `20`.
 
 So the first position must usually be handled separately.
-
----
 
 # 4. Approach 1 — Brute Force Thinking
 
@@ -212,8 +195,6 @@ Space = O(n)
 Although the time is still linear, the additional array and reconstruction are unnecessary.
 
 For an interview, the interviewer expects an **in-place pointer solution**.
-
----
 
 # 5. Optimal Approach — Reach the Previous Node
 
@@ -266,8 +247,6 @@ Result:
 ```text
 10 -> 20 -> 30 -> 50
 ```
-
----
 
 # 6. Pointer Movement
 
@@ -341,8 +320,6 @@ Final list:
 10 -> 20 -> 30 -> 50 -> NULL
 ```
 
----
-
 # 7. Why Do We Move `x - 2` Times?
 
 This is a common interview confusion.
@@ -393,8 +370,6 @@ Total:
 ```text
 2 = x - 2
 ```
-
----
 
 # 8. Algorithm
 
@@ -456,8 +431,6 @@ current.next = current.next.next
 
 Return `head`.
 
----
-
 # 9. Optimal Python Solution
 
 ```python
@@ -500,8 +473,6 @@ class Solution:
         return head
 ```
 
----
-
 # 10. Cleaner Interview Version
 
 If the input guarantees that `x` is always a valid position, we can write:
@@ -535,8 +506,6 @@ class Solution:
 ```
 
 This is usually the best version when the platform guarantees valid input.
-
----
 
 # 11. Defensive Version for Invalid Position
 
@@ -624,8 +593,6 @@ class Solution:
 
 For coding platforms, this extra defensive logic is often unnecessary unless the problem explicitly allows invalid positions.
 
----
-
 # 12. Complete Dry Run
 
 Consider:
@@ -708,8 +675,6 @@ Final result:
 5 -> 8 -> 20 -> 25 -> NULL
 ```
 
----
-
 # 13. Dry Run — Delete Head
 
 Input:
@@ -753,8 +718,6 @@ Returned list:
 ```text
 14 -> 21 -> NULL
 ```
-
----
 
 # 14. Dry Run — Delete Last Node
 
@@ -809,8 +772,6 @@ Final list:
 
 The same pointer logic naturally handles deletion of the last node.
 
----
-
 # 15. Complexity Analysis
 
 Let:
@@ -864,8 +825,6 @@ Space Complexity = O(1)
 | Time | `O(n)` worst case |
 | Extra Space | `O(1)` |
 
----
-
 # 16. Why This Is Optimal
 
 Could we do better than `O(n)`?
@@ -904,8 +863,6 @@ O(n)
 
 is optimal for arbitrary-position deletion in a singly linked list.
 
----
-
 # 17. Common Mistakes
 
 ## Mistake 1 — Moving to the Target Instead of Its Previous Node
@@ -927,8 +884,6 @@ Correct target:
 position x - 1
 ```
 
----
-
 ## Mistake 2 — Forgetting the Head Case
 
 This does not work when:
@@ -944,8 +899,6 @@ Always think:
 ```text
 Deleting head = change head itself.
 ```
-
----
 
 ## Mistake 3 — Off-by-One Error
 
@@ -973,8 +926,6 @@ Therefore:
 range(x - 2)
 ```
 
----
-
 ## Mistake 4 — Returning `current`
 
 The problem asks for the head of the modified linked list.
@@ -991,15 +942,11 @@ Correct:
 return head
 ```
 
----
-
 ## Mistake 5 — Creating an Unnecessary New Linked List
 
 Deletion can be done by changing a single pointer.
 
 Do not rebuild the list unless specifically required.
-
----
 
 # 18. Visual Cheat Sheet
 
@@ -1014,18 +961,14 @@ prev
 20 --------> 30 --------> 40
               target
 
-
 Operation:
 
 prev.next = prev.next.next
-
 
 After:
 
 20 ---------------------> 40
 ```
-
----
 
 ## Delete Head
 
@@ -1037,11 +980,9 @@ head
  v
 10 -> 20 -> 30
 
-
 Operation:
 
 head = head.next
-
 
 After:
 
@@ -1050,8 +991,6 @@ After:
        v
       20 -> 30
 ```
-
----
 
 ## Delete Last Node
 
@@ -1063,26 +1002,20 @@ Before:
       |
      prev
 
-
 Operation:
 
 prev.next = prev.next.next
-
 
 After:
 
 20 -> 30 -> NULL
 ```
 
----
-
 # 19. Interview Explanation in 30 Seconds
 
 A strong interview explanation would be:
 
 > Because this is a singly linked list, I cannot move backward from the node being deleted. Therefore, except when deleting the head, I traverse to the node immediately before position `x`. Once I reach it, I bypass the target using `current.next = current.next.next`. If `x == 1`, I simply return `head.next`. The traversal takes `O(n)` time in the worst case and uses `O(1)` extra space.
-
----
 
 # 20. Interviewer Follow-Up Questions
 
@@ -1100,8 +1033,6 @@ We perform:
 prev.next = next
 ```
 
----
-
 ## Q2. Why is deleting the head special?
 
 The head has no previous node.
@@ -1113,8 +1044,6 @@ We must update the head itself:
 ```python
 head = head.next
 ```
-
----
 
 ## Q3. What happens when deleting the last node?
 
@@ -1144,8 +1073,6 @@ we get:
 B.next = None
 ```
 
----
-
 ## Q4. Can deletion be done in `O(1)` time?
 
 If we are only given the **head and position**, no.
@@ -1156,16 +1083,12 @@ However, if we are directly given a pointer to a non-tail node, there is a famou
 
 That is a different problem.
 
----
-
 ## Q5. What if the position is invalid?
 
 There are two possibilities:
 
 1. The problem guarantees valid positions — no extra handling is needed.
 2. The problem does not guarantee them — validate during traversal and leave the list unchanged or return an error depending on the specification.
-
----
 
 ## Q6. Why is the space complexity `O(1)`?
 
@@ -1179,8 +1102,6 @@ node_to_delete
 
 The number of variables does not grow with the input size.
 
----
-
 # 21. Important Comparison — Array vs Linked List
 
 | Operation | Array | Singly Linked List |
@@ -1193,8 +1114,6 @@ The number of variables does not grow with the input size.
 An important interview insight is:
 
 > Linked-list deletion itself is cheap; **finding the location** is what costs time.
-
----
 
 # 22. Alternative Technique — Dummy Node
 
@@ -1277,8 +1196,6 @@ You will see them repeatedly in problems such as:
 - add two numbers
 - remove N-th node from end
 
----
-
 # 23. Head-Case vs Dummy-Node Comparison
 
 ## Without Dummy Node
@@ -1303,8 +1220,6 @@ delete target using the same logic for every position
 ```
 
 The dummy-node technique can make linked-list code more uniform and less error-prone.
-
----
 
 # 24. Pattern Recognition
 
@@ -1331,8 +1246,6 @@ node at position x - 1
 
 owns the pointer that must change.
 
----
-
 # 25. Final Optimal Strategy
 
 ```text
@@ -1351,8 +1264,6 @@ owns the pointer that must change.
                                               v
                                          return head
 ```
-
----
 
 # 26. Final Solution
 
@@ -1384,8 +1295,6 @@ class Solution:
         return head
 ```
 
----
-
 # 27. Interview Takeaways
 
 Remember these points:
@@ -1413,8 +1322,6 @@ Remember these points:
 The key sentence to remember is:
 
 > **In a singly linked list, deletion is fundamentally about changing the `next` pointer of the node immediately before the target.**
-
----
 
 ## Related Problems to Practice
 

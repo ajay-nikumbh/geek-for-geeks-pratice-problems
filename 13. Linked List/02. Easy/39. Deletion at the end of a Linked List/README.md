@@ -1,14 +1,8 @@
 # Deletion at the end of a Linked List
 
-| Field | Value |
-|---|---|
-| Topic | Linked List |
-| Difficulty | Easy |
-| Submissions | 18,330 |
-| Accuracy | 51.25% |
-| Companies | — |
-| Related Tags | Linked List |
-| Problem Link | [https://www.geeksforgeeks.org/problems/deletion-at-the-end-of-a-linked-list/1](https://www.geeksforgeeks.org/problems/deletion-at-the-end-of-a-linked-list/1) |
+| Topic | Difficulty | Submissions | Accuracy | Companies | Related Tags | Problem Link |
+|---|---|---|---|---|---|---|
+| Linked List | Easy | 18,330 | 51.25% | — | Linked List | [https://www.geeksforgeeks.org/problems/deletion-at-the-end-of-a-linked-list/1](https://www.geeksforgeeks.org/problems/deletion-at-the-end-of-a-linked-list/1) |
 
 ## Problem Statement
 
@@ -27,8 +21,6 @@ Output: 10 -> 20 -> NULL
 Input:  5 -> NULL
 Output: NULL
 ```
-
----
 
 # 1. Interview Intuition
 
@@ -75,8 +67,6 @@ A singly linked list has **no index and no backward pointer**. The only informat
 
 This is exactly the kind of trade-off interviewers want you to articulate: linked lists trade `O(1)` insertion/deletion **once you're at the right spot** for `O(n)` cost in **finding** that spot when no direct reference exists.
 
----
-
 # 2. Core Linked List Idea
 
 The core operation is simple once you reach the right node:
@@ -115,8 +105,6 @@ current.next = None
 ```
 
 `40` still technically exists in memory for a moment, but since nothing points to it anymore, it is no longer part of the list and will eventually be garbage collected.
-
----
 
 # 3. Most Important Edge Case
 
@@ -165,8 +153,6 @@ if head.next is None:
 
 If you forget this check, your lookahead logic (`current.next.next`) will try to access `.next` on a `None` value, causing a null pointer / `AttributeError` crash.
 
----
-
 # 4. Approach 1 — Brute Force Thinking
 
 A brute-force way to think about this:
@@ -199,8 +185,6 @@ Space = O(1)
 
 This works and is still technically `O(n)`, but it does **two full traversals** where **one** is enough. Interviewers usually push for the single-pass version, since it is strictly better and not any harder to write.
 
----
-
 # 5. Optimal Approach — Single Pass Lookahead
 
 Instead of counting the length first, we can detect "am I the second-to-last node?" while we are still moving, using a **lookahead** check.
@@ -229,8 +213,6 @@ current -> current.next -> current.next.next
 - If `current.next.next` is `None`, then `current.next` has nothing after it — `current.next` **is** the last node, and `current` is exactly the node we need.
 
 This "look one node ahead" trick is a very common linked-list pattern (it also shows up in fast/slow pointer problems, cycle detection, and N-th-from-end problems).
-
----
 
 # 6. Pointer Movement
 
@@ -285,8 +267,6 @@ current.next = None
 10 -> 20 -> 30 -> NULL
 ```
 
----
-
 # 7. Algorithm
 
 ### Step 1
@@ -333,8 +313,6 @@ current.next = None
 
 Return `head`.
 
----
-
 # 8. Optimal Python Solution
 
 ```python
@@ -372,8 +350,6 @@ class Solution:
         # Return the unchanged head of the modified list.
         return head
 ```
-
----
 
 # 9. Complete Dry Run
 
@@ -436,8 +412,6 @@ Since `30.next` was `40`, and we just set it to `None`, node `40` is no longer r
 10 -> 20 -> 30 -> NULL
 ```
 
----
-
 # 10. Dry Run — Single Node List
 
 Input:
@@ -467,8 +441,6 @@ head = None
 ```
 
 This confirms why the single-node check must come **before** the `while current.next.next is not None` loop — if it didn't, the very first check `current.next.next` would try to call `.next` on `None` (since `current.next` would already be `None`), crashing the program.
-
----
 
 # 11. Complexity Analysis
 
@@ -503,8 +475,6 @@ Space Complexity = O(1)
 | Time | `O(n)` |
 | Extra Space | `O(1)` |
 
----
-
 # 12. Why This Is Optimal
 
 Could we make this faster than `O(n)`?
@@ -536,8 +506,6 @@ tail = new_tail
 We would not need to traverse at all — `tail.prev` gives us direct backward access to the second-to-last node.
 
 The `O(n)` cost in our problem exists specifically **because** we are working with a **singly** linked list with no backward references. This distinction — singly vs. doubly linked list — is one of the most common follow-up threads interviewers pull on.
-
----
 
 # 13. Common Mistakes
 
@@ -594,8 +562,6 @@ return current   # WRONG — this returns the second-to-last node, not the head
 
 Always return the original `head` reference (unless the list became empty, in which case return `None`).
 
----
-
 # 14. Visual Cheat Sheet
 
 ## General Case (2+ nodes)
@@ -608,11 +574,9 @@ Before:
              |      |
          current   last
 
-
 Operation:
 
 current.next = None
-
 
 After:
 
@@ -629,11 +593,9 @@ head
  v
 5 -> NULL
 
-
 Operation:
 
 return None
-
 
 After:
 
@@ -647,26 +609,20 @@ Before:
 
 head = None
 
-
 Operation:
 
 return None (nothing to do)
-
 
 After:
 
 head = None
 ```
 
----
-
 # 15. Interview Explanation in 30 Seconds
 
 A strong interview explanation would be:
 
 > Since this is a singly linked list, I can't move backward from the last node, so I need to walk forward until I reach the second-to-last node — the one whose `next` pointer must become `None`. I do this in a single pass by checking `current.next.next`: when that's `None`, `current` is exactly the node I need. I handle two special cases upfront — an empty list, which I return as-is, and a single-node list, which becomes empty after deletion. The traversal takes `O(n)` time and `O(1)` extra space.
-
----
 
 # 16. Interviewer Follow-Up Questions
 
@@ -744,8 +700,6 @@ Not really — the single-pass lookahead approach doesn't need to know the lengt
 
 That's a different, well-known trick: copy the next node's data into the current node, then delete the next node instead. It works for any non-tail node with a known next node, but does **not** apply when deleting the actual last node, since there is no node after it to copy from.
 
----
-
 # 17. Important Comparison — Array vs Singly vs Doubly Linked List
 
 | Structure | Delete Last Element |
@@ -757,8 +711,6 @@ That's a different, well-known trick: copy the next node's data into the current
 This is a great interview talking point:
 
 > Arrays are efficient at removing from the end because they support direct indexing. Singly linked lists are efficient at removing from the **front** but not the end, because there's no backward reference. Doubly linked lists get the best of both worlds for end-deletion, at the cost of extra memory per node for the `prev` pointer.
-
----
 
 # 18. Pattern Recognition
 
@@ -777,8 +729,6 @@ Whenever you see a linked-list problem involving "the last node" or "the N-th fr
 ```
 
 If not, a full traversal is unavoidable in a singly linked list.
-
----
 
 # 19. Final Solution
 
@@ -816,8 +766,6 @@ class Solution:
         return head
 ```
 
----
-
 # 20. Interview Takeaways
 
 Remember these points:
@@ -844,8 +792,6 @@ Remember these points:
 The key sentence to remember is:
 
 > **In a singly linked list, deleting the last node is fundamentally a search problem — you must walk to the second-to-last node before you can perform the one pointer change that actually deletes anything.**
-
----
 
 ## Related Problems to Practice
 

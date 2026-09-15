@@ -1,14 +1,8 @@
 # Delete All Occurrences in a Linked list
 
-| Field | Value |
-|---|---|
-| Topic | Linked List |
-| Difficulty | Medium |
-| Submissions | 33,461 |
-| Accuracy | 48.44% |
-| Companies | — |
-| Related Tags | Linked List |
-| Problem Link | [https://www.geeksforgeeks.org/problems/delete-keys-in-a-linked-list/1](https://www.geeksforgeeks.org/problems/delete-keys-in-a-linked-list/1) |
+| Topic | Difficulty | Submissions | Accuracy | Companies | Related Tags | Problem Link |
+|---|---|---|---|---|---|---|
+| Linked List | Medium | 33,461 | 48.44% | — | Linked List | [https://www.geeksforgeeks.org/problems/delete-keys-in-a-linked-list/1](https://www.geeksforgeeks.org/problems/delete-keys-in-a-linked-list/1) |
 
 ## Problem Statement
 
@@ -45,8 +39,6 @@ Output: 6 -> 9 -> NULL
 
 Here `4` appears as a **run of three consecutive nodes at the head**, plus one more scattered occurrence near the tail. Both patterns — consecutive and scattered — must be handled by the same logic.
 
----
-
 # 1. Interview Intuition
 
 This problem looks like a close cousin of "remove all duplicate values from a **sorted** linked list," but there is one crucial difference that changes the entire approach:
@@ -76,8 +68,6 @@ dummy -> 2 -> 3 -> 2 -> 5 -> 2 -> 7 -> NULL
 
 Now every node in the original list — including the head — has a predecessor. This turns "maybe the head matches, maybe several leading nodes match" into an ordinary case handled by the exact same loop as everything else.
 
----
-
 # 2. Core Linked List Idea
 
 Place a dummy node before the head, then walk two pointers — `previous` and `current` — down the list together, deciding at each `current` node whether it must be spliced out.
@@ -99,7 +89,6 @@ current.value == 2  -> MATCH -> delete it
 previous.next = current.next   (dummy -> 3 -> 2 -> 5 -> 2 -> 7)
 current advances alone (previous stays at dummy)
 
-
 Step 1:
 previous
    |
@@ -110,7 +99,6 @@ previous
              current
 
 current.value == 3  -> no match -> advance BOTH
-
 
 Step 2:
         previous
@@ -125,7 +113,6 @@ current.value == 2  -> MATCH -> delete it
 previous.next = current.next   (dummy -> 3 -> 5 -> 2 -> 7)
 current advances alone (previous stays at 3)
 
-
 Step 3:
         previous
            |
@@ -136,7 +123,6 @@ Step 3:
              current
 
 current.value == 5  -> no match -> advance BOTH
-
 
 Step 4:
                previous
@@ -150,7 +136,6 @@ Step 4:
 current.value == 2  -> MATCH -> delete it
 previous.next = current.next   (dummy -> 3 -> 5 -> 7)
 current advances alone (previous stays at 5)
-
 
 Step 5:
                previous
@@ -171,8 +156,6 @@ Final list:
 ```
 
 Every match — whether at the head, in the middle, isolated, or scattered — is handled with exactly the same rule.
-
----
 
 # 3. Most Important Edge Case
 
@@ -213,8 +196,6 @@ key = 2
 ```
 
 After deleting the first `2`, `current` moves to the second `2` while `previous` stays put (still at `dummy`). The second `2` is deleted the same way, then the third. Only once `current` reaches `3` (a non-match) does `previous` finally move. This is the single most important behavior of the algorithm: **`previous` must never advance on a match**, or consecutive runs will be handled incorrectly.
-
----
 
 # 4. Approach 1 — Brute Force Thinking
 
@@ -304,8 +285,6 @@ Interestingly, the **time complexity here already matches the optimal solution**
 
 What it *does* sacrifice is **space** — it allocates a new array and builds an entirely new list, using `O(n)` extra memory, and it also discards the original node objects. The optimal approach reuses the existing nodes and only rewires pointers, achieving `O(1)` extra space. In an interview, mentioning the brute-force version briefly is fine, but you should proceed to show the pointer-based technique to demonstrate you understand in-place linked-list manipulation.
 
----
-
 # 5. Optimal Approach — Dummy Node + Previous/Current Scan
 
 The optimal technique uses a **dummy node** placed before the head, plus two pointers, `previous` and `current`, that scan the list together — but advance according to different rules depending on whether a match is found.
@@ -347,8 +326,6 @@ If we mistakenly advanced `previous` to the just-deleted node, we would be point
 So the rule is:
 
 > `previous` only ever advances to a node we know is being **kept**. It jumps forward exactly once per surviving node, and stays frozen through any number of consecutive deletions.
-
----
 
 # 6. Pointer Movement
 
@@ -435,8 +412,6 @@ Final list:
 
 Notice that `previous` moved exactly **once** in the entire trace (from `dummy` to `3`), even though **three** deletions happened — two of them consecutive, one of them scattered far later in the list. This is exactly the behavior we want.
 
----
-
 # 7. Algorithm
 
 ### Step 1
@@ -471,8 +446,6 @@ While `current` is not `None`:
 ### Step 4
 
 Return `dummy.next` as the new head.
-
----
 
 # 8. Optimal Python Solution
 
@@ -518,8 +491,6 @@ class Solution:
         # Return the head of the modified list, skipping the dummy node.
         return dummy.next
 ```
-
----
 
 # 9. Complete Dry Run
 
@@ -671,8 +642,6 @@ Final result:
 
 Every one of the three (non-adjacent) `2`s was removed correctly, and the head itself — which originally matched `key` — was replaced cleanly through the dummy node.
 
----
-
 # 10. Dry Run — Consecutive Matches at the Head
 
 Consider the edge case where the first three nodes all equal the key:
@@ -745,8 +714,6 @@ Final result:
 
 Notice `previous` remained parked at `dummy` through **three consecutive deletions** and only moved once, right at the end, when a genuinely surviving node (`3`) was found. `dummy.next` correctly reflects the fully updated head — `3` — even though the *original* head (`2`) was deleted, and so were the two nodes after it.
 
----
-
 # 11. Complexity Analysis
 
 Let:
@@ -780,8 +747,6 @@ Space Complexity = O(n)
 | Brute Force (array rebuild) | `O(n)` | `O(n)` |
 | Optimal (dummy + previous/current) | `O(n)` | `O(1)` |
 
----
-
 # 12. Why This Is Optimal
 
 Could we ever do better than `O(n)` time?
@@ -795,8 +760,6 @@ So `O(n)` time is a hard lower bound for this problem, regardless of approach.
 What separates a good solution from a great one is **space**. The brute-force approach spends `O(n)` extra memory building a parallel array and a brand-new list. The optimal approach achieves the same `O(n)` time bound while using only `O(1)` extra space — a fixed number of pointers (`dummy`, `previous`, `current`) that never grow with input size. It reuses the existing nodes in place, doing pure pointer surgery instead of reconstruction.
 
 This is the hallmark of an optimal linked-list solution: match the best possible time bound, and drive the extra space down to the theoretical minimum.
-
----
 
 # 13. Common Mistakes
 
@@ -845,8 +808,6 @@ A very common mistake is porting logic from the classic "remove duplicates from 
 
 Since the original `head` node might itself be deleted, returning the original `head` variable (which may now point to a removed node) is incorrect. Always return `dummy.next`, which reflects whatever the *current*, possibly updated, first surviving node is.
 
----
-
 # 14. Visual Cheat Sheet
 
 ## Deleting a Node in the Middle (No Adjacent Match)
@@ -872,8 +833,6 @@ previous
    v
   A --------------------------> C
 ```
-
----
 
 ## Deleting Consecutive Matches
 
@@ -903,8 +862,6 @@ previous
   A --------------------------> D
 ```
 
----
-
 ## Deleting the Head via Dummy Node
 
 ```text
@@ -931,15 +888,11 @@ dummy -----------> B -> C
 return dummy.next   -->   B becomes the new head
 ```
 
----
-
 # 15. Interview Explanation in 30 Seconds
 
 A strong interview explanation would be:
 
 > Since the list isn't sorted, matching values can appear anywhere — including consecutively or right at the head — so I can't rely on comparing only neighboring nodes. I use a dummy node before the head so that even the head is deletable through a `previous` pointer. Then I walk `current` through the list: whenever `current.value == key`, I splice it out with `previous.next = current.next` and move only `current` forward, leaving `previous` untouched so any following match — even a run of consecutive matches — gets deleted through the same surviving `previous`. If there's no match, I advance both pointers together. This is a single `O(n)` pass with `O(1)` extra space.
-
----
 
 # 16. Interviewer Follow-Up Questions
 
@@ -990,8 +943,6 @@ else:
 
 Everything else — freezing `previous` during consecutive deletions, using a dummy node to cover head matches — remains exactly the same.
 
----
-
 # 17. Important Comparison — This Problem vs Sorted "Remove All Duplicates"
 
 | Aspect | This Problem (Unsorted, Delete-by-Key) | Sorted "Remove All Duplicates" |
@@ -1008,8 +959,6 @@ Everything else — freezing `previous` during consecutive deletions, using a du
 | Space complexity (optimal) | `O(1)` | `O(1)` |
 
 The core similarity is the **"freeze `previous` on a match"** rule — both problems need it to correctly handle runs of consecutive deletions. The core difference is **what decides a match**: a fixed external `key` here, versus a relationship between neighboring nodes there. That difference is exactly why this problem cannot assume adjacency and must check every node independently.
-
----
 
 # 18. Pattern Recognition
 
@@ -1039,8 +988,6 @@ This exact skeleton reappears in many linked-list problems:
 - remove duplicates (sorted or unsorted, with variations on the frozen-previous rule).
 
 Once you recognize "arbitrary predicate deletion, possibly consecutive, possibly at the head," the dummy-node-plus-frozen-previous template should come to mind immediately.
-
----
 
 # 19. Final Solution
 
@@ -1087,8 +1034,6 @@ class Solution:
         return dummy.next
 ```
 
----
-
 # 20. Interview Takeaways
 
 Remember these points:
@@ -1122,8 +1067,6 @@ Remember these points:
 The key sentence to remember is:
 
 > **When deletion depends on a condition rather than a position, use a dummy node plus a `previous` pointer that only advances past nodes you know are kept — never past nodes you just deleted.**
-
----
 
 ## Related Problems to Practice
 

@@ -1,14 +1,8 @@
 # Remove All Duplicates in a Linked List
 
-| Field | Value |
-|---|---|
-| Topic | Linked List |
-| Difficulty | Medium |
-| Submissions | 48,912 |
-| Accuracy | 41.27% |
-| Companies | Microsoft |
-| Related Tags | Linked List |
-| Problem Link | [https://www.geeksforgeeks.org/problems/remove-all-occurences-of-duplicates-in-a-linked-list/1](https://www.geeksforgeeks.org/problems/remove-all-occurences-of-duplicates-in-a-linked-list/1) |
+| Topic | Difficulty | Submissions | Accuracy | Companies | Related Tags | Problem Link |
+|---|---|---|---|---|---|---|
+| Linked List | Medium | 48,912 | 41.27% | Microsoft | Linked List | [https://www.geeksforgeeks.org/problems/remove-all-occurences-of-duplicates-in-a-linked-list/1](https://www.geeksforgeeks.org/problems/remove-all-occurences-of-duplicates-in-a-linked-list/1) |
 
 ## Problem Statement
 
@@ -56,8 +50,6 @@ Compare this with the well-known variant "remove duplicates, keep one occurrence
 
 That variant keeps the first copy of every value. **This problem keeps nothing from a duplicated value.**
 
----
-
 # 1. Interview Intuition
 
 The list is **sorted**. That single fact is what makes this problem tractable without extra memory.
@@ -87,8 +79,6 @@ The second key idea is **when `previous` is allowed to move**:
 > `previous` only advances when the node it is about to step onto is confirmed to be **unique** (not part of any duplicate run).
 
 If a run of duplicates is detected, `previous` stays exactly where it is, and only `previous.next` gets rewired — to skip the whole run. This is the opposite of the "keep one copy" problem, where `previous` would advance to the first copy before skipping the rest.
-
----
 
 # 2. Core Linked List Idea
 
@@ -173,8 +163,6 @@ Final list (via `dummy.next`):
 1 -> 2 -> 5 -> NULL
 ```
 
----
-
 # 3. Most Important Edge Case
 
 ## Case A — Every Node Is a Duplicate
@@ -212,8 +200,6 @@ Output: 1 -> 2 -> NULL
 ```
 
 When the inner loop walks through the trailing run of `3`s, `current` eventually becomes `None` (it runs off the end of the list). The relinking step `previous.next = current` correctly sets `2.next = None`, terminating the list properly.
-
----
 
 # 4. Approach 1 — Brute Force Thinking
 
@@ -261,8 +247,6 @@ Space = O(n)   (hash map storing up to n distinct values)
 
 This is a fine fallback answer, but for a **sorted** list an interviewer will expect you to avoid the extra space.
 
----
-
 # 5. Optimal Approach — Dummy Node + Consecutive Run Detection (Sorted List)
 
 Because the list is sorted, duplicate values form contiguous runs. We exploit this with three pointers:
@@ -292,8 +276,6 @@ else:
 The crucial asymmetry: in the duplicate branch, `previous` is frozen while `current` sprints ahead through the whole run. In the unique branch, both pointers move together, one step at a time.
 
 This is what makes the algorithm remove **all** copies rather than leaving one behind — `previous` never gets attached to a value that turned out to be duplicated.
-
----
 
 # 6. Pointer Movement
 
@@ -387,8 +369,6 @@ Result via `dummy.next`:
 
 Notice the pattern across the whole run: **`prev` only ever moves onto a node it has personally verified is not the start of a duplicate run.** It stayed at `2` through two separate relinking operations before finally being allowed to move again.
 
----
-
 # 7. Algorithm
 
 ### Step 1 — Dummy Setup
@@ -449,8 +429,6 @@ current  = current.next
 return dummy.next
 ```
 
----
-
 # 8. Optimal Python Solution
 
 ```python
@@ -503,8 +481,6 @@ class Solution:
         # dummy.next is the head of the list with all duplicates removed.
         return dummy.next
 ```
-
----
 
 # 9. Complete Dry Run
 
@@ -623,8 +599,6 @@ Return `dummy.next`:
 
 This matches the expected output exactly — `3` and `4` were fully removed, `1`, `2`, and `5` survived because they each appeared exactly once.
 
----
-
 # 10. Complexity Analysis
 
 Let:
@@ -656,8 +630,6 @@ Space Complexity = O(1)
 | Brute Force (hash map count) | `O(n)` | `O(n)` | No |
 | Optimal (dummy node + run detection) | `O(n)` | `O(1)` | Yes |
 
----
-
 # 11. Why This Is Optimal
 
 For a **sorted** linked list, `O(n)` time and `O(1)` space is the best possible result:
@@ -672,8 +644,6 @@ Contrast this with an **unsorted** list:
 - Alternatively, you could sort the list first (turning it into this exact problem), but that costs `O(n log n)` time, which is strictly worse.
 
 So the dummy-node/run-detection technique is optimal **specifically because it exploits the sortedness** of the input — it is not a general-purpose duplicate-removal algorithm.
-
----
 
 # 12. Common Mistakes
 
@@ -720,8 +690,6 @@ When the inner loop walks through the trailing `3`s, `current` becomes `None`. C
 
 It is very easy to accidentally write the well-known "delete duplicates, keep one" solution instead, especially since the two problems look almost identical at first glance. Always double check: does a value that appears twice get **zero** copies in the output, or **one**? This problem requires zero.
 
----
-
 # 13. Visual Cheat Sheet
 
 ## Unique Node — Both Pointers Advance
@@ -738,7 +706,6 @@ Operation:
 
 previous = previous.next
 current  = current.next
-
 
 After:
 
@@ -758,7 +725,6 @@ previous          current
    v                 v
    2 ------> 3 ----> 3 ----> 4 -> ...
 
-
 Inner loop walks current past the whole run:
 
 previous                          current
@@ -766,11 +732,9 @@ previous                          current
    v                                 v
    2 ------> 3 ----> 3 ----> 4 ----> ...
 
-
 Operation:
 
 previous.next = current
-
 
 After:
 
@@ -808,13 +772,9 @@ dummy ------------------> 2 -> 3 -> NULL
 Return dummy.next -> new head is 2.
 ```
 
----
-
 # 14. Interview Explanation in 30 Seconds
 
 > Since the list is sorted, duplicates are always consecutive, so I only need to compare a node with its immediate neighbor. I use a dummy node before the head so I always have a valid `previous` pointer, even if the head itself turns out to be duplicated. I scan with `current`: if `current.next` has the same value as `current`, I've found a duplicate run, so I walk `current` all the way through it and then do `previous.next = current` to cut the whole run out — without moving `previous`. If `current` is not part of a run, I advance both `previous` and `current` together, confirming that node as unique. This runs in `O(n)` time with `O(1)` extra space.
-
----
 
 # 15. Interviewer Follow-Up Questions
 
@@ -838,8 +798,6 @@ Yes. A recursive formulation typically looks at the head: if `head.next` exists 
 
 In simple position-based deletion, the head is only a special case if you're asked to delete position 1 — a single, predictable check. Here, whether the head needs to be removed is **not known in advance** — it depends on whether the head's value happens to be duplicated, which can only be discovered during the scan. Wrapping the head in a dummy node from the very start means the algorithm never needs to ask "is this affecting the head?" — the uniform `previous.next` update handles it automatically, whether the affected run is at the front, middle, or anywhere else.
 
----
-
 # 16. Comparison: "Keep One Copy" vs "Keep None" (This Problem)
 
 | Aspect | Remove Duplicates, Keep One | Remove Duplicates, Keep None (this problem) |
@@ -850,8 +808,6 @@ In simple position-based deletion, the head is only a special case if you're ask
 | Pointer update on a run | `current.next = skip-ahead past duplicates`, `previous` becomes that first copy | `previous.next = current` (node after the whole run); `previous` stays frozen |
 | Inner loop purpose | Skip extra copies only | Skip the entire run, including the first copy |
 | Typical bug | Off-by-one, skipping one too many/few | Accidentally advancing `previous` into the run |
-
----
 
 # 17. Pattern Recognition
 
@@ -874,8 +830,6 @@ This pattern connects to several array problems, such as:
 - Collapsing consecutive duplicate characters in a sorted or run-length-encoded string.
 
 Recognizing "sorted + duplicate handling" as a signal for "adjacent comparison, no hashing needed" is a shortcut that saves real time in interviews.
-
----
 
 # 18. Final Solution
 
@@ -929,8 +883,6 @@ class Solution:
         return dummy.next
 ```
 
----
-
 # 19. Interview Takeaways
 
 ```text
@@ -959,8 +911,6 @@ class Solution:
 The key sentence to remember is:
 
 > **When a sorted structure requires collapsing or removing runs of equal values, compare adjacent elements and use a dummy node so that even the head can be safely rewritten.**
-
----
 
 ## Related Problems to Practice
 

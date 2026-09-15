@@ -1,14 +1,8 @@
 # Delete Alternate Nodes
 
-| Field | Value |
-|---|---|
-| Topic | Linked List |
-| Difficulty | Easy |
-| Submissions | 91,473 |
-| Accuracy | 56.09% |
-| Companies | Morgan Stanley |
-| Related Tags | Linked List |
-| Problem Link | [https://www.geeksforgeeks.org/problems/delete-alternate-nodes/1](https://www.geeksforgeeks.org/problems/delete-alternate-nodes/1) |
+| Topic | Difficulty | Submissions | Accuracy | Companies | Related Tags | Problem Link |
+|---|---|---|---|---|---|---|
+| Linked List | Easy | 91,473 | 56.09% | Morgan Stanley | Linked List | [https://www.geeksforgeeks.org/problems/delete-alternate-nodes/1](https://www.geeksforgeeks.org/problems/delete-alternate-nodes/1) |
 
 ## Problem Statement
 
@@ -37,8 +31,6 @@ Input:  10 -> 20 -> 30 -> 40 -> NULL
 Output: 10 -> 30 -> NULL
 ```
 
----
-
 # 1. Interview Intuition
 
 At first glance this looks like a variant of the position-based deletion problem — but it is actually **simpler**.
@@ -65,8 +57,6 @@ current.next  -> the node we delete
 ```
 
 We repeatedly bypass `current.next`, then jump `current` forward to the next node we are keeping. No counters, no index arithmetic — just a repeating local pattern.
-
----
 
 # 2. Core Linked List Idea
 
@@ -98,8 +88,6 @@ After:
 ```
 
 The entire problem is just this single bypass operation, applied again and again as we slide down the list two nodes at a time.
-
----
 
 # 3. Most Important Edge Case
 
@@ -159,8 +147,6 @@ Every node pairs up perfectly:
 
 These "does a next node exist" checks are exactly where bugs creep in, especially for odd-length lists — we will see this in the Common Mistakes section.
 
----
-
 # 4. Approach 1 — Brute Force Thinking
 
 A brute-force approach could be:
@@ -201,8 +187,6 @@ Space = O(n)
 
 The time complexity is already optimal, but the extra array and the freshly built list are unnecessary. The existing nodes can be reused directly with pointer manipulation — an interviewer will expect the **in-place** version.
 
----
-
 # 5. Optimal Approach — In-Place Pointer Skipping
 
 We do not need extra memory at all. We can delete alternate nodes by rewiring `next` pointers as we walk down the list.
@@ -238,8 +222,6 @@ current = current.next
 After step 2, `current.next` now points to the **next node to keep** (the node that used to be two steps ahead). When we then do `current = current.next` in step 3, `current` lands exactly on that kept node — putting us right back at the start of the pattern: "the node right after `current` is the one to delete."
 
 This is why only two lines of pointer surgery, repeated in a loop, are enough to alternately keep and delete every node — the loop condition `current and current.next` naturally stops us the moment there is no more node left to delete.
-
----
 
 # 6. Pointer Movement
 
@@ -323,8 +305,6 @@ Final list:
 1 -> 3 -> 5 -> NULL
 ```
 
----
-
 # 7. Algorithm
 
 ### Step 1
@@ -373,8 +353,6 @@ current = current.next
 
 Return `head`.
 
----
-
 # 8. Optimal Python Solution
 
 ```python
@@ -407,8 +385,6 @@ class Solution:
         # Return the head of the modified linked list.
         return head
 ```
-
----
 
 # 9. Complete Dry Run
 
@@ -511,8 +487,6 @@ The loop condition `current is not None and current.next is not None` fails, so 
 
 This matches the expected output exactly.
 
----
-
 # 10. Complexity Analysis
 
 Let:
@@ -546,8 +520,6 @@ Space Complexity = O(1)
 | Time | `O(n)` |
 | Extra Space | `O(1)` |
 
----
-
 # 11. Why This Is Optimal
 
 Could we do better than `O(n)`?
@@ -557,8 +529,6 @@ No — every single node in the list must be examined at least once to decide wh
 Also, no extra memory is required. We are not building a new list or storing extra values — we are simply rewiring the existing `next` pointers in place, so `O(1)` space is the best possible.
 
 This makes the pointer-skipping approach optimal in both time and space.
-
----
 
 # 12. Common Mistakes
 
@@ -582,8 +552,6 @@ while current is not None and current.next is not None:
     current = current.next
 ```
 
----
-
 ## Mistake 2 — Advancing `current` Incorrectly
 
 Wrong:
@@ -600,8 +568,6 @@ current = current.next
 
 Advancing by "two nodes from the original list" using stale pointers can cause you to skip over the keep/delete pattern entirely once `next` pointers have already been rewired.
 
----
-
 ## Mistake 3 — Not Handling a Single-Node List
 
 For:
@@ -612,8 +578,6 @@ For:
 
 `current.next` is `None` from the very first check, so the loop body never executes. This is actually handled correctly by the loop condition — but if you forget the `current.next is not None` check and only test `current is not None`, you will crash trying to delete a node that does not exist.
 
----
-
 ## Mistake 4 — Forgetting the Empty List Case
 
 ```python
@@ -622,8 +586,6 @@ if head is None:
 ```
 
 Without this check, `current = head` would simply be `None`, and the `while` loop would not execute — which actually works fine here since Python handles `None.next` access safely inside the guarded condition. Still, it's good practice to make the empty-list case explicit and return early.
-
----
 
 ## Mistake 5 — Returning `current` Instead of `head`
 
@@ -641,8 +603,6 @@ Correct:
 return head
 ```
 
----
-
 # 13. Visual Cheat Sheet
 
 ## One Delete Step
@@ -655,11 +615,9 @@ current      target
    v            v
    A ---------> B ---------> C
 
-
 Operation:
 
 current.next = current.next.next
-
 
 After:
 
@@ -678,11 +636,9 @@ current
    v
    A -------------------> C
 
-
 Operation:
 
 current = current.next
-
 
 After advance:
 
@@ -703,15 +659,11 @@ Result:
 1 -> 3 -> 5 -> NULL
 ```
 
----
-
 # 14. Interview Explanation in 30 Seconds
 
 A strong interview explanation would be:
 
 > Since we always delete the node immediately after the one we keep, I only need two adjacent pointers: `current` and `current.next`. I bypass `current.next` by linking `current` directly to `current.next.next`, then move `current` forward to the node I just kept. I repeat this while both `current` and `current.next` exist, which naturally handles odd-length lists. This runs in `O(n)` time and `O(1)` space, with no extra data structures.
-
----
 
 # 15. Interviewer Follow-Up Questions
 
@@ -739,8 +691,6 @@ class Solution:
 ```
 
 This is a nice way to test whether the candidate truly understands *why* the pattern works, rather than having memorized the original solution.
-
----
 
 ## Q2. Can you write a recursive version?
 
@@ -771,8 +721,6 @@ class Solution:
 
 This uses `O(n)` recursion stack space, so the iterative version is preferred when space matters.
 
----
-
 ## Q3. What about a doubly linked list — do you need to fix `prev` pointers too?
 
 Yes. In a doubly linked list, deleting a node means fixing links on **both sides**:
@@ -789,8 +737,6 @@ C.prev = A
 ```
 
 Forgetting `C.prev = A` leaves a dangling backward pointer to a deleted node, which is a very common mistake when adapting singly linked list logic to doubly linked lists.
-
----
 
 ## Q4. Can you restore the deleted nodes as a separate list?
 
@@ -831,8 +777,6 @@ class Solution:
 
 This shows the interviewer that you can extend the base pattern to track additional state without changing its core structure.
 
----
-
 # 16. Comparison — Iterative vs Recursive
 
 | Aspect | Iterative | Recursive |
@@ -842,8 +786,6 @@ This shows the interviewer that you can extend the base pattern to track additio
 | Readability | Simple loop | Elegant, mirrors the pattern directly |
 | Risk on Large Lists | None | Possible stack overflow on very long lists |
 | Interview Preference | Usually preferred | Good to mention as an alternative |
-
----
 
 # 17. Pattern Recognition
 
@@ -864,8 +806,6 @@ keep (k - 1) nodes, delete 1 node, repeat
 Delete Alternate Nodes is the special case where `k = 2` — which is exactly why the solution is simpler than the general position-based deletion problem: there is no external index to track, just a fixed, repeating rhythm baked into the algorithm itself.
 
 Recognizing this connection means that once you can solve this problem cleanly, extending it to "delete every k-th node" is a small, natural step rather than a completely new problem.
-
----
 
 # 18. Final Solution
 
@@ -898,8 +838,6 @@ class Solution:
         return head
 ```
 
----
-
 # 19. Interview Takeaways
 
 Remember these points:
@@ -927,8 +865,6 @@ Remember these points:
 The key sentence to remember is:
 
 > **When a deletion pattern repeats at a fixed interval, you rarely need to count positions — you only need to look one step ahead and bypass it, then slide forward.**
-
----
 
 ## Related Problems to Practice
 
