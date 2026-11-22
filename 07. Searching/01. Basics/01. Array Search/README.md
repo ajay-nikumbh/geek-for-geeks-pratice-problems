@@ -22,7 +22,39 @@
 
 ## 1. Problem
 
-Given an **unsorted** array `arr` and an integer `x`, return the **0-based index of the first occurrence** of `x`. If `x` does not appear in `arr`, return `-1`.
+> Given an array, `arr[]` of n integers, and an integer element `x`, find whether element `x` is present in the array. Return the index of the first occurrence of `x` in the array, or -1 if it doesn't exist.
+
+*Problem statement, examples and constraints as given on GeeksforGeeks.*
+
+### Examples
+
+```text
+Input: arr[] = [1, 2, 3, 4], x = 3
+Output: 2
+Explanation: For array [1, 2, 3, 4], the element to be searched is 3. Since 3 is present at index 2, the output is 2.
+```
+
+```text
+Input: arr[] = [10, 8, 30, 4, 5], x = 5
+Output: 4
+Explanation: For array [10, 8, 30, 4, 5], the element to be searched is 5 and it is at index 4. So, the output is 4.
+```
+
+```text
+Input: arr[] = [10, 8, 30], x = 6
+Output: -1
+Explanation: The element to be searched is 6 and it is not present, so we return -1.
+```
+
+### Constraints
+
+```text
+1 ≤ arr.size() ≤ 10^6
+0 ≤ arr[i] ≤ 10^6
+0 ≤ x ≤ 10^5
+```
+
+### Function Signature
 
 ```python
 class Solution:
@@ -32,21 +64,7 @@ class Solution:
         ...
 ```
 
-### Examples
-
-| # | `arr` | `x` | Output | Why |
-|---|---|---|---|---|
-| 1 | `[1, 2, 3, 4]` | `3` | `2` | `arr[2] = 3`, and no earlier index holds `3`. |
-| 2 | `[10, 8, 30, 4, 5]` | `5` | `4` | `5` appears only at index `4`. |
-| 3 | `[10, 8, 30]` | `6` | `-1` | `6` does not appear in the array. |
-
-### Constraints
-
-```text
-1 <= arr.size() <= 10^6
-1 <= arr[i]     <= 10^6
-1 <= x          <= 10^5
-```
+Indexing is **0-based**, and the array is **not sorted**.
 
 ## 2. Key Insight
 

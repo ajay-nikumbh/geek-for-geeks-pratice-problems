@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repeated concatenation vs join</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,system-ui,sans-serif;background:#ffffff;color:#161f34;padding:3rem 2rem}.frame{max-width:960px;margin:0 auto}.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.66rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#4f5d73;margin-bottom:.5rem}h1{font-size:1.75rem;font-weight:700;margin-bottom:1.5rem}.diagram-container{width:100%;overflow-x:auto}svg{width:100%;min-width:960px;display:block}@media print{.diagram-container{overflow-x:visible}svg{min-width:0}}</style>
+</head><body><div class="frame"><p class="eyebrow">Remove Consonants · String building</p><h1>Repeated += vs list + join</h1><div class="diagram-container">
+<svg viewBox="0 0 960 576" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="remove-consonants-concat-vs-join-title remove-consonants-concat-vs-join-desc">
+<title id="remove-consonants-concat-vs-join-title">Repeated concatenation vs join</title>
+<desc id="remove-consonants-concat-vs-join-desc">Without CPython's in-place resize, each result += ch creates a new string and copies 1, 2, 3 and 4 characters (10 in total), while appending to a list copies nothing until a single join copies the 4 characters once.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d73"/></marker><marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#0066cc"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="56" y="48" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="500" fill="#4f5d73" text-anchor="start" letter-spacing="0.18em">KEPT VOWELS OF &quot;abEkipo&quot; · &quot;a&quot; &quot;E&quot; &quot;i&quot; &quot;o&quot;</text>
+<text x="56" y="92" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#4f5d73" text-anchor="start" letter-spacing="0.14em">APPROACH 2, NO IN-PLACE TRICK</text>
+<text x="56" y="110" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="start">result += ch copies the whole result</text>
+<text x="520" y="92" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#0066cc" text-anchor="start" letter-spacing="0.14em">OPTIMAL</text>
+<text x="520" y="110" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#0066cc" text-anchor="start">Append to a list, join once</text>
+<rect x="56" y="136" width="44" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="78.0" y="160.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#0066cc" text-anchor="middle">a</text>
+<text x="248" y="154" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="start">+= &quot;a&quot;</text>
+<text x="248" y="169" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">new string, copy 1</text>
+<rect x="56" y="192" width="44" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="78.0" y="216.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">a</text>
+<rect x="100" y="192" width="44" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="122.0" y="216.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#0066cc" text-anchor="middle">E</text>
+<text x="248" y="210" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="start">+= &quot;E&quot;</text>
+<text x="248" y="225" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">new string, copy 2</text>
+<rect x="56" y="248" width="44" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="78.0" y="272.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">a</text>
+<rect x="100" y="248" width="44" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="122.0" y="272.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">E</text>
+<rect x="144" y="248" width="44" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="166.0" y="272.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#0066cc" text-anchor="middle">i</text>
+<text x="248" y="266" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="start">+= &quot;i&quot;</text>
+<text x="248" y="281" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">new string, copy 3</text>
+<rect x="56" y="304" width="44" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="78.0" y="328.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">a</text>
+<rect x="100" y="304" width="44" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="122.0" y="328.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">E</text>
+<rect x="144" y="304" width="44" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="166.0" y="328.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">i</text>
+<rect x="188" y="304" width="44" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="210.0" y="328.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#0066cc" text-anchor="middle">o</text>
+<text x="248" y="322" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="start">+= &quot;o&quot;</text>
+<text x="248" y="337" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">new string, copy 4</text>
+<rect x="520" y="136" width="44" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="542.0" y="160.2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0066cc" text-anchor="middle">'a'</text>
+<text x="712" y="154" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="start">append('a')</text>
+<text x="712" y="169" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">add 1 reference, copy 0</text>
+<rect x="520" y="192" width="44" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="542.0" y="216.2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="middle">'a'</text>
+<rect x="564" y="192" width="44" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="586.0" y="216.2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0066cc" text-anchor="middle">'E'</text>
+<text x="712" y="210" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="start">append('E')</text>
+<text x="712" y="225" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">add 1 reference, copy 0</text>
+<rect x="520" y="248" width="44" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="542.0" y="272.2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="middle">'a'</text>
+<rect x="564" y="248" width="44" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="586.0" y="272.2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="middle">'E'</text>
+<rect x="608" y="248" width="44" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="630.0" y="272.2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0066cc" text-anchor="middle">'i'</text>
+<text x="712" y="266" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="start">append('i')</text>
+<text x="712" y="281" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">add 1 reference, copy 0</text>
+<rect x="520" y="304" width="44" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="542.0" y="328.2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="middle">'a'</text>
+<rect x="564" y="304" width="44" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="586.0" y="328.2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="middle">'E'</text>
+<rect x="608" y="304" width="44" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="630.0" y="328.2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="middle">'i'</text>
+<rect x="652" y="304" width="44" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="674.0" y="328.2" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0066cc" text-anchor="middle">'o'</text>
+<text x="712" y="322" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="start">append('o')</text>
+<text x="712" y="337" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">add 1 reference, copy 0</text>
+<rect x="520" y="360" width="44" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="542.0" y="384.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#0066cc" text-anchor="middle">a</text>
+<rect x="564" y="360" width="44" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="586.0" y="384.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#0066cc" text-anchor="middle">E</text>
+<rect x="608" y="360" width="44" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="630.0" y="384.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#0066cc" text-anchor="middle">i</text>
+<rect x="652" y="360" width="44" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="674.0" y="384.9" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#0066cc" text-anchor="middle">o</text>
+<text x="712" y="378" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0066cc" text-anchor="start">&quot;&quot;.join(kept)</text>
+<text x="712" y="393" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">copy 4 chars once</text>
+<line x1="488" y1="84" x2="488" y2="416" stroke="#cecfcf" stroke-dasharray="2,4"/>
+<text x="56" y="452" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#4f5d73" text-anchor="start" letter-spacing="0.14em">TOTAL: 1 + 2 + 3 + 4 = 10 CHARS</text>
+<text x="56" y="470" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">k kept chars ~ k²/2 copies · O(n²) worst</text>
+<text x="520" y="452" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#0066cc" text-anchor="start" letter-spacing="0.14em">TOTAL: 4 CHARS COPIED</text>
+<text x="520" y="470" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">k appends + k copies · O(n)</text>
+<text x="56" y="392" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#40668d" text-anchor="start">CPython often resizes in place,</text>
+<text x="56" y="410" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#40668d" text-anchor="start">but the language does not promise it.</text>
+<line x1="56" y1="500" x2="904" y2="500" stroke="#cecfcf"/>
+<rect x="56" y="524" width="24" height="16" fill="rgba(22,31,52,0.05)" stroke="#161f34"/><rect x="176" y="524" width="24" height="16" fill="rgba(0,102,204,0.08)" stroke="#0066cc"/>
+<text x="92" y="535" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="start" letter-spacing="0.06em">OLD CONTENT</text><text x="212" y="535" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="start" letter-spacing="0.06em">NEW THIS STEP</text>
+<text x="904" y="536" font-family="'Instrument Serif', serif" font-size="14" font-weight="400" fill="#4f5d73" text-anchor="end" font-style="italic">Join builds the string once, at the end.</text>
+</svg>
+</div></div></body></html>
