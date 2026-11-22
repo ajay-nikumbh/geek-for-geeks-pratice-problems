@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear scan vs binary search</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,system-ui,sans-serif;background:#ffffff;color:#161f34;padding:3rem 2rem}.frame{max-width:960px;margin:0 auto}.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.66rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#4f5d73;margin-bottom:.5rem}h1{font-size:1.75rem;font-weight:700;margin-bottom:1.5rem}.diagram-container{width:100%;overflow-x:auto}svg{width:100%;min-width:960px;display:block}@media print{.diagram-container{overflow-x:visible}svg{min-width:0}}</style>
+</head><body><div class="frame"><p class="eyebrow">Binary Search · Brute force vs optimal</p><h1>13 reads vs 4 reads</h1><div class="diagram-container">
+<svg viewBox="0 0 960 376" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="binary-search-linear-vs-binary-title binary-search-linear-vs-binary-desc">
+<title id="binary-search-linear-vs-binary-title">Linear scan vs binary search</title>
+<desc id="binary-search-linear-vs-binary-desc">On the same sorted array of 15 values, the linear scan reads indices 0 to 12 before finding 25, while binary search reads only 4 indices.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d73"/></marker><marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#0066cc"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="56" y="48" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="500" fill="#4f5d73" text-anchor="start" letter-spacing="0.18em">SAME INPUT · 15 VALUES · K = 25 AT INDEX 12</text>
+<text x="212" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">0</text>
+<text x="252" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">1</text>
+<text x="292" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">2</text>
+<text x="332" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">3</text>
+<text x="372" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">4</text>
+<text x="412" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">5</text>
+<text x="452" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">6</text>
+<text x="492" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">7</text>
+<text x="532" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">8</text>
+<text x="572" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">9</text>
+<text x="612" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">10</text>
+<text x="652" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">11</text>
+<text x="692" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">12</text>
+<text x="732" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">13</text>
+<text x="772" y="100" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">14</text>
+<text x="56" y="132" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#4f5d73" text-anchor="start" letter-spacing="0.14em">APPROACH 1</text>
+<text x="56" y="150" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="start">Linear scan</text>
+<rect x="192" y="112" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="212" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">1</text>
+<rect x="232" y="112" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="252" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">3</text>
+<rect x="272" y="112" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="292" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">5</text>
+<rect x="312" y="112" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="332" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">7</text>
+<rect x="352" y="112" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="372" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">9</text>
+<rect x="392" y="112" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="412" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">11</text>
+<rect x="432" y="112" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="452" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">13</text>
+<rect x="472" y="112" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="492" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">15</text>
+<rect x="512" y="112" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="532" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">17</text>
+<rect x="552" y="112" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="572" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">19</text>
+<rect x="592" y="112" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="612" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">21</text>
+<rect x="632" y="112" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="652" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">23</text>
+<rect x="672" y="112" width="40" height="48" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="692" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#0066cc" text-anchor="middle">25</text>
+<rect x="713" y="113" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="732" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">27</text>
+<rect x="753" y="113" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="772" y="142" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">29</text>
+<text x="812" y="134" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="start">13 reads</text>
+<text x="812" y="152" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">index 0 to 12</text>
+<text x="56" y="228" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#0066cc" text-anchor="start" letter-spacing="0.14em">OPTIMAL</text>
+<text x="56" y="246" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#0066cc" text-anchor="start">Binary search</text>
+<rect x="193" y="209" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="212" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">1</text>
+<rect x="233" y="209" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="252" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">3</text>
+<rect x="273" y="209" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="292" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">5</text>
+<rect x="313" y="209" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="332" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">7</text>
+<rect x="353" y="209" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="372" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">9</text>
+<rect x="393" y="209" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="412" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">11</text>
+<rect x="433" y="209" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="452" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">13</text>
+<rect x="472" y="208" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="492" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">15</text>
+<text x="492" y="274" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="600" fill="#0066cc" text-anchor="middle">#1</text>
+<rect x="513" y="209" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="532" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">17</text>
+<rect x="553" y="209" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="572" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">19</text>
+<rect x="593" y="209" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="612" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">21</text>
+<rect x="632" y="208" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="652" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">23</text>
+<text x="652" y="274" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="600" fill="#0066cc" text-anchor="middle">#2</text>
+<rect x="672" y="208" width="40" height="48" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="692" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#0066cc" text-anchor="middle">25</text>
+<text x="692" y="274" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="600" fill="#0066cc" text-anchor="middle">#4</text>
+<rect x="712" y="208" width="40" height="48" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="732" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34" text-anchor="middle">27</text>
+<text x="732" y="274" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="600" fill="#0066cc" text-anchor="middle">#3</text>
+<rect x="753" y="209" width="38" height="46" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="772" y="238" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#cecfcf" text-anchor="middle">29</text>
+<text x="812" y="230" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#0066cc" text-anchor="start">4 reads</text>
+<text x="812" y="248" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">probes 7, 11, 13, 12</text>
+<line x1="56" y1="312" x2="904" y2="312" stroke="#cecfcf" stroke-width="1"/>
+<rect x="56" y="333" width="24" height="16" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<rect x="176" y="333" width="24" height="16" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<rect x="296" y="334" width="22" height="14" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="92" y="344" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="start" letter-spacing="0.06em">READ</text>
+<text x="212" y="344" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="start" letter-spacing="0.06em">FOUND</text>
+<text x="332" y="344" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="start" letter-spacing="0.06em">NOT READ</text>
+<text x="440" y="344" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="start" letter-spacing="0.06em">#N = PROBE ORDER</text>
+<text x="904" y="345" font-family="'Instrument Serif', serif" font-size="14" font-weight="400" fill="#4f5d73" text-anchor="end" font-style="italic">Sorted order lets one read rule out half.</text>
+</svg>
+</div></div></body></html>
