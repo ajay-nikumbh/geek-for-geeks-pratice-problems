@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elements in the Range approach map</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,system-ui,sans-serif;background:#ffffff;color:#161f34;padding:3rem 2rem}.frame{max-width:960px;margin:0 auto}.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.66rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#4f5d73;margin-bottom:.5rem}h1{font-size:1.75rem;font-weight:700;margin-bottom:1.5rem}.diagram-container{width:100%;overflow-x:auto}svg{width:100%;min-width:960px;display:block}@media print{.diagram-container{overflow-x:visible}svg{min-width:0}}</style>
+</head><body><div class="frame"><p class="eyebrow">Elements in the Range · Approaches</p><h1>Where each approach lands</h1><div class="diagram-container">
+<svg viewBox="0 0 960 544" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="elements-in-the-range-approaches-title elements-in-the-range-approaches-desc">
+<title id="elements-in-the-range-approaches-title">Elements in the Range approach map</title>
+<desc id="elements-in-the-range-approaches-desc">Counting in-range values is O(n) time and O(1) space; the hash set needs O(n) space, sorting a copy costs O(n log n), and searching per value costs O(m·n).</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d73"/></marker><marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#0066cc"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="56" y="48" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="500" fill="#4f5d73" text-anchor="start" letter-spacing="0.18em">TIME VS EXTRA SPACE</text>
+<line x1="312" y1="96" x2="312" y2="424" stroke="#cecfcf" stroke-width="1" stroke-dasharray="2,4"/>
+<text x="312" y="448" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="middle">O(n)</text>
+<line x1="472" y1="96" x2="472" y2="424" stroke="#cecfcf" stroke-width="1" stroke-dasharray="2,4"/>
+<text x="472" y="448" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="middle">O(n + m)</text>
+<line x1="632" y1="96" x2="632" y2="424" stroke="#cecfcf" stroke-width="1" stroke-dasharray="2,4"/>
+<text x="632" y="448" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="middle">O(n log n)</text>
+<line x1="776" y1="96" x2="776" y2="424" stroke="#cecfcf" stroke-width="1" stroke-dasharray="2,4"/>
+<text x="776" y="448" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="middle">O(m · n)</text>
+<line x1="176" y1="360" x2="816" y2="360" stroke="#cecfcf" stroke-width="1" stroke-dasharray="2,4"/>
+<text x="160" y="363" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="end">O(1)</text>
+<line x1="176" y1="184" x2="816" y2="184" stroke="#cecfcf" stroke-width="1" stroke-dasharray="2,4"/>
+<text x="160" y="187" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="end">O(n)</text>
+<line x1="176" y1="424" x2="816" y2="424" stroke="#161f34" stroke-width="1"/>
+<line x1="176" y1="96" x2="176" y2="424" stroke="#161f34" stroke-width="1"/>
+<text x="496" y="476" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#4f5d73" text-anchor="middle" letter-spacing="0.14em">TIME  (WORSE TO THE RIGHT)</text>
+<text x="56" y="76" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#4f5d73" text-anchor="start" letter-spacing="0.14em">EXTRA SPACE  (WORSE UPWARD)</text>
+<rect x="324" y="344" width="163" height="36" fill="#ffffff" stroke="none" stroke-width="0"/>
+<circle cx="312" cy="360" r="8" fill="#ffffff"/>
+<circle cx="312" cy="360" r="8" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="2"/>
+<text x="328" y="358" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0066cc" text-anchor="start">Count in-range values</text>
+<text x="328" y="374" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">optimal · needs distinct</text>
+<rect x="484" y="168" width="141" height="36" fill="#ffffff" stroke="none" stroke-width="0"/>
+<circle cx="472" cy="184" r="6" fill="#ffffff"/>
+<circle cx="472" cy="184" r="6" fill="#ffffff" stroke="#161f34" stroke-width="1.5"/>
+<text x="488" y="182" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="start">Hash set of values</text>
+<text x="488" y="198" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">Approach 3</text>
+<rect x="644" y="168" width="192" height="36" fill="#ffffff" stroke="none" stroke-width="0"/>
+<circle cx="632" cy="184" r="6" fill="#ffffff"/>
+<circle cx="632" cy="184" r="6" fill="#ffffff" stroke="#161f34" stroke-width="1.5"/>
+<text x="648" y="182" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="start">Sort copy + binary search</text>
+<text x="648" y="198" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">Approach 2</text>
+<rect x="587" y="344" width="177" height="36" fill="#ffffff" stroke="none" stroke-width="0"/>
+<circle cx="776" cy="360" r="6" fill="#ffffff"/>
+<circle cx="776" cy="360" r="6" fill="#ffffff" stroke="#161f34" stroke-width="1.5"/>
+<text x="760" y="358" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34" text-anchor="end">Linear search per value</text>
+<text x="760" y="374" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="end">Approach 1</text>
+<text x="632" y="196" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="middle"></text>
+<line x1="56" y1="496" x2="904" y2="496" stroke="#cecfcf" stroke-width="1"/>
+<text x="904" y="524" font-family="'Instrument Serif', serif" font-size="14" font-weight="400" fill="#4f5d73" text-anchor="end" font-style="italic">Lower left is better. Distinct values make counting enough.</text>
+</svg>
+</div></div></body></html>
