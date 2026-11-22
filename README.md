@@ -6,9 +6,9 @@ Source: [GfG Practice — Explore](https://www.geeksforgeeks.org/explore?sortBy=
 
 ## Roadmap
 
-Work through the topics in seven phases, left to right. Topic numbers match the folder names.
+Learning flow across seven phases, left to right. After Core Linear Data the path branches into three phases you can study in parallel, which converge on Trees & Graphs. Topic numbers match the folder names.
 
-![GeeksforGeeks DSA practice roadmap: 7 phases covering 25 topics and 2,468 problems](assets/roadmap.png)
+![GeeksforGeeks DSA practice roadmap: flow of 7 phases covering 25 topics and 2,468 problems](assets/roadmap.png)
 
 Source: [`assets/roadmap.html`](assets/roadmap.html)
 

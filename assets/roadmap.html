@@ -8,112 +8,115 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: Inter, system-ui, sans-serif; background: #ffffff; color: #161f34; padding: 3rem 2rem; }
-.frame { max-width: 1280px; margin: 0 auto; }
+.frame { max-width: 1360px; margin: 0 auto; }
 .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #4f5d73; margin-bottom: 0.5rem; }
 h1 { font-family: Inter, sans-serif; font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem; }
 .diagram-container { width: 100%; overflow-x: auto; }
-svg { width: 100%; min-width: 1280px; display: block; }
+svg { width: 100%; min-width: 1360px; display: block; }
 @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
 </style>
 </head>
 <body>
 <div class="frame">
-<p class="eyebrow">Steps · Diagram Design</p>
+<p class="eyebrow">Flow · Diagram Design</p>
 <h1>GeeksforGeeks DSA practice roadmap</h1>
 <div class="diagram-container">
-<svg viewBox="0 0 1280 488" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="roadmap-title roadmap-desc">
+<svg viewBox="0 0 1360 704" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="roadmap-title roadmap-desc">
 <title id="roadmap-title">GfG DSA practice roadmap</title>
-<desc id="roadmap-desc">Seven phases cover all 25 topics and 2,468 problems in folder order, from Foundations to Paradigms; Core Linear Data is the largest phase with 616 problems.</desc>
+<desc id="roadmap-desc">Learning flow across seven phases and 25 topics: Foundations lead to Core Linear Data, which branches into Search and Lookup, Array Techniques and Linear Structures; all three converge on Trees and Graphs, then Paradigms and Advanced.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d73"/></marker></defs>
 <rect width="100%" height="100%" fill="#ffffff"/>
-<text x="80" y="44" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="500" letter-spacing="0.18em" fill="#4f5d73">ROADMAP · 25 TOPICS · 2,468 PROBLEMS · LEFT TO RIGHT</text>
-<g aria-hidden="true">
-<rect x="80" y="160" width="160" height="48" fill="rgba(22,31,52,0.05)" data-role="rail" data-step="foundations" data-index="1"/>
-<rect x="240" y="160" width="160" height="48" fill="rgba(0,102,204,0.08)" data-role="rail" data-step="linear" data-index="2" data-focal="true"/>
-<rect x="400" y="160" width="160" height="48" fill="rgba(22,31,52,0.05)" data-role="rail" data-step="lookup" data-index="3"/>
-<rect x="560" y="160" width="160" height="48" fill="rgba(22,31,52,0.09)" data-role="rail" data-step="techniques" data-index="4"/>
-<rect x="720" y="160" width="160" height="48" fill="rgba(22,31,52,0.05)" data-role="rail" data-step="structures" data-index="5"/>
-<rect x="880" y="160" width="160" height="48" fill="rgba(22,31,52,0.09)" data-role="rail" data-step="trees" data-index="6"/>
-<rect x="1040" y="160" width="160" height="48" fill="rgba(22,31,52,0.05)" data-role="rail" data-step="paradigms" data-index="7"/>
-<line x1="240" y1="160" x2="400" y2="160" stroke="#0066cc" stroke-width="1"/><line x1="240" y1="208" x2="400" y2="208" stroke="#0066cc" stroke-width="1"/>
-<line x1="160" y1="100" x2="160" y2="140" stroke="#cecfcf" stroke-width="1"/>
-<line x1="320" y1="100" x2="320" y2="140" stroke="#0066cc" stroke-width="1"/>
-<line x1="480" y1="100" x2="480" y2="140" stroke="#cecfcf" stroke-width="1"/>
-<line x1="640" y1="100" x2="640" y2="140" stroke="#cecfcf" stroke-width="1"/>
-<line x1="800" y1="100" x2="800" y2="140" stroke="#cecfcf" stroke-width="1"/>
-<line x1="960" y1="100" x2="960" y2="140" stroke="#cecfcf" stroke-width="1"/>
-<line x1="1120" y1="100" x2="1120" y2="140" stroke="#cecfcf" stroke-width="1"/>
+<text x="56" y="48" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="500" letter-spacing="0.18em" fill="#4f5d73">ROADMAP · 7 PHASES · 25 TOPICS · 2,468 PROBLEMS</text>
+<text x="152" y="84" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.18em" fill="#40668d">STEP 1</text>
+<text x="416" y="84" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.18em" fill="#40668d">STEP 2</text>
+<text x="680" y="84" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.18em" fill="#40668d">STEP 3</text>
+<text x="944" y="84" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.18em" fill="#40668d">STEP 4</text>
+<text x="1208" y="84" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.18em" fill="#40668d">STEP 5</text>
+<g fill="none" stroke="#4f5d73" stroke-width="1.2">
+<path d="M248,324 H318" marker-end="url(#arrow)"/>
+<path d="M512,292 H540 Q548,292 548,284 V174 Q548,166 556,166 H582" marker-end="url(#arrow)"/>
+<path d="M512,324 H582" marker-end="url(#arrow)"/>
+<path d="M512,356 H540 Q548,356 548,364 V480 Q548,488 556,488 H582" marker-end="url(#arrow)"/>
+<path d="M776,166 H804 Q812,166 812,174 V280 Q812,288 820,288 H846" marker-end="url(#arrow)"/>
+<path d="M776,324 H846" marker-end="url(#arrow)"/>
+<path d="M776,488 H804 Q812,488 812,480 V368 Q812,360 820,360 H846" marker-end="url(#arrow)"/>
+<path d="M1040,324 H1110" marker-end="url(#arrow)"/>
+<path d="M152,384 V592 Q152,600 160,600 H1200 Q1208,600 1208,592 V406" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
 </g>
-<g font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.14em" text-anchor="middle">
-<text x="160" y="88" fill="#4f5d73" data-role="number" data-step="foundations">01</text>
-<text x="320" y="88" fill="#0066cc" data-role="number" data-step="linear">02</text>
-<text x="480" y="88" fill="#4f5d73" data-role="number" data-step="lookup">03</text>
-<text x="640" y="88" fill="#4f5d73" data-role="number" data-step="techniques">04</text>
-<text x="800" y="88" fill="#4f5d73" data-role="number" data-step="structures">05</text>
-<text x="960" y="88" fill="#4f5d73" data-role="number" data-step="trees">06</text>
-<text x="1120" y="88" fill="#4f5d73" data-role="number" data-step="paradigms">07</text>
-</g>
-<g aria-hidden="true" fill="#ffffff" stroke-width="1">
-<circle cx="160" cy="184" r="36" stroke="#161f34" data-role="medallion" data-step="foundations"/>
-<circle cx="320" cy="184" r="36" stroke="none"/>
-<circle cx="320" cy="184" r="36" fill="rgba(0,102,204,0.08)" stroke="#0066cc" data-role="medallion" data-step="linear" data-focal="true"/>
-<circle cx="480" cy="184" r="36" stroke="#161f34" data-role="medallion" data-step="lookup"/>
-<circle cx="640" cy="184" r="36" stroke="#161f34" data-role="medallion" data-step="techniques"/>
-<circle cx="800" cy="184" r="36" stroke="#161f34" data-role="medallion" data-step="structures"/>
-<circle cx="960" cy="184" r="36" stroke="#161f34" data-role="medallion" data-step="trees"/>
-<circle cx="1120" cy="184" r="36" stroke="#161f34" data-role="medallion" data-step="paradigms"/>
-</g>
-<g text-anchor="middle">
-<text x="160" y="188" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#161f34">428</text>
-<text x="160" y="202" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="7" font-weight="500" letter-spacing="0.14em" fill="#4f5d73">PROBLEMS</text>
-<text x="160" y="268" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34">Foundations</text>
-<text x="160" y="296" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">01 Mathematics</text>
-<text x="160" y="316" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">02 Recursion</text>
-<text x="160" y="336" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">03 Bit Magic</text>
-<text x="320" y="188" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#0066cc">616</text>
-<text x="320" y="202" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="7" font-weight="500" letter-spacing="0.14em" fill="#4f5d73">PROBLEMS</text>
-<text x="320" y="268" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0066cc">Core Linear Data</text>
-<text x="320" y="296" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">04 Arrays</text>
-<text x="320" y="316" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">05 Matrix</text>
-<text x="320" y="336" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">06 Strings</text>
-<text x="480" y="188" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#161f34">292</text>
-<text x="480" y="202" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="7" font-weight="500" letter-spacing="0.14em" fill="#4f5d73">PROBLEMS</text>
-<text x="480" y="268" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34">Search &amp; Lookup</text>
-<text x="480" y="296" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">07 Searching</text>
-<text x="480" y="316" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">08 Sorting</text>
-<text x="480" y="336" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">09 Hashing</text>
-<text x="640" y="188" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#161f34">119</text>
-<text x="640" y="202" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="7" font-weight="500" letter-spacing="0.14em" fill="#4f5d73">PROBLEMS</text>
-<text x="640" y="268" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34">Array Techniques</text>
-<text x="640" y="296" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">10 Two Pointers</text>
-<text x="640" y="316" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">11 Sliding Window</text>
-<text x="640" y="336" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">12 Prefix Sum</text>
-<text x="800" y="188" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#161f34">209</text>
-<text x="800" y="202" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="7" font-weight="500" letter-spacing="0.14em" fill="#4f5d73">PROBLEMS</text>
-<text x="800" y="268" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34">Linear Structures</text>
-<text x="800" y="296" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">13 Linked List</text>
-<text x="800" y="316" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">14 Stack</text>
-<text x="800" y="336" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">15 Queue</text>
-<text x="800" y="356" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">16 Deque</text>
-<text x="960" y="188" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#161f34">347</text>
-<text x="960" y="202" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="7" font-weight="500" letter-spacing="0.14em" fill="#4f5d73">PROBLEMS</text>
-<text x="960" y="268" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34">Trees &amp; Graphs</text>
-<text x="960" y="296" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">17 Tree</text>
-<text x="960" y="316" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">18 Binary Search Tree</text>
-<text x="960" y="336" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">19 Heap</text>
-<text x="960" y="356" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">20 Graph</text>
-<text x="1120" y="188" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#161f34">457</text>
-<text x="1120" y="202" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="7" font-weight="500" letter-spacing="0.14em" fill="#4f5d73">PROBLEMS</text>
-<text x="1120" y="268" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#161f34">Paradigms &amp; Advanced</text>
-<text x="1120" y="296" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">21 Greedy</text>
-<text x="1120" y="316" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">22 Backtracking</text>
-<text x="1120" y="336" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">23 Dynamic Programming</text>
-<text x="1120" y="356" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">24 Trie</text>
-<text x="1120" y="376" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">25 Segment Tree</text>
-</g>
-<line x1="80" y1="424" x2="1200" y2="424" stroke="#cecfcf" stroke-width="1"/>
-<g aria-hidden="true" stroke-width="1"><circle cx="88" cy="452" r="8" fill="#ffffff" stroke="#161f34"/><circle cx="208" cy="452" r="8" fill="rgba(0,102,204,0.08)" stroke="#0066cc"/></g>
-<g font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" letter-spacing="0.06em" fill="#4f5d73"><text x="104" y="455">PHASE</text><text x="224" y="455">LARGEST PHASE</text></g>
-<text x="1200" y="456" text-anchor="end" font-family="'Instrument Serif', serif" font-style="italic" font-size="14" fill="#4f5d73">Equal spacing shows order, not time. Topic numbers match folder names.</text>
+<rect x="616" y="572" width="128" height="16" fill="#ffffff"/>
+<text x="680" y="583" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" letter-spacing="0.06em" fill="#4f5d73">RECURSION BASE</text>
+<rect x="56" y="260" width="192" height="124" rx="6" fill="#ffffff"/>
+<rect x="56" y="260" width="192" height="124" rx="6" fill="#ffffff" stroke="#161f34" stroke-width="1"/>
+<text x="72" y="282" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.14em" fill="#4f5d73">PHASE 01</text>
+<text x="232" y="282" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" letter-spacing="0.06em" fill="#4f5d73">428 PROBLEMS</text>
+<text x="72" y="302" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34">Foundations</text>
+<line x1="72" y1="314" x2="232" y2="314" stroke="#cecfcf" stroke-width="1" stroke-opacity="1"/>
+<text x="72" y="334" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">01 Mathematics</text>
+<text x="72" y="352" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">02 Recursion</text>
+<text x="72" y="370" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">03 Bit Magic</text>
+<rect x="320" y="260" width="192" height="124" rx="6" fill="#ffffff"/>
+<rect x="320" y="260" width="192" height="124" rx="6" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="1"/>
+<text x="336" y="282" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.14em" fill="#0066cc">PHASE 02</text>
+<text x="496" y="282" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" letter-spacing="0.06em" fill="#4f5d73">616 PROBLEMS</text>
+<text x="336" y="302" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#0066cc">Core Linear Data</text>
+<line x1="336" y1="314" x2="496" y2="314" stroke="#0066cc" stroke-width="1" stroke-opacity="0.4"/>
+<text x="336" y="334" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">04 Arrays</text>
+<text x="336" y="352" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">05 Matrix</text>
+<text x="336" y="370" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">06 Strings</text>
+<rect x="584" y="104" width="192" height="124" rx="6" fill="#ffffff"/>
+<rect x="584" y="104" width="192" height="124" rx="6" fill="#ffffff" stroke="#161f34" stroke-width="1"/>
+<text x="600" y="126" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.14em" fill="#4f5d73">PHASE 03</text>
+<text x="760" y="126" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" letter-spacing="0.06em" fill="#4f5d73">292 PROBLEMS</text>
+<text x="600" y="146" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34">Search &amp; Lookup</text>
+<line x1="600" y1="158" x2="760" y2="158" stroke="#cecfcf" stroke-width="1" stroke-opacity="1"/>
+<text x="600" y="178" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">07 Searching</text>
+<text x="600" y="196" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">08 Sorting</text>
+<text x="600" y="214" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">09 Hashing</text>
+<rect x="584" y="260" width="192" height="124" rx="6" fill="#ffffff"/>
+<rect x="584" y="260" width="192" height="124" rx="6" fill="#ffffff" stroke="#161f34" stroke-width="1"/>
+<text x="600" y="282" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.14em" fill="#4f5d73">PHASE 04</text>
+<text x="760" y="282" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" letter-spacing="0.06em" fill="#4f5d73">119 PROBLEMS</text>
+<text x="600" y="302" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34">Array Techniques</text>
+<line x1="600" y1="314" x2="760" y2="314" stroke="#cecfcf" stroke-width="1" stroke-opacity="1"/>
+<text x="600" y="334" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">10 Two Pointers</text>
+<text x="600" y="352" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">11 Sliding Window</text>
+<text x="600" y="370" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">12 Prefix Sum</text>
+<rect x="584" y="416" width="192" height="144" rx="6" fill="#ffffff"/>
+<rect x="584" y="416" width="192" height="144" rx="6" fill="#ffffff" stroke="#161f34" stroke-width="1"/>
+<text x="600" y="438" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.14em" fill="#4f5d73">PHASE 05</text>
+<text x="760" y="438" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" letter-spacing="0.06em" fill="#4f5d73">209 PROBLEMS</text>
+<text x="600" y="458" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34">Linear Structures</text>
+<line x1="600" y1="470" x2="760" y2="470" stroke="#cecfcf" stroke-width="1" stroke-opacity="1"/>
+<text x="600" y="490" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">13 Linked List</text>
+<text x="600" y="508" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">14 Stack</text>
+<text x="600" y="526" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">15 Queue</text>
+<text x="600" y="544" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">16 Deque</text>
+<rect x="848" y="252" width="192" height="144" rx="6" fill="#ffffff"/>
+<rect x="848" y="252" width="192" height="144" rx="6" fill="#ffffff" stroke="#161f34" stroke-width="1"/>
+<text x="864" y="274" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.14em" fill="#4f5d73">PHASE 06</text>
+<text x="1024" y="274" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" letter-spacing="0.06em" fill="#4f5d73">347 PROBLEMS</text>
+<text x="864" y="294" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34">Trees &amp; Graphs</text>
+<line x1="864" y1="306" x2="1024" y2="306" stroke="#cecfcf" stroke-width="1" stroke-opacity="1"/>
+<text x="864" y="326" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">17 Tree</text>
+<text x="864" y="344" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">18 Binary Search Tree</text>
+<text x="864" y="362" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">19 Heap</text>
+<text x="864" y="380" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">20 Graph</text>
+<rect x="1112" y="244" width="192" height="160" rx="6" fill="#ffffff"/>
+<rect x="1112" y="244" width="192" height="160" rx="6" fill="#ffffff" stroke="#161f34" stroke-width="1"/>
+<text x="1128" y="266" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" letter-spacing="0.14em" fill="#4f5d73">PHASE 07</text>
+<text x="1288" y="266" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" letter-spacing="0.06em" fill="#4f5d73">457 PROBLEMS</text>
+<text x="1128" y="286" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#161f34">Paradigms &amp; Advanced</text>
+<line x1="1128" y1="298" x2="1288" y2="298" stroke="#cecfcf" stroke-width="1" stroke-opacity="1"/>
+<text x="1128" y="318" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">21 Greedy</text>
+<text x="1128" y="336" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">22 Backtracking</text>
+<text x="1128" y="354" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">23 Dynamic Programming</text>
+<text x="1128" y="372" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">24 Trie</text>
+<text x="1128" y="390" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#4f5d73">25 Segment Tree</text>
+<line x1="56" y1="640" x2="1304" y2="640" stroke="#cecfcf" stroke-width="1"/>
+<rect x="56" y="664" width="24" height="16" rx="3" fill="#ffffff" stroke="#161f34"/><rect x="200" y="664" width="24" height="16" rx="3" fill="rgba(0,102,204,0.08)" stroke="#0066cc"/>
+<line x1="368" y1="672" x2="400" y2="672" stroke="#4f5d73" stroke-width="1.2" marker-end="url(#arrow)"/><line x1="512" y1="672" x2="544" y2="672" stroke="#4f5d73" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+<g font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" letter-spacing="0.06em" fill="#4f5d73"><text x="92" y="675">PHASE</text><text x="236" y="675">LARGEST PHASE</text><text x="412" y="675">STUDY NEXT</text><text x="556" y="675">REUSES SKILL</text></g>
+<text x="1304" y="676" text-anchor="end" font-family="'Instrument Serif', serif" font-style="italic" font-size="14" fill="#4f5d73">Phases in the same step can be studied in parallel.</text>
 </svg>
 </div>
 </div>
