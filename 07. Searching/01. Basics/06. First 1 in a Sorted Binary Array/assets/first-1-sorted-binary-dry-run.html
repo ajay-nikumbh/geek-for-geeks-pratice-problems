@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First 1 dry run</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,system-ui,sans-serif;background:#ffffff;color:#161f34;padding:3rem 2rem}.frame{max-width:960px;margin:0 auto}.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.66rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#4f5d73;margin-bottom:.5rem}h1{font-size:1.75rem;font-weight:700;margin-bottom:1.5rem}.diagram-container{width:100%;overflow-x:auto}svg{width:100%;min-width:960px;display:block}@media print{.diagram-container{overflow-x:visible}svg{min-width:0}}</style>
+</head><body><div class="frame"><p class="eyebrow">First 1 in a Sorted Binary Array · Dry run</p><h1>Record the answer, keep going left</h1><div class="diagram-container">
+<svg viewBox="0 0 960 524" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="first-1-sorted-binary-dry-run-title first-1-sorted-binary-dry-run-desc">
+<title id="first-1-sorted-binary-dry-run-title">First 1 dry run</title>
+<desc id="first-1-sorted-binary-dry-run-desc">Lower-bound binary search on [0, 0, 0, 0, 0, 0, 1, 1, 1, 1] probes indices 4, 7, 5 and 6, records 7 then 6 as the answer, and returns 6 when the window empties.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d73"/></marker><marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#0066cc"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="56" y="48" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="500" fill="#4f5d73" text-anchor="start" letter-spacing="0.18em">DRY RUN · ARR = [0, 0, 0, 0, 0, 0, 1, 1, 1, 1] · GFG EXAMPLE 1</text>
+<text x="218" y="112" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">0</text>
+<text x="270" y="112" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">1</text>
+<text x="322" y="112" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">2</text>
+<text x="374" y="112" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">3</text>
+<text x="426" y="112" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">4</text>
+<text x="478" y="112" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">5</text>
+<text x="530" y="112" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">6</text>
+<text x="582" y="112" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">7</text>
+<text x="634" y="112" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">8</text>
+<text x="686" y="112" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="middle">9</text>
+<text x="752" y="112" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#4f5d73" text-anchor="start" letter-spacing="0.14em">ANSWER SO FAR</text>
+<text x="56" y="144" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#4f5d73" text-anchor="start" letter-spacing="0.14em">STEP 1</text>
+<text x="56" y="160" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">low 0 · high 9</text>
+<rect x="192" y="128" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="218" y="154" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">0</text>
+<rect x="244" y="128" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="270" y="154" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">0</text>
+<rect x="296" y="128" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="322" y="154" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">0</text>
+<rect x="348" y="128" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="374" y="154" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">0</text>
+<rect x="400" y="128" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="2"/>
+<text x="426" y="154" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">0</text>
+<rect x="452" y="128" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="478" y="154" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">0</text>
+<rect x="504" y="128" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="530" y="154" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">1</text>
+<rect x="556" y="128" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="582" y="154" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">1</text>
+<rect x="608" y="128" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="634" y="154" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">1</text>
+<rect x="660" y="128" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="686" y="154" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">1</text>
+<text x="752" y="144" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="600" fill="#161f34" text-anchor="start">arr[4] = 0</text>
+<text x="752" y="160" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">answer = -1, go right</text>
+<text x="56" y="212" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#4f5d73" text-anchor="start" letter-spacing="0.14em">STEP 2</text>
+<text x="56" y="228" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">low 5 · high 9</text>
+<rect x="193" y="197" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="218" y="222" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="245" y="197" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="270" y="222" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="297" y="197" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="322" y="222" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="349" y="197" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="374" y="222" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="401" y="197" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="426" y="222" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="452" y="196" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="478" y="222" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">0</text>
+<rect x="504" y="196" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="530" y="222" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">1</text>
+<rect x="556" y="196" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="2"/>
+<text x="582" y="222" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">1</text>
+<rect x="608" y="196" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="634" y="222" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">1</text>
+<rect x="660" y="196" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="686" y="222" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">1</text>
+<text x="752" y="212" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="600" fill="#161f34" text-anchor="start">arr[7] = 1</text>
+<text x="752" y="228" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">answer = 7, go left</text>
+<text x="56" y="280" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#4f5d73" text-anchor="start" letter-spacing="0.14em">STEP 3</text>
+<text x="56" y="296" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">low 5 · high 6</text>
+<rect x="193" y="265" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="218" y="290" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="245" y="265" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="270" y="290" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="297" y="265" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="322" y="290" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="349" y="265" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="374" y="290" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="401" y="265" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="426" y="290" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="452" y="264" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="2"/>
+<text x="478" y="290" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">0</text>
+<rect x="504" y="264" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<text x="530" y="290" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">1</text>
+<rect x="557" y="265" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="582" y="290" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">1</text>
+<rect x="609" y="265" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="634" y="290" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">1</text>
+<rect x="661" y="265" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="686" y="290" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">1</text>
+<text x="752" y="280" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="600" fill="#161f34" text-anchor="start">arr[5] = 0</text>
+<text x="752" y="296" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">answer = 7, go right</text>
+<text x="56" y="348" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#4f5d73" text-anchor="start" letter-spacing="0.14em">STEP 4</text>
+<text x="56" y="364" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">low 6 · high 6</text>
+<rect x="193" y="333" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="218" y="358" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="245" y="333" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="270" y="358" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="297" y="333" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="322" y="358" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="349" y="333" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="374" y="358" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="401" y="333" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="426" y="358" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="453" y="333" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="478" y="358" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="504" y="332" width="52" height="40" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="2"/>
+<text x="530" y="358" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#161f34" text-anchor="middle">1</text>
+<rect x="557" y="333" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="582" y="358" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">1</text>
+<rect x="609" y="333" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="634" y="358" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">1</text>
+<rect x="661" y="333" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="686" y="358" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">1</text>
+<text x="752" y="348" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="600" fill="#161f34" text-anchor="start">arr[6] = 1</text>
+<text x="752" y="364" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">answer = 6, go left</text>
+<text x="56" y="416" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="600" fill="#0066cc" text-anchor="start" letter-spacing="0.14em">WINDOW EMPTY</text>
+<text x="56" y="432" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#4f5d73" text-anchor="start">low 6 · high 5</text>
+<rect x="193" y="401" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="218" y="426" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="245" y="401" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="270" y="426" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="297" y="401" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="322" y="426" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="349" y="401" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="374" y="426" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="401" y="401" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="426" y="426" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="453" y="401" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="478" y="426" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">0</text>
+<rect x="504" y="400" width="52" height="40" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="2"/>
+<text x="530" y="426" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#0066cc" text-anchor="middle">1</text>
+<rect x="557" y="401" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="582" y="426" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">1</text>
+<rect x="609" y="401" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="634" y="426" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">1</text>
+<rect x="661" y="401" width="50" height="38" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="686" y="426" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#cecfcf" text-anchor="middle">1</text>
+<text x="752" y="416" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="600" fill="#0066cc" text-anchor="start">return 6</text>
+<text x="752" y="432" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="400" fill="#0066cc" text-anchor="start">last recorded answer</text>
+<line x1="56" y1="464" x2="904" y2="464" stroke="#cecfcf" stroke-width="1"/>
+<rect x="56" y="481" width="24" height="16" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="1"/>
+<rect x="192" y="481" width="24" height="16" fill="rgba(22,31,52,0.05)" stroke="#161f34" stroke-width="2"/>
+<rect x="328" y="481" width="24" height="16" fill="rgba(0,102,204,0.08)" stroke="#0066cc" stroke-width="2"/>
+<rect x="456" y="482" width="22" height="14" stroke-dasharray="4,3" fill="#ffffff" stroke="#cecfcf" stroke-width="1"/>
+<text x="92" y="493" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="start" letter-spacing="0.06em">IN WINDOW</text>
+<text x="228" y="493" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="start" letter-spacing="0.06em">PROBE (MID)</text>
+<text x="364" y="493" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="start" letter-spacing="0.06em">FIRST 1</text>
+<text x="492" y="493" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="8" font-weight="400" fill="#4f5d73" text-anchor="start" letter-spacing="0.06em">DISCARDED</text>
+<text x="904" y="494" font-family="'Instrument Serif', serif" font-size="14" font-weight="400" fill="#4f5d73" text-anchor="end" font-style="italic">On a 1: record it, then look left for an earlier one.</text>
+</svg>
+</div></div></body></html>
