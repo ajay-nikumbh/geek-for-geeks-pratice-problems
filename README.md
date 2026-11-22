@@ -4,25 +4,13 @@ Structured collection of GeeksforGeeks Practice problems, organized topic-wise f
 
 Source: [GfG Practice — Explore](https://www.geeksforgeeks.org/explore?sortBy=submissions)
 
-## Structure
+## Roadmap
 
-```
-01. <Topic>/
-  README.md          <- topic index: tables by Basics/Easy/Medium/Hard
-  01. Basics/
-    01. <Problem Name>/
-      README.md      <- problem detail + solution placeholder
-  02. Easy/
-  03. Medium/
-  04. Hard/
-02. <Topic>/
-...
-```
+Work through the topics in seven phases, left to right. Topic numbers match the folder names.
 
-- Topics numbered in GfG's submissions-sorted order.
-- Each topic has its own `README.md` index table split by difficulty, linking every problem to its GfG page and local folder.
-- Each problem folder numbered by submission count (descending) within its difficulty, holding a `README.md` with metadata + placeholder for article/solution.
-- `_manifest.json` — full flat index (topic, difficulty, name, URL, submissions, accuracy, companies, tags, folder path) for all problems.
+![GeeksforGeeks DSA practice roadmap: 7 phases covering 25 topics and 2,468 problems](assets/roadmap.png)
+
+Source: [`assets/roadmap.html`](assets/roadmap.html)
 
 ## Topics × Difficulty
 
@@ -54,7 +42,3 @@ Source: [GfG Practice — Explore](https://www.geeksforgeeks.org/explore?sortBy=
 | 24 | Trie | [Trie](./24.%20Trie/README.md) | 0 | 2 | 16 | 7 | 25 | 1.0% |
 | 25 | Segment Tree | [Segment Tree](./25.%20Segment%20Tree/README.md) | 0 | 1 | 11 | 4 | 16 | 0.6% |
 | | **Total (25 topics)** | | **355** | **847** | **1065** | **201** | **2468** | **100%** |
-
-## Status
-
-Folder structure + per-topic index tables generated. Articles/solutions to be written per problem next.
