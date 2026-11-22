@@ -495,12 +495,7 @@ sequenceDiagram
 | 4 | 3 | 4 | No | move on |
 | 5 | 4 | 5 | Yes | **return 4** |
 
-```text
-index:   0    1    2    3    4
-arr  : [10,   8,  30,   4,   5]
-         x    x    x    x    ^
-                             found at i = 4
-```
+![Linear scan of [10, 8, 30, 4, 5] for x = 5: indices 0 to 3 do not match, index 4 matches and the scan returns 4](assets/array-search-dry-run.png)
 
 Output: `4`.
 
@@ -542,6 +537,8 @@ x   = 9
 Index `3` also holds `9`, but the loop never reaches it.
 
 Compare with Approach 1 on the same input: it made 5 comparisons and stored 2 indices. The optimal scan made 2 comparisons and stored nothing.
+
+![On [4, 9, 4, 9, 2] with x = 9, collecting all matches reads 5 cells and stores two indices; the early-exit scan reads 2 cells and returns 1](assets/array-search-early-exit.png)
 
 Output: `1`.
 
@@ -588,6 +585,10 @@ flowchart LR
 | 2. Value → first-index map | `O(n)` build + `O(1)` lookup | `O(n)` | No | Many queries on one array |
 | 3. Sort pairs + binary search | `O(n log n)` | `O(n)` | No | Many queries, when a sorted copy is kept |
 | **Optimal: linear scan** | **`O(n)`, best `O(1)`** | **`O(1)`** | **Yes** | **A single query (this problem)** |
+
+![Approach map for one query: linear scan sits alone in the lower left with O(n) early-exit time and O(1) space; the other approaches need a full scan or a sort and more space](assets/array-search-approaches.png)
+
+Which approach to pick depends on how many queries hit the same array:
 
 ```mermaid
 flowchart TD
